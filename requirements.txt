@@ -9,5 +9,5 @@ requests==2.2.1
 scipy==0.11.0
 psycopg2==2.5.2
 zipline==0.6.0
--e git+https://github.com/maxvitek/intradata.git
+git+https://github.com/maxvitek/intradata.git
 finsymbols==0.3.5
