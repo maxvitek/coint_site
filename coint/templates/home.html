@@ -1,0 +1,69 @@
+{% load staticfiles %}
+{% load tz %}
+<!doctype html>
+<head>
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+    </style>
+    <link type="text/css" rel="stylesheet" href="{% static "style.css" %}">
+    <link type="text/css" rel="stylesheet" href="{% static "rickshaw.css" %}">
+    <title>Cointegration Demonstration</title>
+    <script src="{% static "d3.v3.js" %}"></script>
+    <script src="{% static "rickshaw.js" %}"></script>
+</head>
+<body>
+    <h2>Cointegration Demonstration</h2>
+    <p>This is some text that will appear in a place very like this.</p>
+    <div id="chart"></div>
+
+    <script>
+
+    var series1 = [{% for i in data %}{ x: {{ i.datetime }}, y: {{ i.ticker1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+
+    var series2 = [{% for i in data %}{ x: {{ i.datetime }}, y: {{ i.ticker2 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+
+    var min1 = Number.MAX_VALUE;
+    var max1 = Number.MIN_VALUE;
+    for (i = 0; i < series1.length; i++) {
+      min1 = Math.min(min1, series1[i].y);
+      max1 = Math.max(max1, series1[i].y);
+    }
+
+    var min2 = Number.MAX_VALUE;
+    var max2 = Number.MIN_VALUE;
+    for (i = 0; i < series2.length; i++) {
+      min2 = Math.min(min2, series2[i].y);
+      max2 = Math.max(max2, series2[i].y);
+    }
+
+    var axis1 = d3.scale.linear().domain([min1, max1]);
+    var axis2 = d3.scale.linear().domain([min2, max2]);
+
+    var graph = new Rickshaw.Graph( {
+        element: document.getElementById("chart"),
+        width: 750,
+        height: 400,
+        renderer: 'scatterplot',
+        series: [
+            {
+                color: "#ff9030",
+                data: series1,
+                name: "{{ ticker1 }}",
+                scale: axis1
+            }, {
+                color: "#ff4040",
+                data: series2,
+                name: "{{ ticker2 }}",
+                scale: axis2
+            }
+        ]
+    } );
+
+    graph.renderer.dotSize = 2;
+
+    new Rickshaw.Graph.HoverDetail({ graph: graph });
+
+    graph.render();
+
+    </script>
+</body>

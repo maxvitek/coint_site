@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# Celery
+BROKER_URL = os.getenv('RABBITMQ_BIGWIG_URL')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -23,6 +25,13 @@ SECRET_KEY = 'zo1ynhnr_h4a!7a1%7q&ke3uttw!iscl-d#di2s4cwd(z03jq!'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+TEMPLATE_LOADERS = (
+    ('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )),
+)
 
 ALLOWED_HOSTS = []
 
@@ -67,7 +76,7 @@ DATABASES['default'] = dj_database_url.config()
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'US/Eastern'
 
 USE_I18N = True
 
@@ -80,11 +89,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 # Static asset configuration
-import os
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, 'static'),
+    os.path.join(PROJECT_PATH, '../coint/static'),
+)
+
+STATICFILES_FINDERS = (
+'django.contrib.staticfiles.finders.FileSystemFinder',
+'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
