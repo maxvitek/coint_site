@@ -42,8 +42,8 @@
     var graph = new Rickshaw.Graph( {
         element: document.getElementById("chart"),
         width: 750,
-        height: 400,
-        renderer: 'scatterplot',
+        height: 250,
+        renderer: 'line',
         series: [
             {
                 color: "#ff9030",
@@ -59,7 +59,7 @@
         ]
     } );
 
-    graph.renderer.dotSize = 2;
+    //graph.renderer.dotSize = 2;
 
     new Rickshaw.Graph.HoverDetail({ graph: graph });
 
