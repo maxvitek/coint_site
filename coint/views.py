@@ -14,6 +14,5 @@ def home(request):
     :return:
     """
     pair_data = get_pair('AAPL', 'GOOG')
-    print(pair_data)
     return render(request, template_name='home.html', dictionary={
         'data': pair_data, 'ticker1': 'AAPL', 'ticker2': 'GOOG'})
