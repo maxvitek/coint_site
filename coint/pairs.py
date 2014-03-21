@@ -45,14 +45,14 @@ def get_adf(ticker1, ticker2):
 
     """
     df = get_pair(ticker1, ticker2, data_frame_result=True, lookback=15)
-    ln_df = np.log(df.pct_change()+1).dropna()
+    ln_df = np.log(df).dropna()
     reg = ols(y=ln_df[ticker1], x=ln_df[ticker2])
     result = ts.adfuller(reg.resid)
-    return result[0], result[4]
+    return [ticker1, ticker2], result[0], result[4]
 
 
 def test_all_pairs():
-    symbols = sorted([s['symbol'] for s in get_sp500_symbols()])[:5]
+    symbols = sorted([s['symbol'] for s in get_sp500_symbols()])[:3]
     combs = [i for i in itertools.combinations(symbols, 2)]
     results = []
     for c in combs:
@@ -61,5 +61,5 @@ def test_all_pairs():
         adf = get_adf.delay(ticker1, ticker2)
         results.append((c, adf))
 
-    return results
+    return sorted(results, key=lambda x: x[1][0])
 

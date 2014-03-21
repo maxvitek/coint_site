@@ -124,3 +124,66 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+
+# logging
+from termcolor import colored
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'colorized': {
+            'format': colored('[', 'white', attrs=['bold']) +
+                    colored('%(asctime)s', 'cyan') +
+                    colored(']', 'white', attrs=['bold']) + ' ' +
+                    colored('[', 'white', attrs=['bold']) +
+                    colored('%(levelname)s', 'white') +
+                    colored(']', 'white', attrs=['bold']) + ' ' +
+                    colored('[', 'white', attrs=['bold']) +
+                    colored('%(module)s', 'green') +
+                    colored(']', 'white', attrs=['bold']) + ' ' +
+                    colored('[', 'white', attrs=['bold']) +
+                    colored('%(process)s', 'blue') +
+                    colored(']', 'white', attrs=['bold']) + ' ' +
+                    colored('[', 'white', attrs=['bold']) +
+                    colored('%(thread)s', 'yellow') +
+                    colored(']', 'white', attrs=['bold']) + ' ' +
+                    colored('%(message)s', 'white')
+        },
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+        'console':{
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'colorized'
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+        'coint': {
+            'handlers': ['console', 'file'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+    }
+}

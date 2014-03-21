@@ -12,3 +12,8 @@ app.conf.update(
     CELERY_TASK_RESULT_EXPIRES=300,  # short expiration
     CELERY_ACKS_LATE=True  # rerunning tasks is ok
 )
+
+
+@app.task
+def addtask(x, y):  # only used for testing
+    return x + y
