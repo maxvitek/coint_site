@@ -10,7 +10,13 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+SETTINGS_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(SETTINGS_DIR)
+
+# check for local environment settings
+if os.path.exists(os.path.join(SETTINGS_DIR, 'local_settings.py')):
+    from local_settings import set_env
+    set_env()
 
 # Celery
 BROKER_URL = os.getenv('RABBITMQ_BIGWIG_URL')
@@ -64,12 +70,28 @@ WSGI_APPLICATION = 'coint_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-# Parse database configuration from $DATABASE_URL
+# Parse database configuration from environment variables
 
 import dj_database_url
+import dj_mongohq_url
 
 DATABASES = dict()
 DATABASES['default'] = dj_database_url.config()
+DATABASES['mongodb'] = dj_mongohq_url.config(env='MONGOHQ_URL')
+
+TEMPODB = dict()
+TEMPODB['HOST'] = os.getenv('TEMPODB_API_HOST')
+TEMPODB['PORT'] = os.getenv('TEMPODB_API_PORT')
+TEMPODB['KEY'] = os.getenv('TEMPODB_API_KEY')
+TEMPODB['SECRET'] = os.getenv('TEMPODB_API_SECRET')
+tempodb_api_secure = os.getenv('TEMPODB_API_SECURE')
+if tempodb_api_secure:
+    if tempodb_api_secure == 'True':
+        TEMPODB['SECURE'] = True
+    elif tempodb_api_secure == 'False':
+        TEMPODB['SECURE'] = False
+    else:  # allow other values coming from tempodb's heroku setup
+        TEMPODB['SECURE'] = tempodb_api_secure
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -98,7 +120,7 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_FINDERS = (
-'django.contrib.staticfiles.finders.FileSystemFinder',
-'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
