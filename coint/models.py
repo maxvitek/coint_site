@@ -1,6 +1,4 @@
 from django.db import models
-from coint_site.settings import TEMPODB
-from tempodb import Client as TempoDBClient
 
 
 class Company(models.Model):
@@ -11,4 +9,3 @@ class Company(models.Model):
     industry = models.CharField(max_length=150)
     sector = models.CharField(max_length=150)
     tempodb = models.IntegerField()
- #   ts = tdb.read_key(symbol)

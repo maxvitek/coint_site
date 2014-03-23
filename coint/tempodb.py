@@ -1,6 +1,8 @@
 from __future__ import absolute_import
 from tempodb import Client as TempoDBClient
+from tempodb import DataPoint
 from coint_site.settings import TEMPODB
+from pandas import Series
 
 
 class TempoDB(object):
@@ -50,4 +52,22 @@ class TempoDB(object):
 
 class TooManySeries(Exception):
     pass
+
+
+class NotATimeSeries(Exception):
+    pass
+
+
+def df2series(pd_series):
+    """
+    Converts pandas series to tempodb series
+    """
+    if not isinstance(pd_series, Series):
+        raise NotATimeSeries()
+    data = []
+    for t in pd_series.iteritems():
+        data.append(DataPoint(t[0], t[1]))
+
+    return data
+
 

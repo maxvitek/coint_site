@@ -72,12 +72,10 @@ WSGI_APPLICATION = 'coint_site.wsgi.application'
 
 # Parse database configuration from environment variables
 
-import dj_database_url
 import dj_mongohq_url
 
 DATABASES = dict()
-DATABASES['default'] = dj_database_url.config()
-DATABASES['mongodb'] = dj_mongohq_url.config(env='MONGOHQ_URL')
+DATABASES['default'] = dj_mongohq_url.config(env='MONGOHQ_URL')
 
 TEMPODB_NUM = 10
 TEMPODB = dict()

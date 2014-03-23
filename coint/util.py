@@ -2,6 +2,7 @@ import time
 from finsymbols import get_sp500_symbols
 from tempodb import TempoDB
 from models import Company
+from pandas import Series
 
 
 def timestamp(date_time):
@@ -23,6 +24,32 @@ def seed():
     tempodb_mapping = tempodb.get_mapping(symbols)
 
     for co in sp500:
-        company = Company.objects.create(
+        Company.objects.create(
+            name=co['company'],
+            symbol=co['symbol'],
+            hq=co['headquarters'],
+            industry=co['industry'],
+            sector=co['sector'],
+            tempodb=tempodb_mapping[co['symbol']]
+        ).save()
 
-        )
+    return
+
+
+def series2js(pd_series):
+    """
+    Converts pandas Series object to something
+    more friendly to display in d3.js
+    """
+    if not isinstance(pd_series, Series):
+        raise NotATimeSeries()
+    data = []
+    for t in pd_series.iteritems():
+        data.append({
+            'datetime': timestamp(t[0]),
+            'price': t[1],
+        })
+
+
+class NotATimeSeries(Exception):
+    pass
