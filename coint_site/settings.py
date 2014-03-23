@@ -82,9 +82,8 @@ TEMPODB = dict()
 import urlparse
 for i in range(TEMPODB_NUM):
     j = i + 1
-    protocol = 'tempodb://'
-    url = protocol + os.getenv('TEMPODB_' + str(j))
-    urlparse.uses_netloc.append(protocol)
+    url = os.getenv('TEMPODB_' + str(j))
+    urlparse.uses_netloc.append('tempodb://')
     parsed = urlparse.urlparse(url)
     TEMPODB[j] = {
         'KEY': parsed.username,
