@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from tempodb import Client as TempoDBClient
 from tempodb import DataPoint, DataSet
 from coint_site.settings import TEMPODB
-from pandas import Series
+from pandas import DataFrame, Series
 
 
 class TempoDB(object):
@@ -79,8 +79,9 @@ def tdbseries2pdseries(tdb_series):
         raise NotATimeSeries()
     data = []
     for t in tdb_series.data:
-        data.append((t[0], t[1]))
-
-    return Series(data)
+        data.append((t.ts, t.value))
+    df = DataFrame(data, columns=['datetime', 'close'])
+    df.set_index('datetime')
+    return df['close']
 
 

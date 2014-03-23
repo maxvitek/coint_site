@@ -27,18 +27,27 @@ class PairAnalysis(object):
         self.s2 = Company.objects.filter(symbol=sym2).get()
         self.adf = None
         self.ols = None
-        self.pair, self.created = Pair().objects.get_or_create(symbol=self.symbol)
+        self.pair, self.created = Pair.objects.get_or_create(
+            symbol=self.symbol,
+        )
 
         self.analyze()
 
         self.persist()
 
+        if self.pair.adf_stat < self.pair.adf_1pct:
+            logger.info(ticker1 + ticker2 + '::Cointegrated: ' + str(self.pair.adf_stat))
+        if not self.pair.adf_stat < self.pair.adf_1pct:
+            logger.info(ticker1 + ticker2 + '::Not Cointegrated: ' + str(self.pair.adf_stat))
+
     def analyze(self):
         logger.info(self.symbol + '::Getting prices')
         data1 = tdbseries2pdseries(self.s1.get_prices())
         data2 = tdbseries2pdseries(self.s2.get_prices())
-        logdata1 = np.log(data1)
-        logdata2 = np.log(data2)
+        print len(data1)
+        logdata1 = np.log(data1).dropna()
+        logdata2 = np.log(data2).dropna()
+        print(len(logdata1))
         self.ols = ols(y=logdata1, x=logdata2)
         self.adf = ts.adfuller(self.ols.resid)
 
