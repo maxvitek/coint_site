@@ -44,10 +44,8 @@ class PairAnalysis(object):
         logger.info(self.symbol + '::Getting prices')
         data1 = tdbseries2pdseries(self.s1.get_prices())
         data2 = tdbseries2pdseries(self.s2.get_prices())
-        print len(data1)
         logdata1 = np.log(data1).dropna()
         logdata2 = np.log(data2).dropna()
-        print(len(logdata1))
         self.ols = ols(y=logdata1, x=logdata2)
         self.adf = ts.adfuller(self.ols.resid)
 
