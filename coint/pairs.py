@@ -8,6 +8,8 @@ from util import timestamp
 import logging
 from coint_site.celery import app
 import itertools
+from tempodb import TempoDB, pdseries2tbdseries
+from models import Company
 
 logger = logging.getLogger(__name__)
 
@@ -63,3 +65,26 @@ def test_all_pairs():
 
     return sorted(results, key=lambda x: x[1][0])
 
+
+def seed():
+    """
+    This will seed the dbs with everything we need
+    """
+    sp500 = get_sp500_symbols()
+    symbols = [s['symbol'] for s in sp500]
+    tempodb = TempoDB()
+    tempodb_mapping = tempodb.get_mapping(symbols)
+
+    for co in sp500:
+        company = Company.objects.create(
+            name=co['company'],
+            symbol=co['symbol'],
+            hq=co['headquarters'],
+            industry=co['industry'],
+            sector=co['sector'],
+            tempodb=tempodb_mapping[co['symbol']]
+        ).save()
+
+        company.update()
+
+    return

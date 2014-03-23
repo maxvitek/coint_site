@@ -58,7 +58,7 @@ class NotATimeSeries(Exception):
     pass
 
 
-def df2series(pd_series):
+def pdseries2tbdseries(pd_series):
     """
     Converts pandas series to tempodb series
     """
