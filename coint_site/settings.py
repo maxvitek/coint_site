@@ -186,3 +186,7 @@ LOGGING = {
         },
     }
 }
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'coint_site.settings'
+
+print TEMPODB
