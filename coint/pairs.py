@@ -8,10 +8,44 @@ from util import timestamp
 import logging
 from coint_site.celery import app
 import itertools
-from tempodb import TempoDB, pdseries2tbdseries
-from models import Company
+from tempodb import TempoDB, tdbseries2pdseries
+from models import Company, Pair
 
 logger = logging.getLogger(__name__)
+
+
+class PairAnalysis(object):
+    """
+
+    """
+    def __int__(self, ticker1, ticker2):
+        self.tdb = TempoDB()
+        sym1, sym2 = sorted([ticker1, ticker2])
+        self.symbol = sym1 + sym2
+        self.s1 = Company.objects.filter(symbol=sym1).get()
+        self.s2 = Company.objects.filter(symbol=sym2).get()
+        self.adf = None
+        self.ols = None
+
+        self.analyze()
+
+    def analyze(self):
+        data1 = tdbseries2pdseries(self.s1.get_prices())
+        data2 = tdbseries2pdseries(self.s2.get_prices())
+        logdata1 = np.log(data1)
+        logdata2 = np.log(data2)
+        self.ols = ols(y=logdata1, x=logdata2)
+        self.adf = ts.adfuller(self.ols.resid)
+
+    def persist(self):
+        Pair(
+            symbol=self.symbol,
+            adf_stat=self.adf[0],
+            adf_p=self.adf[1],
+            adf_1pct=self.adf[4]['1%'],
+            adf_5pct=self.adf[4]['5%'],
+            adf_10pct=self.adf[4]['10%']
+        ).save()
 
 
 def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
@@ -50,7 +84,7 @@ def get_adf(ticker1, ticker2):
     ln_df = np.log(df).dropna()
     reg = ols(y=ln_df[ticker1], x=ln_df[ticker2])
     result = ts.adfuller(reg.resid)
-    return [ticker1, ticker2], result[0], result[4]
+    return result
 
 
 def test_all_pairs():
@@ -76,6 +110,7 @@ def seed():
     tempodb_mapping = tempodb.get_mapping(symbols)
 
     for co in sp500:
+        logger.info('Seeding: ' + co['symbol'])
         company = Company.objects.create(
             name=co['company'],
             symbol=co['symbol'],
@@ -83,8 +118,10 @@ def seed():
             industry=co['industry'],
             sector=co['sector'],
             tempodb=tempodb_mapping[co['symbol']]
-        ).save()
+        )
 
-        company.update()
+        company.update_prices.delay()
+
+        company.save()
 
     return

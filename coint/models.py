@@ -1,5 +1,5 @@
 from django.db import models
-from tempodb import TempoDB, pdseries2tbdseries
+from tempodb import TempoDB, pdseries2tdbseries
 import datetime
 from intradata import get_google_data
 from celery.contrib.methods import task_method
@@ -10,9 +10,8 @@ logger = logging.getLogger(__name__)
 
 
 class Company(models.Model):
-    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=150)
-    symbol = models.CharField(max_length=20)
+    symbol = models.CharField(primary_key=True, max_length=20)
     hq = models.CharField(max_length=150)
     industry = models.CharField(max_length=150)
     sector = models.CharField(max_length=150)
@@ -29,11 +28,15 @@ class Company(models.Model):
         tdb = TempoDB()
         df = get_google_data(self.symbol, lookback=15)
         series = df['close']
-        tbd_series = pdseries2tbdseries(series)
+        tbd_series = pdseries2tdbseries(series)
         tdb.db[self.tempodb].write_key(self.symbol, tbd_series)
         return None
 
 
 class Pair(models.Model):
-    id = models.AutoField(primary_key=True)
-    symbol = models.CharField(max_length=40)
+    symbol = models.CharField(primary_key=True, max_length=40)
+    adf_stat = models.FloatField()
+    adf_p = models.FloatField()
+    adf_1pct = models.FloatField()
+    adf_5pct = models.FloatField()
+    adf_10pct = models.FloatField()

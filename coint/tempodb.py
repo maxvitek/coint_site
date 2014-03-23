@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from tempodb import Client as TempoDBClient
-from tempodb import DataPoint
+from tempodb import DataPoint, DataSet
 from coint_site.settings import TEMPODB
 from pandas import Series
 
@@ -58,7 +58,7 @@ class NotATimeSeries(Exception):
     pass
 
 
-def pdseries2tbdseries(pd_series):
+def pdseries2tdbseries(pd_series):
     """
     Converts pandas series to tempodb series
     """
@@ -69,5 +69,18 @@ def pdseries2tbdseries(pd_series):
         data.append(DataPoint(t[0], t[1]))
 
     return data
+
+
+def tdbseries2pdseries(tdb_series):
+    """
+    Converts pandas series to tempodb series
+    """
+    if not isinstance(tdb_series, DataSet):
+        raise NotATimeSeries()
+    data = []
+    for t in tdb_series.data:
+        data.append((t[0], t[1]))
+
+    return Series(data)
 
 
