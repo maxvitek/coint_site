@@ -18,7 +18,8 @@ class PairAnalysis(object):
     """
 
     """
-    def __int__(self, ticker1, ticker2):
+    def __init__(self, ticker1, ticker2):
+        logger.info(ticker1 + ticker2 + '::Conducting pair analysis: ' + ticker1 + ' & ' + ticker2)
         self.tdb = TempoDB()
         sym1, sym2 = sorted([ticker1, ticker2])
         self.symbol = sym1 + sym2
@@ -26,10 +27,14 @@ class PairAnalysis(object):
         self.s2 = Company.objects.filter(symbol=sym2).get()
         self.adf = None
         self.ols = None
+        self.pair = Pair(symbol=self.symbol).objects.get_or_create()
 
         self.analyze()
 
+        self.persist()
+
     def analyze(self):
+        logger.info(self.symbol + '::Getting prices')
         data1 = tdbseries2pdseries(self.s1.get_prices())
         data2 = tdbseries2pdseries(self.s2.get_prices())
         logdata1 = np.log(data1)
@@ -38,14 +43,13 @@ class PairAnalysis(object):
         self.adf = ts.adfuller(self.ols.resid)
 
     def persist(self):
-        Pair(
-            symbol=self.symbol,
-            adf_stat=self.adf[0],
-            adf_p=self.adf[1],
-            adf_1pct=self.adf[4]['1%'],
-            adf_5pct=self.adf[4]['5%'],
-            adf_10pct=self.adf[4]['10%']
-        ).save()
+        logger.info(self.symbol + '::Persisting analysis')
+        self.pair.adf_stat = self.adf[0]
+        self.pair.adf_p = self.adf[1]
+        self.pair.adf_1pct = self.adf[4]['1%']
+        self.pair.adf_5pct = self.adf[4]['5%']
+        self.pair.adf_10pct = self.adf[4]['10%']
+        self.pair.save()
 
 
 def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
@@ -123,5 +127,30 @@ def seed():
         company.update_prices.delay()
 
         company.save()
+
+    return
+
+@app.task
+def make_pair(ticker1, ticker2):
+    """
+    A function which makes a PairAnalysis object
+    used farm off the task to a celery worker
+    """
+    PairAnalysis(ticker1, ticker2)
+    return
+
+
+def make_all_pairs():
+    """
+    This will check all of the pairs
+    """
+    companies = Company.objects.all()
+    symbols = sorted([co.symbol for co in companies])
+    combos = [i for i in itertools.combinations(symbols, 2)]
+
+    for c in combos:
+        ticker1 = c[0]
+        ticker2 = c[1]
+        make_pair.delay(ticker1, ticker2)
 
     return
