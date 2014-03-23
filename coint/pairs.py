@@ -27,7 +27,7 @@ class PairAnalysis(object):
         self.s2 = Company.objects.filter(symbol=sym2).get()
         self.adf = None
         self.ols = None
-        self.pair = Pair(symbol=self.symbol).objects.get_or_create()
+        self.pair, self.created = Pair().objects.get_or_create(symbol=self.symbol)
 
         self.analyze()
 
