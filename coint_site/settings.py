@@ -79,19 +79,21 @@ DATABASES = dict()
 DATABASES['default'] = dj_database_url.config()
 DATABASES['mongodb'] = dj_mongohq_url.config(env='MONGOHQ_URL')
 
+TEMPODB_NUM = 10
 TEMPODB = dict()
-TEMPODB['HOST'] = os.getenv('TEMPODB_API_HOST')
-TEMPODB['PORT'] = os.getenv('TEMPODB_API_PORT')
-TEMPODB['KEY'] = os.getenv('TEMPODB_API_KEY')
-TEMPODB['SECRET'] = os.getenv('TEMPODB_API_SECRET')
-tempodb_api_secure = os.getenv('TEMPODB_API_SECURE')
-if tempodb_api_secure:
-    if tempodb_api_secure == 'True':
-        TEMPODB['SECURE'] = True
-    elif tempodb_api_secure == 'False':
-        TEMPODB['SECURE'] = False
-    else:  # allow other values coming from tempodb's heroku setup
-        TEMPODB['SECURE'] = tempodb_api_secure
+import urlparse
+for i in range(TEMPODB_NUM):
+    j = i + 1
+    protocol = 'tempodb://'
+    url = protocol + os.getenv('TEMPODB_' + str(j))
+    urlparse.uses_netloc.append(protocol)
+    parsed = urlparse.urlparse(url)
+    TEMPODB[j] = {
+        'KEY': parsed.username,
+        'SECRET': parsed.password,
+        'HOST': parsed.hostname,
+        'PORT': parsed.port
+    }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

@@ -16,3 +16,4 @@ git+https://github.com/maxvitek/finsymbols.git
 pytz==2013b
 dj-mongohq-url==0.0.1
 tempodb==0.5.0
+celery==3.1.9
