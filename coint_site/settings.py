@@ -19,7 +19,7 @@ if os.path.exists(os.path.join(SETTINGS_DIR, 'local_settings.py')):
     set_env()
 
 # Celery
-BROKER_URL = os.getenv('RABBITMQ_BIGWIG_URL')
+BROKER_URL = os.getenv('RABBITMQ_URL')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
