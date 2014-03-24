@@ -22,7 +22,7 @@ class PairAnalysis(object):
         logger.info(ticker1 + ticker2 + '::Conducting pair analysis: ' + ticker1 + ' & ' + ticker2)
         self.tdb = TempoDB()
         sym1, sym2 = sorted([ticker1, ticker2])
-        self.symbol = sym1 + sym2
+        self.symbol = sym1 + '-' + sym2
         self.s1 = Company.objects.filter(symbol=sym1).get()
         self.s2 = Company.objects.filter(symbol=sym2).get()
         self.adf = None
@@ -36,9 +36,9 @@ class PairAnalysis(object):
         self.persist()
 
         if self.pair.adf_stat < self.pair.adf_1pct:
-            logger.info(ticker1 + ticker2 + '::Cointegrated: ' + str(self.pair.adf_stat))
+            logger.info(self.symbol + '::Cointegrated: ' + str(self.pair.adf_stat))
         if not self.pair.adf_stat < self.pair.adf_1pct:
-            logger.info(ticker1 + ticker2 + '::Not Cointegrated: ' + str(self.pair.adf_stat))
+            logger.info(self.symbol + '::Not Cointegrated: ' + str(self.pair.adf_stat))
 
     def analyze(self):
         logger.info(self.symbol + '::Getting prices')
