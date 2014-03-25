@@ -219,3 +219,16 @@ h1, h2 {
   opacity: .2;
   z-index: 2;
 }
+
+.node {
+  opacity: 0.5;
+}
+
+.node:hover {
+  opacity: 1;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: 0.3;
+}

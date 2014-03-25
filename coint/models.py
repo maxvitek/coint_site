@@ -20,11 +20,12 @@ class Company(models.Model):
     def get_prices(self):
         logger.info('Fetching prices for: ' + self.symbol)
         tdb = TempoDB()
-        return tdb.db[self.tempodb].read_key(
+        self.prices = tdb.db[self.tempodb].read_key(
             self.symbol,
             datetime.datetime(2000, 1, 1, 1, 1, 1),
             datetime.datetime.now(),
             interval='1min')
+        return self.prices
 
     @app.task(filter=task_method)
     def update_prices(self):
@@ -44,3 +45,6 @@ class Pair(models.Model):
     adf_1pct = models.FloatField(null=True)
     adf_5pct = models.FloatField(null=True)
     adf_10pct = models.FloatField(null=True)
+
+    def component_tickers(self):
+        return self.symbol.split('-')

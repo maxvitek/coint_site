@@ -10,6 +10,7 @@ from coint_site.celery import app
 import itertools
 from tempodb import TempoDB, tdbseries2pdseries
 from models import Company, Pair
+from threadpool import ThreadPool
 
 logger = logging.getLogger(__name__)
 
@@ -18,13 +19,30 @@ class PairAnalysis(object):
     """
 
     """
-    def __init__(self, ticker1, ticker2):
-        logger.info(ticker1 + ticker2 + '::Conducting pair analysis: ' + ticker1 + ' & ' + ticker2)
-        self.tdb = TempoDB()
-        sym1, sym2 = sorted([ticker1, ticker2])
+    def __init__(self, c1, c2):
+
+        if isinstance(c1, str):
+            self.s1 = Company.objects.filter(symbol=c1).get()
+        elif isinstance(c1, Company):
+            self.s1 = c1
+            if not self.s1.prices:
+                self.s1.get_prices()
+        else:
+            raise ValueError
+
+        if isinstance(c2, str):
+            self.s2 = Company.objects.filter(symbol=c2).get()
+        elif isinstance(c2, Company):
+            self.s2 = c2
+            if not self.s2.prices:
+                self.s2.get_prices()
+        else:
+            raise ValueError
+
+        sym1, sym2 = sorted([c1.symbol, c2.symbol])
         self.symbol = sym1 + '-' + sym2
-        self.s1 = Company.objects.filter(symbol=sym1).get()
-        self.s2 = Company.objects.filter(symbol=sym2).get()
+        logger.info(self.symbol + '::Conducting pair analysis: ' + c1.symbol + ' & ' + c2.symbol)
+        self.tdb = TempoDB()
         self.adf = None
         self.ols = None
         self.pair, self.created = Pair.objects.get_or_create(
@@ -42,8 +60,8 @@ class PairAnalysis(object):
 
     def analyze(self):
         logger.info(self.symbol + '::Getting prices')
-        data1 = tdbseries2pdseries(self.s1.get_prices())
-        data2 = tdbseries2pdseries(self.s2.get_prices())
+        data1 = tdbseries2pdseries(self.s1.prices)
+        data2 = tdbseries2pdseries(self.s2.prices)
         logdata1 = np.log(data1).dropna()
         logdata2 = np.log(data2).dropna()
         self.ols = ols(y=logdata1, x=logdata2)
@@ -152,12 +170,15 @@ def make_all_pairs():
     This will check all of the pairs
     """
     companies = Company.objects.all()
-    symbols = sorted([co.symbol for co in companies])
-    combos = [i for i in itertools.combinations(symbols, 2)]
+    tpool = ThreadPool(50)
+    for c in companies:
+        tpool.add_task(c.get_prices)
+    tpool.wait_completion()
 
-    for c in combos:
-        ticker1 = c[0]
-        ticker2 = c[1]
-        make_pair.delay(ticker1, ticker2)
+    for c in itertools.combinations(companies, 2):
+        c1 = c[0]
+        c2 = c[1]
+        tpool.add_task(make_pair, c1, c2)
+    tpool.wait_completion()
 
     return
