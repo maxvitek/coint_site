@@ -26,6 +26,7 @@ class PairAnalysis(object):
         elif isinstance(c1, Company):
             self.s1 = c1
             if not self.s1.prices:
+                logger.info(self.s1.symbol + '::Getting prices')
                 self.s1.get_prices()
         else:
             raise ValueError
@@ -35,6 +36,7 @@ class PairAnalysis(object):
         elif isinstance(c2, Company):
             self.s2 = c2
             if not self.s2.prices:
+                logger.info(self.s2.symbol + '::Getting prices')
                 self.s2.get_prices()
         else:
             raise ValueError
@@ -59,7 +61,7 @@ class PairAnalysis(object):
             logger.info(self.symbol + '::Not Cointegrated: ' + str(self.pair.adf_stat))
 
     def analyze(self):
-        logger.info(self.symbol + '::Getting prices')
+        logger.info(self.symbol + '::Conducting analysis')
         data1 = tdbseries2pdseries(self.s1.prices)
         data2 = tdbseries2pdseries(self.s2.prices)
         logdata1 = np.log(data1).dropna()
