@@ -11,6 +11,8 @@ import itertools
 from tempodb import TempoDB, tdbseries2pdseries
 from models import Company, Pair
 from threadpool import ThreadPool
+import csv
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -182,3 +184,16 @@ def make_all_pairs():
     tpool.wait_completion()
 
     return
+
+
+def make_pairs_csv():
+    """
+    This makes a csv file in the project
+    """
+    filepath = os.path.join(os.getcwd(), 'coint', 'static', 'pairs.csv')
+    with open(filepath, 'w') as f:
+        c = csv.writer(f)
+        c.writerow(['symbol_1', 'symbol_2', 'adf_stat', 'adf_p'])
+        pairs = Pair.objects.all()
+        for p in pairs:
+            c.writerow(p.csv_data())
