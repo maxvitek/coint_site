@@ -8,7 +8,7 @@ gunicorn==18.0
 numpy==1.7.0
 pandas>=0.13.1
 requests==2.2.1
-scipy>=0.11.0
+scipy==0.11.0
 psycopg2==2.5.2
 zipline==0.6.0
 git+https://github.com/maxvitek/intradata.git
