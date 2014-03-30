@@ -90,7 +90,7 @@ def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
     """
     df1 = get_google_data(ticker1, lookback=lookback)
     df2 = get_google_data(ticker2, lookback=lookback)
-    df = pd.DataFrame({ticker1: df1['close'], ticker2: df2['close']}).interpolate()
+    df = pd.DataFrame({ticker1: df1['close'], ticker2: df2['close']}).dropna().interpolate()
     if data_frame_result:
         logger.info('pairs dataframe returned for ' + ticker1 + ' and ' + ticker2)
         return df
@@ -193,7 +193,7 @@ def make_pairs_csv():
     filepath = os.path.join(os.getcwd(), 'coint', 'static', 'pairs.csv')
     with open(filepath, 'w') as f:
         c = csv.writer(f)
-        c.writerow(['symbol_1', 'symbol_2', 'adf_stat', 'adf_p'])
+        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'adf_stat', 'adf_p'])
         pairs = Pair.objects.all()
         for p in pairs:
             c.writerow(p.csv_data())

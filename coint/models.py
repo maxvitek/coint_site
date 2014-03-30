@@ -50,7 +50,7 @@ class Pair(models.Model):
         return self.symbol.split('-')
 
     def csv_data(self):
-        return self.component_tickers() + [
+        return [self.symbol] + self.component_tickers() + [
             self.adf_stat,
             self.adf_p,
         ]
