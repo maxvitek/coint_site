@@ -1,119 +1,495 @@
 {% load staticfiles %}
 {% load tz %}
+{% load dajaxice_templatetags %}
 <!doctype html>
 <head>
     <style>
-        @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+
+        @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+
+        body {
+          font-family: "Helvetica Neue";
+          margin: 40px auto;
+          width: 960px;
+          min-height: 2000px;
+        }
+
+        #body {
+          position: relative;
+        }
+
+        footer {
+          padding: 2em 0 1em 0;
+          font-size: 12px;
+        }
+
+        h1 {
+          font-size: 96px;
+          margin-top: .3em;
+          margin-bottom: 0;
+        }
+
+        h1 + h2 {
+          margin-top: 0;
+        }
+
+        h2 {
+          font-weight: 400;
+          font-size: 28px;
+        }
+
+        h1, h2 {
+          font-family: "Yanone Kaffeesatz";
+          text-rendering: optimizeLegibility;
+        }
+
+        #body > p {
+          line-height: 1.5em;
+          width: 640px;
+          text-rendering: optimizeLegibility;
+        }
+
+        #charts {
+          padding: 10px 0;
+        }
+
+        .chart {
+          display: inline-block;
+          height: 151px;
+          margin-bottom: 20px;
+        }
+
+        .reset {
+          padding-left: 1em;
+          font-size: smaller;
+          color: #ccc;
+        }
+
+        .background.bar {
+          fill: #ccc;
+        }
+
+        .foreground.bar {
+          fill: steelblue;
+        }
+
+        .axis path, .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+        .axis text {
+          font: 10px sans-serif;
+        }
+
+        .brush rect.extent {
+          fill: steelblue;
+          fill-opacity: .125;
+        }
+
+        .brush .resize path {
+          fill: #eee;
+          stroke: #666;
+        }
+
+        #pairs-chart {
+          width: 920px;
+        }
+
+        #pair-list {
+          min-height: 1024px;
+        }
+
+        #pair-list .date,
+        #pair-list .day {
+          margin-bottom: .4em;
+        }
+
+        #pair-list .pair {
+          line-height: 1.5em;
+          background: #eee;
+          width: 640px;
+          margin-bottom: 1px;
+        }
+
+        #pair-list .time {
+          color: #999;
+        }
+
+        #pair-list .pair div {
+          display: inline-block;
+          width: 100px;
+        }
+
+        #pair-list div.distance,
+        #pair-list div.delay {
+          width: 160px;
+          padding-right: 10px;
+          text-align: right;
+        }
+
+        #pair-list .early {
+          color: green;
+        }
+
+        aside {
+          position: absolute;
+          left: 740px;
+          font-size: smaller;
+          width: 320px;
+        }
+
     </style>
     <link type="text/css" rel="stylesheet" href="{% static "style.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "rickshaw.css" %}">
     <title>Cointegration Demonstration</title>
     <script src="{% static "d3.v3.js" %}"></script>
     <script src="{% static "rickshaw.js" %}"></script>
+    <script src="{% static "crossfilter.js" %}"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+      });
+    </script>
+    <script type='text/javascript' src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% dajaxice_js_import %}
+    <script>
+        function getPair(data) {
+            document.getElementById('ajax_script').innerHTML = data.html ;
+            var arr = document.getElementById('ajax_script').getElementsByTagName('script')
+            for (var n = 0; n < arr.length; n++)
+                eval(arr[n].innerHTML)
+        }
+    </script>
 </head>
 <body>
     <h2>Cointegration Demonstration</h2>
-    <p>This is some text that will appear in a place very like this.</p>
-    <div id="pairs"></div>
-    <div id="chart"></div>
+    <p>This is some text that will appear in a place very like this.  It will include some formulas like this:</p>
+
+\[\begin{aligned}
+\dot{x} &amp; = \sigma(y-x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy
+\end{aligned} \]
+
+    <div id="coint"></div>
+
+    <div id="charts">
+      <div id="pairs-chart" class="chart">
+        <div class="title">\(p\) Statistic of Cointegrated Pairs</div>
+      </div>
+    </div>
+
+    <aside id="totals"><span id="active">-</span> of <span id="total">-</span> pairs selected.</aside>
+
+    <div id="lists">
+      <div id="pair-list" class="list"></div>
+    </div>
 
     <script>
 
-    function name(d) { return d.name; }
-    function group(d) { return d.group; }
+        d3.csv("{% static "pairs.csv" %}", function(error, pairs) {
+            
+            var formatNumber = d3.format(",d");
+            
+            var nestByP = d3.nest()
+                .key(function(d) { return d.adf_p; });
 
-    var color = d3.scale.category10();
-    function colorByGroup(d) { return color(group(d)); }
+            pairs.forEach(function(d, i) {
+                d.index = i;
+                d.symbol = d.symbol;
+                d.symbol_1 = d.symbol_1;
+                d.symbol_2 = d.symbol_2;
+                d.adf_stat = Math.floor(+d.adf_stat * 100000) / 100000;
+                d.adf_p = Math.floor(+d.adf_p * 100000) / 100000;
+              });
 
-    var width = 960,
-        height = 500;
+            var pair = crossfilter(pairs),
+                all = pair.groupAll(),
+                adf_p = pair.dimension(function(d) { return d.adf_p; }),
+                adf_ps = adf_p.group(function(d) { return Math.floor(d * 20) / 20; });
 
-    var svg = d3.select('#pairs')
-        .append('svg')
-        .attr('width', width)
-        .attr('height', height);
+            var charts = [
 
-    var node, link;
+                barChart()
+                    .dimension(adf_p)
+                    .group(adf_ps)
+                    .x(d3.scale.linear()
+                    .domain([0, 1])
+                    .rangeRound([0, 10 * 24]))
 
-    var voronoi = d3.geom.voronoi()
-        .x(function(d) { return d.x; })
-        .y(function(d) { return d.y; })
-        .clipExtent([[-10, -10], [width+10, height+10]]);
+            ];
 
-    function recenterVoronoi(nodes) {
-        var shapes = [];
-        voronoi(nodes).forEach(function(d) {
-            if ( !d.length ) return;
-            var n = [];
-            d.forEach(function(c){
-                n.push([ c[0] - d.point.x, c[1] - d.point.y ]);
+            var chart = d3.selectAll(".chart")
+              .data(charts)
+              .each(function(chart) { chart.on("brush", renderAll).on("brushend", renderAll); });
+
+            var list = d3.selectAll(".list")
+                .data([pairList]);
+
+            d3.selectAll("#total")
+                .text(formatNumber(pair.size()));
+
+            renderAll();
+
+            function render(method) {
+                d3.select(this).call(method);
+            }
+
+            function renderAll() {
+                chart.each(render);
+                list.each(render);
+                d3.select("#active").text(formatNumber(all.value()));
+            }
+
+              window.filter = function(filters) {
+                filters.forEach(function(d, i) { charts[i].filter(d); });
+                renderAll();
+              };
+
+              window.reset = function(i) {
+                charts[i].filter(null);
+                renderAll();
+              };
+
+              function pairList(div) {
+                var pairsByP = nestByP.entries(adf_p.bottom(10));
+
+                div.each(function() {
+                  var adf_p = d3.select(this).selectAll(".adf_p")
+                      .data(pairsByP, function(d) { return d.key; });
+
+                  adf_p.enter().append("div")
+                      .attr("class", "adf_p")
+                      .append("div")
+                      .attr("class", "day")
+                      .text(function(d) { return d.values[0].adf_p; });
+
+                  adf_p.exit().remove();
+
+                  var pair = adf_p.order().selectAll(".pair")
+                      .data(function(d) { return d.values; }, function(d) { return d.index; });
+
+                  var pairEnter = pair.enter().append("div")
+                      .attr("class", "pair");
+
+                  pairEnter.append("div")
+                      .attr("class", "symbol")
+                      .attr("onclick", function(d) {return "Dajaxice.coint.ajax_coint(getPair, {'symbol': '".concat(d.symbol).concat("'})")})
+                      .text(function(d) { return d.symbol; });
+
+                  pairEnter.append("div")
+                      .attr("class", "symbol_1")
+                      .text(function(d) { return d.symbol_1; });
+
+                  pairEnter.append("div")
+                      .attr("class", "symbol_2")
+                      .text(function(d) { return d.symbol_2; });
+
+                  pairEnter.append("div")
+                      .attr("class", "adf_stat")
+                      .text(function(d) { return d.adf_stat; });
+
+                  pairEnter.append("div")
+                      .attr("class", "adf_p")
+                      .text(function(d) { return d.adf_p; });
+
+                  pair.exit().remove();
+
+                  pair.order();
+                });
+              }
+
+              function barChart() {
+                if (!barChart.id) barChart.id = 0;
+
+                var margin = {top: 10, right: 10, bottom: 20, left: 10},
+                    x,
+                    y = d3.scale.linear().range([100, 0]),
+                    id = barChart.id++,
+                    axis = d3.svg.axis().orient("bottom"),
+                    brush = d3.svg.brush(),
+                    brushDirty,
+                    dimension,
+                    group,
+                    round;
+
+                function chart(div) {
+                  var width = x.range()[1],
+                      height = y.range()[0];
+
+                  y.domain([0, group.top(1)[0].value]);
+
+                  div.each(function() {
+                    var div = d3.select(this),
+                        g = div.select("g");
+
+                    if (g.empty()) {
+                      div.select(".title").append("a")
+                          .attr("href", "javascript:reset(" + id + ")")
+                          .attr("class", "reset")
+                          .text("reset")
+                          .style("display", "none");
+
+                      g = div.append("svg")
+                          .attr("width", width + margin.left + margin.right)
+                          .attr("height", height + margin.top + margin.bottom)
+                          .append("g")
+                          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                      g.append("clipPath")
+                          .attr("id", "clip-" + id)
+                          .append("rect")
+                          .attr("width", width)
+                          .attr("height", height);
+
+                      g.selectAll(".bar")
+                          .data(["background", "foreground"])
+                          .enter().append("path")
+                          .attr("class", function(d) { return d + " bar"; })
+                          .datum(group.all());
+
+                      g.selectAll(".foreground.bar")
+                          .attr("clip-path", "url(#clip-" + id + ")");
+
+                      g.append("g")
+                          .attr("class", "axis")
+                          .attr("transform", "translate(0," + height + ")")
+                          .call(axis);
+
+                      var gBrush = g.append("g").attr("class", "brush").call(brush);
+                      gBrush.selectAll("rect").attr("height", height);
+                      gBrush.selectAll(".resize").append("path").attr("d", resizePath);
+                    }
+
+                    if (brushDirty) {
+                      brushDirty = false;
+                      g.selectAll(".brush").call(brush);
+                      div.select(".title a").style("display", brush.empty() ? "none" : null);
+                      if (brush.empty()) {
+                        g.selectAll("#clip-" + id + " rect")
+                            .attr("x", 0)
+                            .attr("width", width);
+                      } else {
+                        var extent = brush.extent();
+                        g.selectAll("#clip-" + id + " rect")
+                            .attr("x", x(extent[0]))
+                            .attr("width", x(extent[1]) - x(extent[0]));
+                      }
+                    }
+
+                    g.selectAll(".bar").attr("d", barPath);
+                  });
+
+                  function barPath(groups) {
+                    var path = [],
+                        i = -1,
+                        n = groups.length,
+                        d;
+                    while (++i < n) {
+                      d = groups[i];
+                      path.push("M", x(d.key), ",", height, "V", y(d.value), "h9V", height);
+                    }
+                    return path.join("");
+                  }
+
+                  function resizePath(d) {
+                    var e = +(d == "e"),
+                        x = e ? 1 : -1,
+                        y = height / 3;
+                    return "M" + (.5 * x) + "," + y
+                        + "A6,6 0 0 " + e + " " + (6.5 * x) + "," + (y + 6)
+                        + "V" + (2 * y - 6)
+                        + "A6,6 0 0 " + e + " " + (.5 * x) + "," + (2 * y)
+                        + "Z"
+                        + "M" + (2.5 * x) + "," + (y + 8)
+                        + "V" + (2 * y - 8)
+                        + "M" + (4.5 * x) + "," + (y + 8)
+                        + "V" + (2 * y - 8);
+                  }
+                }
+
+                brush.on("brushstart.chart", function() {
+                  var div = d3.select(this.parentNode.parentNode.parentNode);
+                  div.select(".title a").style("display", null);
+                });
+
+                brush.on("brush.chart", function() {
+                  var g = d3.select(this.parentNode),
+                      extent = brush.extent();
+                  if (round) g.select(".brush")
+                      .call(brush.extent(extent = extent.map(round)))
+                    .selectAll(".resize")
+                      .style("display", null);
+                  g.select("#clip-" + id + " rect")
+                      .attr("x", x(extent[0]))
+                      .attr("width", x(extent[1]) - x(extent[0]));
+                  dimension.filterRange(extent);
+                });
+
+                brush.on("brushend.chart", function() {
+                  if (brush.empty()) {
+                    var div = d3.select(this.parentNode.parentNode.parentNode);
+                    div.select(".title a").style("display", "none");
+                    div.select("#clip-" + id + " rect").attr("x", null).attr("width", "100%");
+                    dimension.filterAll();
+                  }
+                });
+
+                chart.margin = function(_) {
+                  if (!arguments.length) return margin;
+                  margin = _;
+                  return chart;
+                };
+
+                chart.x = function(_) {
+                  if (!arguments.length) return x;
+                  x = _;
+                  axis.scale(x);
+                  brush.x(x);
+                  return chart;
+                };
+
+                chart.y = function(_) {
+                  if (!arguments.length) return y;
+                  y = _;
+                  return chart;
+                };
+
+                chart.dimension = function(_) {
+                  if (!arguments.length) return dimension;
+                  dimension = _;
+                  return chart;
+                };
+
+                chart.filter = function(_) {
+                  if (_) {
+                    brush.extent(_);
+                    dimension.filterRange(_);
+                  } else {
+                    brush.clear();
+                    dimension.filterAll();
+                  }
+                  brushDirty = true;
+                  return chart;
+                };
+
+                chart.group = function(_) {
+                  if (!arguments.length) return group;
+                  group = _;
+                  return chart;
+                };
+
+                chart.round = function(_) {
+                  if (!arguments.length) return round;
+                  round = _;
+                  return chart;
+                };
+
+                return d3.rebind(chart, brush, "on");
+              }
             });
-            n.point = d.point;
-            shapes.push(n);
-        });
-        return shapes;
-    }
-
-    var force = d3.layout.force()
-        .charge(-2000)
-        .friction(0.3)
-        .linkDistance(50)
-        .size([width, height]);
-
-    force.on('tick', function() {
-        node.attr('transform', function(d) { return 'translate('+d.x+','+d.y+')'; })
-            .attr('clip-path', function(d) { return 'url(#clip-'+d.index+')'; });
-
-        link.attr('x1', function(d) { return d.source.x; })
-            .attr('y1', function(d) { return d.source.y; })
-            .attr('x2', function(d) { return d.target.x; })
-            .attr('y2', function(d) { return d.target.y; });
-
-        var clip = svg.selectAll('.clip')
-            .data( recenterVoronoi(node.data()), function(d) { return d.point.index; } );
-
-        clip.enter().append('clipPath')
-            .attr('id', function(d) { return 'clip-'+d.point.index; })
-            .attr('class', 'clip');
-        clip.exit().remove()
-
-        clip.selectAll('path').remove();
-        clip.append('path')
-            .attr('d', function(d) { return 'M'+d.join(',')+'Z'; });
-    });
-
-    var data = {{ nodes|safe }}
-
-    data.nodes.forEach(function(d, i) {
-        d.id = i;
-    });
-
-    link = svg.selectAll('.link')
-        .data( data.links )
-      .enter().append('line')
-        .attr('class', 'link')
-        .style("stroke-width", function(d) { return Math.sqrt(d.value); });
-
-    node = svg.selectAll('.node')
-        .data( data.nodes )
-      .enter().append('g')
-        .attr('title', name)
-        .attr('class', 'node')
-        .call( force.drag );
-
-    node.append('circle')
-        .attr('r', 30)
-        .attr('fill', colorByGroup)
-        .attr('fill-opacity', 0.5);
-
-    node.append('circle')
-        .attr('r', 4)
-        .attr('stroke', 'black');
-
-    force
-        .nodes( data.nodes )
-        .links( data.links )
-        .start();
 
     </script>
 
@@ -141,7 +517,7 @@
     var axis2 = d3.scale.linear().domain([min2, max2]);
 
     var graph = new Rickshaw.Graph( {
-        element: document.getElementById("chart"),
+        element: document.getElementById("coint"),
         width: 750,
         height: 250,
         renderer: 'line',
@@ -167,4 +543,6 @@
     graph.render();
 
     </script>
+
+    <div id="ajax_script"></div>
 </body>
