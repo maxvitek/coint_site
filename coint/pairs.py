@@ -63,7 +63,7 @@ class PairAnalysis(object):
             logger.info(self.symbol + '::Not Cointegrated: ' + str(self.pair.adf_stat))
 
     def analyze(self):
-        logger.info(self.symbol + '::Conducting analysis    ')
+        logger.info(self.symbol + '::Conducting analysis')
         data1 = tdbseries2pdseries(self.s1.prices)
         data2 = tdbseries2pdseries(self.s2.prices)
         logdata1 = np.log(data1).dropna()
@@ -92,7 +92,8 @@ def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
     """
     df1 = get_google_data(ticker1, lookback=lookback)
     df2 = get_google_data(ticker2, lookback=lookback)
-    df = pd.DataFrame({ticker1: df1['close'], ticker2: df2['close']}).dropna().interpolate()
+    df = pd.DataFrame({ticker1: df1['close'], ticker2: df2['close'], 'log_' + ticker1: np.log(df1)['close'],
+                       'log_' + ticker2: np.log(df2)['close']}).dropna().interpolate()
     if data_frame_result:
         logger.info('pairs dataframe returned for ' + ticker1 + ' and ' + ticker2)
         return df
@@ -103,6 +104,8 @@ def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
             'datetime': timestamp(t[0]),
             'ticker1': t[1][ticker1],
             'ticker2': t[1][ticker2],
+            'log_ticker1': t[1]['log_' + ticker1],
+            'log_ticker2': t[1]['log_' + ticker2],
         })
     logger.info('pairs data list returned for ' + ticker1 + ' and ' + ticker2)
     return pair_data
