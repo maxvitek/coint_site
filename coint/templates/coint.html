@@ -1,6 +1,13 @@
 <script>
     document.getElementById("coint").innerHTML = '';
 
+    coint_div = d3.select('#coint');
+
+    coint_div.append("h2").text("Cointegration Analysis of {{ data.company_1.symbol }} and {{ data.company_2.symbol }}");
+    coint_div.append("div").attr("id", "stock_chart");
+    coint_div.append("p").text("Latest stock performance of {{ data.company_1.name }} of {{ data.company_1.hq }} and {{ data.company_2.name }} of {{ data.company_2.hq }}.");
+    coint_div.append("p").text("First we examine these for cointegration using the two step Engle-Grander test:")
+
     var series1 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var series2 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker2 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
@@ -23,7 +30,7 @@
     var axis2 = d3.scale.linear().domain([min2, max2]);
 
     var graph = new Rickshaw.Graph( {
-        element: document.getElementById("coint"),
+        element: document.getElementById("stock_chart"),
         width: 600,
         height: 250,
         renderer: 'line',
