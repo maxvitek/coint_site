@@ -47,6 +47,10 @@ class PairAnalysis(object):
         self.symbol = sym1 + '-' + sym2
         logger.info(self.symbol + '::Conducting pair analysis: ' + c1.symbol + ' & ' + c2.symbol)
         self.tdb = TempoDB()
+        self.data1 = None
+        self.data2 = None
+        self.log_data1 = None
+        self.log_data2 = None
         self.adf = None
         self.ols = None
         self.pair, self.created = Pair.objects.get_or_create(
@@ -55,8 +59,6 @@ class PairAnalysis(object):
 
         self.analyze()
 
-        self.persist()
-
         if self.pair.adf_stat < self.pair.adf_1pct:
             logger.info(self.symbol + '::Cointegrated: ' + str(self.pair.adf_stat))
         if not self.pair.adf_stat < self.pair.adf_1pct:
@@ -64,11 +66,11 @@ class PairAnalysis(object):
 
     def analyze(self):
         logger.info(self.symbol + '::Conducting analysis')
-        data1 = tdbseries2pdseries(self.s1.prices)
-        data2 = tdbseries2pdseries(self.s2.prices)
-        logdata1 = np.log(data1).dropna()
-        logdata2 = np.log(data2).dropna()
-        self.ols = ols(y=logdata1, x=logdata2)
+        self.data1 = tdbseries2pdseries(self.s1.prices)
+        self.data2 = tdbseries2pdseries(self.s2.prices)
+        self.log_data1 = np.log(self.data1).dropna()
+        self.log_data2 = np.log(self.data2).dropna()
+        self.ols = ols(y=self.log_data1, x=self.log_data2)
         self.adf = ts.adfuller(self.ols.resid)
 
     def persist(self):
@@ -79,6 +81,9 @@ class PairAnalysis(object):
         self.pair.adf_5pct = self.adf[4]['5%']
         self.pair.adf_10pct = self.adf[4]['10%']
         self.pair.save()
+
+    def view_data(self):
+        pass
 
 
 def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
@@ -168,7 +173,8 @@ def make_pair(ticker1, ticker2):
     A function which makes a PairAnalysis object
     used farm off the task to a celery worker
     """
-    PairAnalysis(ticker1, ticker2)
+    pa = PairAnalysis(ticker1, ticker2)
+    pa.persist()
     return
 
 
