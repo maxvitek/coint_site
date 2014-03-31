@@ -63,7 +63,7 @@ class PairAnalysis(object):
             logger.info(self.symbol + '::Not Cointegrated: ' + str(self.pair.adf_stat))
 
     def analyze(self):
-        logger.info(self.symbol + '::Conducting analysis')
+        logger.info(self.symbol + '::Conducting analysis    ')
         data1 = tdbseries2pdseries(self.s1.prices)
         data2 = tdbseries2pdseries(self.s2.prices)
         logdata1 = np.log(data1).dropna()

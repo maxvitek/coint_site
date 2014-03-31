@@ -93,6 +93,17 @@
           stroke: #666;
         }
 
+        #pairs_crossfilter {
+            width: 300px;
+            float:left;
+        }
+
+        #pair_body {
+            width: 600px;
+            float:left;
+            padding-left: 20px;
+        }
+
         #pairs-chart {
           width: 920px;
         }
@@ -109,7 +120,7 @@
         #pair-list .pair {
           line-height: 1.5em;
           background: #eee;
-          width: 640px;
+          width: 260px;
           margin-bottom: 1px;
         }
 
@@ -134,10 +145,10 @@
         }
 
         aside {
+          font-size: small;
+          left: 10px;
           position: absolute;
-          left: 740px;
-          font-size: smaller;
-          width: 320px;
+          width: 300px;
         }
 
     </style>
@@ -164,27 +175,31 @@
     </script>
 </head>
 <body>
-    <h2>Cointegration Demonstration</h2>
-    <p>This is some text that will appear in a place very like this.  It will include some formulas like this:</p>
+    <div id="pairs_crossfilter">
+        <div id="charts">
+          <div id="pairs-chart" class="chart">
+            <div class="title">\(p\) Statistic of Cointegrated Pairs</div>
+          </div>
+        </div>
 
-\[\begin{aligned}
-\dot{x} &amp; = \sigma(y-x) \\
-\dot{y} &amp; = \rho x - y - xz \\
-\dot{z} &amp; = -\beta z + xy
-\end{aligned} \]
+        <p id="totals"><span id="active">-</span> of <span id="total">-</span> pairs selected.</p>
 
-    <div id="coint"></div>
-
-    <div id="charts">
-      <div id="pairs-chart" class="chart">
-        <div class="title">\(p\) Statistic of Cointegrated Pairs</div>
-      </div>
+        <div id="lists">
+          <div id="pair-list" class="list"></div>
+        </div>
     </div>
 
-    <aside id="totals"><span id="active">-</span> of <span id="total">-</span> pairs selected.</aside>
+    <div id="pair_body">
+        <h2>Cointegration Demonstration</h2>
+        <p>This is some text that will appear in a place very like this.  It will include some formulas like this:</p>
 
-    <div id="lists">
-      <div id="pair-list" class="list"></div>
+            \[\begin{aligned}
+            \dot{x} &amp; = \sigma(y-x) \\
+            \dot{y} &amp; = \rho x - y - xz \\
+            \dot{z} &amp; = -\beta z + xy
+            \end{aligned} \]
+
+        <div id="coint"></div>
     </div>
 
     <script>
@@ -254,7 +269,7 @@
               };
 
               function pairList(div) {
-                var pairsByP = nestByP.entries(adf_p.bottom(10));
+                var pairsByP = nestByP.entries(adf_p.bottom(50));
 
                 div.each(function() {
                   var adf_p = d3.select(this).selectAll(".adf_p")
@@ -263,8 +278,8 @@
                   adf_p.enter().append("div")
                       .attr("class", "adf_p")
                       .append("div")
-                      .attr("class", "day")
-                      .text(function(d) { return d.values[0].adf_p; });
+                      //.attr("class", "day")
+                      //.text(function(d) { return d.values[0].adf_p; });
 
                   adf_p.exit().remove();
 
@@ -279,17 +294,17 @@
                       .attr("onclick", function(d) {return "Dajaxice.coint.ajax_coint(getPair, {'symbol': '".concat(d.symbol).concat("'})")})
                       .text(function(d) { return d.symbol; });
 
-                  pairEnter.append("div")
-                      .attr("class", "symbol_1")
-                      .text(function(d) { return d.symbol_1; });
-
-                  pairEnter.append("div")
-                      .attr("class", "symbol_2")
-                      .text(function(d) { return d.symbol_2; });
-
-                  pairEnter.append("div")
-                      .attr("class", "adf_stat")
-                      .text(function(d) { return d.adf_stat; });
+{#                  pairEnter.append("div")#}
+{#                      .attr("class", "symbol_1")#}
+{#                      .text(function(d) { return d.symbol_1; });#}
+{##}
+{#                  pairEnter.append("div")#}
+{#                      .attr("class", "symbol_2")#}
+{#                      .text(function(d) { return d.symbol_2; });#}
+{##}
+{#                  pairEnter.append("div")#}
+{#                      .attr("class", "adf_stat")#}
+{#                      .text(function(d) { return d.adf_stat; });#}
 
                   pairEnter.append("div")
                       .attr("class", "adf_p")
@@ -518,7 +533,7 @@
 
     var graph = new Rickshaw.Graph( {
         element: document.getElementById("coint"),
-        width: 750,
+        width: 600,
         height: 250,
         renderer: 'line',
         series: [
