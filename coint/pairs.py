@@ -21,16 +21,16 @@ class PairAnalysis(object):
     """
 
     """
-    def __init__(self, c1, c2):
+    def __init__(self, c1, c2, update_lookback=15, lookback=1000):
 
-        if isinstance(c1, str):
+        if isinstance(c1, str) or isinstance(c1, unicode):
             self.s1 = Company.objects.filter(symbol=c1).get()
         elif isinstance(c1, Company):
             self.s1 = c1
         else:
             raise ValueError
 
-        if isinstance(c2, str):
+        if isinstance(c2, str) or isinstance(c2, unicode):
             self.s2 = Company.objects.filter(symbol=c2).get()
         elif isinstance(c2, Company):
             self.s2 = c2
@@ -39,11 +39,13 @@ class PairAnalysis(object):
 
         if not hasattr(self.s1, 'prices'):
             logger.info(self.s1.symbol + '::Getting prices')
-            self.s1.update_prices()
+            self.s1.update_prices(lookback=update_lookback)
+            self.s1.get_prices(lookback=lookback)
 
         if not hasattr(self.s2, 'prices'):
             logger.info(self.s2.symbol + '::Getting prices')
-            self.s2.update_prices()
+            self.s2.update_prices(lookback=update_lookback)
+            self.s2.get_prices(lookback=lookback)
 
         sym1, sym2 = sorted([self.s1.symbol, self.s2.symbol])
         self.symbol = sym1 + '-' + sym2
@@ -73,6 +75,8 @@ class PairAnalysis(object):
         self.data2 = tdbseries2pdseries(self.s2.prices)
         self.log_data1 = np.log(self.data1).dropna()
         self.log_data2 = np.log(self.data2).dropna()
+        print self.log_data1
+        print self.log_data2
         self.ols = ols(y=self.log_data1, x=self.log_data2)
         self.adf = ts.adfuller(self.ols.resid)
         return None
@@ -93,7 +97,7 @@ class PairAnalysis(object):
             self.s2.symbol: self.data2,
             'log_' + self.s1.symbol: self.log_data1,
             'log_' + self.s2.symbol: self.log_data2,
-        })
+        }).dropna().interpolate()
         pair_data = []
         for t in df.iterrows():
             pair_data.append({
@@ -110,7 +114,7 @@ class PairAnalysis(object):
             'company_1': self.s1,
             'company_2': self.s2,
         }
-        #return self.view_data
+        return self.view_data
 
 
 def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):

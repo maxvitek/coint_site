@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.utils.timezone import activate
 from coint_site.settings import TIME_ZONE
 import logging
-from coint.pairs import get_pair
+from coint.pairs import PairAnalysis
 
 activate(TIME_ZONE)
 
@@ -17,11 +17,7 @@ def home(request):
     :return:
     """
     logger.warning('home view: ' + request.META.get('REMOTE_ADDR'))
-
-    pair_data = get_pair('AAPL', 'GOOG')
-    logger.info('Got pair data.')
-    return render(request, template_name='home.html', dictionary={
-        'data': pair_data, 'ticker1': 'AAPL', 'ticker2': 'GOOG'})
+    return render(request, template_name='home.html')
 
 
 def coint(request, symbol):
@@ -34,7 +30,8 @@ def coint(request, symbol):
     symbol_1, symbol_2 = symbol.split('-')
     logger.warning('coint view: ' + request.META.get('REMOTE_ADDR'))
 
-    pair_data = get_pair(symbol_1, symbol_2)
-    logger.info('Got pair data.')
-    return render(request, template_name='coint.html', dictionary={
-        'data': pair_data, 'ticker1': symbol_1, 'ticker2': symbol_2})
+    pa = PairAnalysis(symbol_1, symbol_2, update_lookback=1, lookback=1)
+    view_data = pa.get_view_data()
+
+    return render(request, template_name='coint.html', dictionary={'data': view_data})
+

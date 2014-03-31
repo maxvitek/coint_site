@@ -1,9 +1,9 @@
 <script>
     document.getElementById("coint").innerHTML = '';
 
-    var series1 = [{% for i in data %}{ x: {{ i.datetime }}, y: {{ i.ticker1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+    var series1 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
-    var series2 = [{% for i in data %}{ x: {{ i.datetime }}, y: {{ i.ticker2 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+    var series2 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker2 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var min1 = Number.MAX_VALUE;
     var max1 = Number.MIN_VALUE;
@@ -31,12 +31,12 @@
             {
                 color: "#ff9030",
                 data: series1,
-                name: "{{ ticker1 }}",
+                name: "{{ data.company_1.symbol }}",
                 scale: axis1
             }, {
                 color: "#ff4040",
                 data: series2,
-                name: "{{ ticker2 }}",
+                name: "{{ data.company_2.symbol }}",
                 scale: axis2
             }
         ]
