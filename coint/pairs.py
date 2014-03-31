@@ -53,6 +53,7 @@ class PairAnalysis(object):
         self.log_data2 = None
         self.adf = None
         self.ols = None
+        self.view_data = None
         self.pair, self.created = Pair.objects.get_or_create(
             symbol=self.symbol,
         )
@@ -72,6 +73,7 @@ class PairAnalysis(object):
         self.log_data2 = np.log(self.data2).dropna()
         self.ols = ols(y=self.log_data1, x=self.log_data2)
         self.adf = ts.adfuller(self.ols.resid)
+        return None
 
     def persist(self):
         logger.info(self.symbol + '::Persisting analysis')
@@ -81,9 +83,30 @@ class PairAnalysis(object):
         self.pair.adf_5pct = self.adf[4]['5%']
         self.pair.adf_10pct = self.adf[4]['10%']
         self.pair.save()
+        return None
 
-    def view_data(self):
-        pass
+    def get_view_data(self):
+        df = pd.DataFrame({
+            self.s1.symbol: self.data1['close'],
+            self.s2.symbol: self.data2['close'],
+            'log' + self.s1.symbol: self.log_data1['close'],
+            'log' + self.s2.symbol: self.log_data2['close'],
+        })
+        pair_data = []
+        for t in df.iterrows():
+            pair_data.append({
+                'datetime': timestamp(t[0]),
+                'ticker1': t[1][self.s1.symbol],
+                'ticker2': t[1][self.s2.symbol],
+                'log_ticker1': t[1]['log_' + self.s1.symbol],
+                'log_ticker2': t[1]['log_' + self.s2.symbol],
+            })
+        self.view_data = {
+            'pair_data': pair_data,
+            'ols': self.ols,
+            'adf': self.adf,
+        }
+        return self.view_data
 
 
 def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
