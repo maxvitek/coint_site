@@ -77,7 +77,7 @@ class PairAnalysis(object):
         self.log_data2 = np.log(self.data2).dropna()
         print self.log_data1
         print self.log_data2
-        self.ols = ols(y=self.log_data1, x=self.log_data2)
+        self.ols = ols(y=self.log_data1, x=self.log_data2, intercept=False)
         self.adf = ts.adfuller(self.ols.resid)
         return None
 
@@ -154,7 +154,7 @@ def get_adf(ticker1, ticker2):
     """
     df = get_pair(ticker1, ticker2, data_frame_result=True, lookback=15)
     ln_df = np.log(df).dropna()
-    reg = ols(y=ln_df[ticker1], x=ln_df[ticker2])
+    reg = ols(y=ln_df[ticker1], x=ln_df[ticker2], intercept=False)
     result = ts.adfuller(reg.resid)
     return result
 
