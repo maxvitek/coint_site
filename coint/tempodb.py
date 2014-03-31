@@ -78,10 +78,11 @@ def tdbseries2pdseries(tdb_series):
     if not isinstance(tdb_series, DataSet):
         raise NotATimeSeries()
     data = []
+    index = []
     for t in tdb_series.data:
-        data.append((t.ts, t.value))
-    df = DataFrame(data, columns=['datetime', 'close'])
-    df.set_index('datetime')
-    return df['close']
+        data.append(t.value)
+        index.append(t.ts)
+    series = Series(data=data, index=index)
+    return series
 
 

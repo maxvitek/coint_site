@@ -35,7 +35,7 @@ class Company(models.Model):
         series = df['close']
         tbd_series = pdseries2tdbseries(series)
         tdb.db[self.tempodb].write_key(self.symbol, tbd_series)
-        return None
+        return self.get_prices()
 
 
 class Pair(models.Model):

@@ -27,9 +27,6 @@ class PairAnalysis(object):
             self.s1 = Company.objects.filter(symbol=c1).get()
         elif isinstance(c1, Company):
             self.s1 = c1
-            if not self.s1.prices:
-                logger.info(self.s1.symbol + '::Getting prices')
-                self.s1.get_prices()
         else:
             raise ValueError
 
@@ -37,15 +34,20 @@ class PairAnalysis(object):
             self.s2 = Company.objects.filter(symbol=c2).get()
         elif isinstance(c2, Company):
             self.s2 = c2
-            if not self.s2.prices:
-                logger.info(self.s2.symbol + '::Getting prices')
-                self.s2.get_prices()
         else:
             raise ValueError
 
-        sym1, sym2 = sorted([c1.symbol, c2.symbol])
+        if not hasattr(self.s1, 'prices'):
+            logger.info(self.s1.symbol + '::Getting prices')
+            self.s1.update_prices()
+
+        if not hasattr(self.s2, 'prices'):
+            logger.info(self.s2.symbol + '::Getting prices')
+            self.s2.update_prices()
+
+        sym1, sym2 = sorted([self.s1.symbol, self.s2.symbol])
         self.symbol = sym1 + '-' + sym2
-        logger.info(self.symbol + '::Conducting pair analysis: ' + c1.symbol + ' & ' + c2.symbol)
+        logger.info(self.symbol + '::Conducting pair analysis: ' + self.s1.symbol + ' & ' + self.s2.symbol)
         self.tdb = TempoDB()
         self.data1 = None
         self.data2 = None
@@ -87,10 +89,10 @@ class PairAnalysis(object):
 
     def get_view_data(self):
         df = pd.DataFrame({
-            self.s1.symbol: self.data1['close'],
-            self.s2.symbol: self.data2['close'],
-            'log' + self.s1.symbol: self.log_data1['close'],
-            'log' + self.s2.symbol: self.log_data2['close'],
+            self.s1.symbol: self.data1,
+            self.s2.symbol: self.data2,
+            'log_' + self.s1.symbol: self.log_data1,
+            'log_' + self.s2.symbol: self.log_data2,
         })
         pair_data = []
         for t in df.iterrows():
@@ -105,8 +107,10 @@ class PairAnalysis(object):
             'pair_data': pair_data,
             'ols': self.ols,
             'adf': self.adf,
+            'company_1': self.s1,
+            'company_2': self.s2,
         }
-        return self.view_data
+        #return self.view_data
 
 
 def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
@@ -206,9 +210,9 @@ def make_all_pairs():
     This will check all of the pairs
     """
     companies = Company.objects.all()
-    tpool = ThreadPool(50)
+    tpool = ThreadPool(75)
     for c in companies:
-        tpool.add_task(c.get_prices)
+        tpool.add_task(c.update_prices())
     tpool.wait_completion()
 
     for c in itertools.combinations(companies, 2):
