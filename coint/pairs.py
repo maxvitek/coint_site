@@ -98,6 +98,7 @@ class PairAnalysis(object):
             'log_' + self.s1.symbol: self.log_data1,
             'log_' + self.s2.symbol: self.log_data2,
         }).dropna().interpolate()
+
         pair_data = []
         for t in df.iterrows():
             pair_data.append({
@@ -107,8 +108,17 @@ class PairAnalysis(object):
                 'log_ticker1': t[1]['log_' + self.s1.symbol],
                 'log_ticker2': t[1]['log_' + self.s2.symbol],
             })
+
+        resid_data = []
+        for t in self.ols.resid.index:
+            resid_data.append({
+                'datetime': timestamp(t),
+                'resid': self.ols.resid[t],
+            })
+
         self.view_data = {
             'pair_data': pair_data,
+            'resid_data': resid_data,
             'ols': self.ols,
             'adf': self.adf,
             'company_1': self.s1,

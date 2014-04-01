@@ -8,17 +8,35 @@
     coint_div.append("p").attr("style", "font-size: small; color: gray;").text("Latest stock performance of {{ data.company_1.name }} of {{ data.company_1.hq }} and {{ data.company_2.name }} of {{ data.company_2.hq }}.");
     coint_div.append("p").text("We examine these for cointegration using the two step Engle-Grander test:");
     coint_div.append("p").text("First, we perform ordinary Least Squares Linear Regression on the log price processes:");
+    coint_div.append("div").attr("id", "log_price_chart");
+    coint_div.append("p").attr("style", "font-size: small; color: gray;").text("Log price processes for {{ data.company_1.name }} and {{ data.company_2.name }}.");
     coint_div.append("script").attr("type", "math/tex; mode=display").text("\\log{ P_t ^ { {{ data.company_1.symbol }} } } = \\log{ P_t ^ { {{ data.company_2.symbol }} } } * \\beta_{coint}");
     coint_div.append("script").attr("type", "math/tex; mode=display").text("\\implies \\beta_{coint} = {{ data.ols.beta.x|floatformat:"3" }}");
     coint_div.append("p").text("This gives us the spread:");
     coint_div.append("script").attr("type", "math/tex; mode=display").text("S_t = log{ P_t ^ { {{ data.company_1.symbol }} } } - \\log{ P_t ^ { {{ data.company_2.symbol }} } } * \\beta_{coint}");
     coint_div.append("div").attr("id", "resid_chart");
+    coint_div.append("p").attr("style", "font-size: small; color: gray;").text("{{ data.company_1.symbol }}-{{ data.company_2.symbol }} spread, or residual of the Least Squares Linear Regression of the log price proccesses.");
+    coint_div.append("p").text("Using these residuals, we test the null hypothesis the process has a unit root -- is not stationary -- using the Augmented-Dickey Fuller Test.  If {{ data.company_1.symbol }} and {{ data.company_2.symbol }} are cointegrated, the spread should be stationary.");
+    coint_div.append("script").attr("type", "math/tex; mode=display").text("ADF_{stat} = {{ data.adf.0|floatformat:"3" }}");
+    coint_div.append("script").attr("type", "math/tex; mode=display").text("p_{ADF} = {{ data.adf.1|floatformat:"3" }}");
+    {% if data.adf.1 < 0.05 %}
+    coint_div.append("p").text("{{ data.company_1.symbol }} and {{ data.company_2.symbol }} are cointegrated at the 1% confidence threshold.");
+    {% endif %}
+    {% if data.adf.1 >= 0.05 %}
+    coint_div.append("p").text("{{ data.company_1.symbol }} and {{ data.company_2.symbol }} are not cointegrated at the 1% confidence threshold.");
+    {% endif %}
+
 
     var series1 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var series2 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker2 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
-    var series3 = [{% for i in data.ols.resid %}{ x: {{ i.0 }}, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+    var series3 = [{% for i in data.resid_data %}{ x: {{ i.datetime }}, y: {{ i.resid }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+
+    var series4 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.log_ticker1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+
+    var series5 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.log_ticker2 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+
 
     var min1 = Number.MAX_VALUE;
     var max1 = Number.MIN_VALUE;
@@ -34,8 +52,32 @@
       max2 = Math.max(max2, series2[i].y);
     }
 
+    var min3 = Number.MAX_VALUE;
+    var max3 = Number.MIN_VALUE;
+    for (i = 0; i < series3.length; i++) {
+      min3 = Math.min(min3, series3[i].y);
+      max3 = Math.max(max3, series3[i].y);
+    }
+
+    var min4 = Number.MAX_VALUE;
+    var max4 = Number.MIN_VALUE;
+    for (i = 0; i < series4.length; i++) {
+      min4 = Math.min(min4, series4[i].y);
+      max4 = Math.max(max4, series4[i].y);
+    }
+
+    var min5 = Number.MAX_VALUE;
+    var max5 = Number.MIN_VALUE;
+    for (i = 0; i < series5.length; i++) {
+      min5 = Math.min(min5, series5[i].y);
+      max5 = Math.max(max5, series5[i].y);
+    }
+
     var axis1 = d3.scale.linear().domain([min1, max1]);
     var axis2 = d3.scale.linear().domain([min2, max2]);
+    var axis3 = d3.scale.linear().domain([min3, max3]);
+    var axis4 = d3.scale.linear().domain([min4, max4]);
+    var axis5 = d3.scale.linear().domain([min5, max5]);
 
     var graph = new Rickshaw.Graph( {
         element: document.getElementById("stock_chart"),
@@ -57,10 +99,49 @@
         ]
     } );
 
+    var log_price_graph = new Rickshaw.Graph( {
+        element: document.getElementById("log_price_chart"),
+        width: 600,
+        height: 150,
+        renderer: 'line',
+        series: [
+            {
+                color: "#ff9030",
+                data: series4,
+                name: "{{ data.company_1.symbol }}",
+                scale: axis4
+            }, {
+                color: "#ff4040",
+                data: series5,
+                name: "{{ data.company_2.symbol }}",
+                scale: axis5
+            }
+        ]
+    } );
+
+    var resid_graph = new Rickshaw.Graph( {
+        element: document.getElementById("resid_chart"),
+        width: 600,
+        height: 150,
+        renderer: 'line',
+        series: [
+            {
+                color: "#ff9030",
+                data: series3,
+                name: "{{ data.company_1.symbol }}-{{ data.company_2.symbol }} Spread",
+                scale: axis3
+            }
+        ]
+    } );
+
     //graph.renderer.dotSize = 2;
 
     new Rickshaw.Graph.HoverDetail({ graph: graph });
+    new Rickshaw.Graph.HoverDetail({ graph: log_price_graph });
+    new Rickshaw.Graph.HoverDetail({ graph: resid_graph });
 
     graph.render();
+    resid_graph.render();
+    log_price_graph.render();
 </script>
 <script>MathJax.Hub.Reprocess()</script>
