@@ -75,8 +75,6 @@ class PairAnalysis(object):
         self.data2 = tdbseries2pdseries(self.s2.prices)
         self.log_data1 = np.log(self.data1).dropna()
         self.log_data2 = np.log(self.data2).dropna()
-        print self.log_data1
-        print self.log_data2
         self.ols = ols(y=self.log_data1, x=self.log_data2, intercept=False)
         self.adf = ts.adfuller(self.ols.resid)
         return None

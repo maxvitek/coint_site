@@ -20,10 +20,10 @@
     coint_div.append("script").attr("type", "math/tex; mode=display").text("ADF_{stat} = {{ data.adf.0|floatformat:"3" }}");
     coint_div.append("script").attr("type", "math/tex; mode=display").text("p_{ADF} = {{ data.adf.1|floatformat:"3" }}");
     {% if data.adf.1 < 0.05 %}
-    coint_div.append("p").text("{{ data.company_1.symbol }} and {{ data.company_2.symbol }} are cointegrated at the 1% confidence threshold.");
+    coint_div.append("p").html("{{ data.company_1.symbol }} and {{ data.company_2.symbol }} <b>are</b> cointegrated at the 1% confidence threshold.");
     {% endif %}
     {% if data.adf.1 >= 0.05 %}
-    coint_div.append("p").text("{{ data.company_1.symbol }} and {{ data.company_2.symbol }} are not cointegrated at the 1% confidence threshold.");
+    coint_div.append("p").html("{{ data.company_1.symbol }} and {{ data.company_2.symbol }} <b>are not</b> cointegrated at the 1% confidence threshold.");
     {% endif %}
 
 
