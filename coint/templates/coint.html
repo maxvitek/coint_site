@@ -155,6 +155,14 @@
     new Rickshaw.Graph.HoverDetail({ graph: log_price_graph });
     new Rickshaw.Graph.HoverDetail({ graph: resid_graph });
 
+    new Rickshaw.Graph.Axis.Y( {
+        graph: resid_graph,
+        orientation: 'left',
+        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+        tickValues: [0],
+        element: document.getElementById('y_axis')
+    } );
+
     stock_graph.render();
     resid_graph.render();
     log_price_graph.render();

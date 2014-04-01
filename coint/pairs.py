@@ -224,7 +224,10 @@ def make_all_pairs():
     companies = Company.objects.all()
     tpool = ThreadPool(75)
     for c in companies:
-        tpool.add_task(c.update_prices())
+        tpool.add_task(c.get_prices())
+    tpool.wait_completion()
+    for c in companies:
+        tpool.add_task(c.get_prices())
     tpool.wait_completion()
 
     for c in itertools.combinations(companies, 2):
