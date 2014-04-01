@@ -18,12 +18,17 @@ class Company(models.Model):
     tempodb = models.IntegerField()
 
     def get_prices(self, lookback=1000):
-        logger.info('Fetching prices for: ' + self.symbol)
         tdb = TempoDB()
+        start_time = datetime.datetime.now() - datetime.timedelta(days=lookback - 1)
+        # our start time should actually be the next midnight
+        # (so a lookback of 1 is just today's trading day, not any of yesterday's data)
+        start = datetime.datetime(start_time.year, start_time.month, start_time.day, 0, 0, 0)
+        end = datetime.datetime.now()
+        logger.info('Fetching prices for: ' + self.symbol + ' from ' + str(start) + ' to ' + str(end))
         self.prices = tdb.db[self.tempodb].read_key(
             self.symbol,
-            datetime.datetime.now() - datetime.timedelta(days=lookback),
-            datetime.datetime.now(),
+            start,
+            end,
             interval='1min')
         return self.prices
 

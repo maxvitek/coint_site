@@ -37,13 +37,17 @@ class PairAnalysis(object):
         else:
             raise ValueError
 
+        if not hasattr(self.s1, 'prices') and not hasattr(self.s2, 'prices'):
+            self.s1.update_prices(lookback=update_lookback)
+            self.s2.update_prices(lookback=update_lookback)
+            self.s1.get_prices(lookback=lookback)
+            self.s2.get_prices(lookback=lookback)
+
         if not hasattr(self.s1, 'prices'):
-            logger.info(self.s1.symbol + '::Getting prices')
             self.s1.update_prices(lookback=update_lookback)
             self.s1.get_prices(lookback=lookback)
 
         if not hasattr(self.s2, 'prices'):
-            logger.info(self.s2.symbol + '::Getting prices')
             self.s2.update_prices(lookback=update_lookback)
             self.s2.get_prices(lookback=lookback)
 
@@ -248,10 +252,20 @@ def make_pairs_csv():
     """
     This makes a csv file in the project
     """
+    companies = Company.objects.all()
+    industries = {}
+    sectors = {}
+    for c in companies:
+        industries[c.symbol] = c.industry
+        sectors[c.symbol] = c.sector
+
     filepath = os.path.join(os.getcwd(), 'coint', 'static', 'pairs.csv')
     with open(filepath, 'w') as f:
         c = csv.writer(f)
-        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'adf_stat', 'adf_p'])
+        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'adf_stat', 'adf_p',
+                    'industry_1', 'industry_2', 'sector_1', 'sector_2'])
         pairs = Pair.objects.all()
         for p in pairs:
-            c.writerow(p.csv_data())
+            row_data = p.csv_data()
+            c.writerow(row_data + [industries[row_data[1]], industries[row_data[2]],
+                                   sectors[row_data[1]], sectors[row_data[2]]])

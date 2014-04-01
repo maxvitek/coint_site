@@ -16,7 +16,7 @@
     coint_div.append("script").attr("type", "math/tex; mode=display").text("\\log{ P_t ^ { {{ data.company_1.symbol }} } } = \\log{ P_t ^ { {{ data.company_2.symbol }} } } * \\beta_{coint}");
     coint_div.append("script").attr("type", "math/tex; mode=display").text("\\implies \\beta_{coint} = {{ data.ols.beta.x|floatformat:"3" }}");
     coint_div.append("p").text("This gives us the spread:");
-    coint_div.append("script").attr("type", "math/tex; mode=display").text("S_t = log{ P_t ^ { {{ data.company_1.symbol }} } } - \\log{ P_t ^ { {{ data.company_2.symbol }} } } * \\beta_{coint}");
+    coint_div.append("script").attr("type", "math/tex; mode=display").text("S_t = log{ P_t ^ { {{ data.company_1.symbol }} } } - \\log{ P_t ^ { {{ data.company_2.symbol }} } } * \\beta_{coint} = log{ P_t ^ { {{ data.company_1.symbol }} } } - \\log{ P_t ^ { {{ data.company_2.symbol }} } } * {{ data.ols.beta.x|floatformat:"3" }}");
     coint_div.append("br");
     coint_div.append("div").attr("id", "resid_chart");
     coint_div.append("p").attr("style", "font-size: small; color: gray;").text("{{ data.company_1.symbol }}-{{ data.company_2.symbol }} spread, or residual of the Least Squares Linear Regression of the log price proccesses.");
