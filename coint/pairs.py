@@ -227,12 +227,12 @@ def make_all_pairs():
 
     logger.info('Updating prices')
     for c in companies:
-        tpool.add_task(c.update_prices())
+        tpool.add_task(c.update_prices)
     tpool.wait_completion()
 
     logger.info('Fetching full price histories')
     for c in companies:
-        tpool.add_task(c.get_prices())
+        tpool.add_task(c.get_prices)
     tpool.wait_completion()
 
     for c in itertools.combinations(companies, 2):
