@@ -5,12 +5,20 @@
 
     coint_div.append("h2").text("Cointegration Analysis of {{ data.company_1.symbol }} and {{ data.company_2.symbol }}");
     coint_div.append("div").attr("id", "stock_chart");
-    coint_div.append("p").text("Latest stock performance of {{ data.company_1.name }} of {{ data.company_1.hq }} and {{ data.company_2.name }} of {{ data.company_2.hq }}.");
-    coint_div.append("p").text("First we examine these for cointegration using the two step Engle-Grander test:")
+    coint_div.append("p").attr("style", "font-size: small; color: gray;").text("Latest stock performance of {{ data.company_1.name }} of {{ data.company_1.hq }} and {{ data.company_2.name }} of {{ data.company_2.hq }}.");
+    coint_div.append("p").text("We examine these for cointegration using the two step Engle-Grander test:");
+    coint_div.append("p").text("First, we perform ordinary Least Squares Linear Regression on the log price processes:");
+    coint_div.append("script").attr("type", "math/tex; mode=display").text("\\log{ P_t ^ { {{ data.company_1.symbol }} } } = \\log{ P_t ^ { {{ data.company_2.symbol }} } } * \\beta_{coint}");
+    coint_div.append("script").attr("type", "math/tex; mode=display").text("\\implies \\beta_{coint} = {{ data.ols.beta.x|floatformat:"3" }}");
+    coint_div.append("p").text("This gives us the spread:");
+    coint_div.append("script").attr("type", "math/tex; mode=display").text("S_t = log{ P_t ^ { {{ data.company_1.symbol }} } } - \\log{ P_t ^ { {{ data.company_2.symbol }} } } * \\beta_{coint}");
+    coint_div.append("div").attr("id", "resid_chart");
 
     var series1 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var series2 = [{% for i in data.pair_data %}{ x: {{ i.datetime }}, y: {{ i.ticker2 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+
+    var series3 = [{% for i in data.ols.resid %}{ x: {{ i.0 }}, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var min1 = Number.MAX_VALUE;
     var max1 = Number.MIN_VALUE;
@@ -55,3 +63,4 @@
 
     graph.render();
 </script>
+<script>MathJax.Hub.Reprocess()</script>
