@@ -12,12 +12,14 @@ class Pairtrade(TradingAlgorithm):
     """
 
     """
-    def __init__(self, slope, intercept=0):
-        TradingAlgorithm.__init__()
+    def __init__(self, ticker1, ticker2, slope, intercept=0):
+        TradingAlgorithm.__init__(self)
         self.spreads = []
         self.invested = 0
         self.slope = slope
         self.intercept = intercept
+        self.ticker1 = ticker1
+        self.ticker2 = ticker2
 
     def compute_zscore(self, spread):
         """1. Compute the spread given slope and intercept.
