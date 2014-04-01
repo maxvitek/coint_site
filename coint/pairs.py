@@ -269,3 +269,17 @@ def make_pairs_csv():
             row_data = p.csv_data()
             c.writerow(row_data + [industries[row_data[1]], industries[row_data[2]],
                                    sectors[row_data[1]], sectors[row_data[2]]])
+
+    filepath = os.path.join(os.getcwd(), 'coint', 'static', 'short_pairs.csv')
+    with open(filepath, 'w') as f:
+        c = csv.writer(f)
+        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'adf_stat', 'adf_p',
+                    'industry_1', 'industry_2', 'sector_1', 'sector_2'])
+        sorted_pairs = sorted(pairs, key=lambda x: x.adf_p)
+        short_pairs = sorted_pairs[:999]
+        for p in short_pairs:
+            row_data = p.csv_data()
+            c.writerow(row_data + [industries[row_data[1]], industries[row_data[2]],
+                                   sectors[row_data[1]], sectors[row_data[2]]])
+
+    return None

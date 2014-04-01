@@ -197,7 +197,7 @@
 
     <script>
 
-        d3.csv("{% static "pairs.csv" %}", function(error, pairs) {
+        function d3_crossfilter(pairs) {
             
             var formatNumber = d3.format(",d");
             
@@ -501,7 +501,7 @@
 
                 return d3.rebind(chart, brush, "on");
               }
-            });
+        };
 
     </script>
 
@@ -512,4 +512,8 @@
     </script>
 
     <div id="ajax_script"></div>
+    <script>
+{#        d3.csv("{% static "pairs.csv" %}", d3_crossfilter);#}
+        d3.csv("{% static "short_pairs.csv" %}", d3_crossfilter);
+    </script>
 </body>

@@ -6,14 +6,23 @@ import pytz
 
 from zipline.algorithm import TradingAlgorithm
 from zipline.transforms import batch_transform
+from zipline.utils.factory import load_from_yahoo
+
+
+@batch_transform
+def coint_transform(data, sid1, sid2):
+    """
+    NOT IMPLEMENTED (placeholder)
+    Will compute cointegration beta
+    """
+    pass
 
 
 class Pairtrade(TradingAlgorithm):
     """
 
     """
-    def __init__(self, ticker1, ticker2, slope, intercept=0):
-        TradingAlgorithm.__init__(self)
+    def initialize(self, ticker1, ticker2, slope, intercept=0):
         self.spreads = []
         self.invested = 0
         self.slope = slope
