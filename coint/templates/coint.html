@@ -79,7 +79,7 @@
     var axis4 = d3.scale.linear().domain([min4, max4]);
     var axis5 = d3.scale.linear().domain([min5, max5]);
 
-    var graph = new Rickshaw.Graph( {
+    var stock_graph = new Rickshaw.Graph( {
         element: document.getElementById("stock_chart"),
         width: 600,
         height: 250,
@@ -134,13 +134,23 @@
         ]
     } );
 
-    //graph.renderer.dotSize = 2;
+    //stock_graph.renderer.dotSize = 2;
 
-    new Rickshaw.Graph.HoverDetail({ graph: graph });
+    new Rickshaw.Graph.Axis.Time({
+      graph: stock_graph
+    });
+    new Rickshaw.Graph.Axis.Time({
+      graph: log_price_graph
+    });
+    new Rickshaw.Graph.Axis.Time({
+      graph: resid_graph
+    });
+
+    new Rickshaw.Graph.HoverDetail({ graph: stock_graph });
     new Rickshaw.Graph.HoverDetail({ graph: log_price_graph });
     new Rickshaw.Graph.HoverDetail({ graph: resid_graph });
 
-    graph.render();
+    stock_graph.render();
     resid_graph.render();
     log_price_graph.render();
 </script>
