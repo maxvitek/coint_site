@@ -18,3 +18,8 @@ the free tier.
 
 Despite the sound of all that, I want it to
 be simple.
+
+--This readme is out of date.  I'll update 
+it soon.  Here is the site so far:
+
+http://coint.herokuapp.com
