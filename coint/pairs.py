@@ -221,11 +221,16 @@ def make_all_pairs():
     """
     This will check all of the pairs
     """
+    logger.info('Collecting companies')
     companies = Company.objects.all()
     tpool = ThreadPool(75)
+
+    logger.info('Updating prices')
     for c in companies:
-        tpool.add_task(c.get_prices())
+        tpool.add_task(c.update_prices())
     tpool.wait_completion()
+
+    logger.info('Fetching full price histories')
     for c in companies:
         tpool.add_task(c.get_prices())
     tpool.wait_completion()
