@@ -13,6 +13,7 @@ from models import Company, Pair
 from threadpool import ThreadPool
 import csv
 import os
+from termcolor import colored
 
 logger = logging.getLogger(__name__)
 
@@ -21,66 +22,60 @@ class PairAnalysis(object):
     """
 
     """
-    def __init__(self, c1, c2, update_lookback=15, lookback=1000):
+    def __init__(self, c1, c2, lookback=1000):
+        self.companies = []
 
-        if isinstance(c1, str) or isinstance(c1, unicode):
-            self.s1 = Company.objects.filter(symbol=c1).get()
-        elif isinstance(c1, Company):
-            self.s1 = c1
-        else:
-            raise ValueError
+        self.companies.append(self.get_company(c1))
+        self.companies.append(self.get_company(c2))
+        self.df_dict = {}
 
-        if isinstance(c2, str) or isinstance(c2, unicode):
-            self.s2 = Company.objects.filter(symbol=c2).get()
-        elif isinstance(c2, Company):
-            self.s2 = c2
-        else:
-            raise ValueError
+        company_num = 1
+        for c in self.companies:
+            if not hasattr(c, 'prices'):
+                c.get_raw_prices(lookback=lookback)
+            self.df_dict['company_' + str(company_num)] = c.prices
+            company_num += 1
 
-        if not hasattr(self.s1, 'prices') and not hasattr(self.s2, 'prices'):
-            self.s1.update_prices(lookback=update_lookback)
-            self.s2.update_prices(lookback=update_lookback)
-            self.s1.get_prices(lookback=lookback)
-            self.s2.get_prices(lookback=lookback)
-
-        if not hasattr(self.s1, 'prices'):
-            self.s1.update_prices(lookback=update_lookback)
-            self.s1.get_prices(lookback=lookback)
-
-        if not hasattr(self.s2, 'prices'):
-            self.s2.update_prices(lookback=update_lookback)
-            self.s2.get_prices(lookback=lookback)
-
-        sym1, sym2 = sorted([self.s1.symbol, self.s2.symbol])
+        sym1, sym2 = sorted([c.symbol for c in self.companies])
         self.symbol = sym1 + '-' + sym2
-        logger.info(self.symbol + '::Conducting pair analysis: ' + self.s1.symbol + ' & ' + self.s2.symbol)
-        self.tdb = TempoDB()
-        self.data1 = None
-        self.data2 = None
-        self.log_data1 = None
-        self.log_data2 = None
+
+        logger.info(self.symbol + '::Conducting pair analysis: ' + self.symbol)
+
         self.adf = None
         self.ols = None
-        self.view_data = None
+        self.df = pd.DataFrame(self.df_dict)
         self.pair, self.created = Pair.objects.get_or_create(
             symbol=self.symbol,
         )
 
         self.analyze()
 
-        if self.pair.adf_stat < self.pair.adf_1pct:
-            logger.info(self.symbol + '::Cointegrated: ' + str(self.pair.adf_stat))
-        if not self.pair.adf_stat < self.pair.adf_1pct:
-            logger.info(self.symbol + '::Not Cointegrated: ' + str(self.pair.adf_stat))
+        if self.pair.adf_stat < self.pair.adf_5pct:
+            coint_log_item = colored('Cointegrated', 'green', attrs=['bold'])
+        else:
+            coint_log_item = colored('Not Cointegrated', 'red', attrs=['bold'])
+
+        logger.info(self.symbol + '::' + coint_log_item + ': ' + str(self.pair.adf_stat))
+
+    def get_company(self, co_arg):
+        if isinstance(co_arg, str) or isinstance(co_arg, unicode):
+            company = Company.objects.filter(symbol=co_arg).get()
+        elif isinstance(co_arg, Company):
+            company = co_arg
+        else:
+            raise ValueError
+        return company
 
     def analyze(self):
         logger.info(self.symbol + '::Conducting analysis')
-        self.data1 = tdbseries2pdseries(self.s1.prices)
-        self.data2 = tdbseries2pdseries(self.s2.prices)
-        self.log_data1 = np.log(self.data1).dropna()
-        self.log_data2 = np.log(self.data2).dropna()
-        self.ols = ols(y=self.log_data1, x=self.log_data2, intercept=False)
-        self.adf = ts.adfuller(self.ols.resid)
+
+        company_num = 1
+        for c in self.companies:
+            c.log_prices = np.log(c.prices)
+            self.df['log_company_' + str(company_num)] = c.log_prices
+            company_num += 1
+        self.df.dropna().interpolate()
+        self.ols, self.adf = engle_granger_test(y=self.df['log_company_1'], x=self.df['log_company_2'])
         return None
 
     def persist(self):
@@ -93,95 +88,11 @@ class PairAnalysis(object):
         self.pair.save()
         return None
 
-    def get_view_data(self):
-        df = pd.DataFrame({
-            self.s1.symbol: self.data1,
-            self.s2.symbol: self.data2,
-            'log_' + self.s1.symbol: self.log_data1,
-            'log_' + self.s2.symbol: self.log_data2,
-        }).dropna().interpolate()
 
-        pair_data = []
-        for t in df.iterrows():
-            pair_data.append({
-                'datetime': timestamp(t[0]),
-                'ticker1': t[1][self.s1.symbol],
-                'ticker2': t[1][self.s2.symbol],
-                'log_ticker1': t[1]['log_' + self.s1.symbol],
-                'log_ticker2': t[1]['log_' + self.s2.symbol],
-            })
-
-        resid_data = []
-        for t in self.ols.resid.index:
-            resid_data.append({
-                'datetime': timestamp(t),
-                'resid': self.ols.resid[t],
-            })
-
-        self.view_data = {
-            'pair_data': pair_data,
-            'resid_data': resid_data,
-            'ols': self.ols,
-            'adf': self.adf,
-            'company_1': self.s1,
-            'company_2': self.s2,
-        }
-        return self.view_data
-
-
-def get_pair(ticker1, ticker2, data_frame_result=False, lookback=1):
-    """
-    We take two tickers and return either
-    a pandas dataframe or a list of dicts
-    depending on 'data_frame_result' kwarg
-    :params ticker1: str
-    :params ticker2: str
-    :return DataFrame, list (of dicts)
-    """
-    df1 = get_google_data(ticker1, lookback=lookback)
-    df2 = get_google_data(ticker2, lookback=lookback)
-    df = pd.DataFrame({ticker1: df1['close'], ticker2: df2['close'], 'log_' + ticker1: np.log(df1)['close'],
-                       'log_' + ticker2: np.log(df2)['close']}).dropna().interpolate()
-    if data_frame_result:
-        logger.info('pairs dataframe returned for ' + ticker1 + ' and ' + ticker2)
-        return df
-
-    pair_data = []
-    for t in df.iterrows():
-        pair_data.append({
-            'datetime': timestamp(t[0]),
-            'ticker1': t[1][ticker1],
-            'ticker2': t[1][ticker2],
-            'log_ticker1': t[1]['log_' + ticker1],
-            'log_ticker2': t[1]['log_' + ticker2],
-        })
-    logger.info('pairs data list returned for ' + ticker1 + ' and ' + ticker2)
-    return pair_data
-
-
-@app.task
-def get_adf(ticker1, ticker2):
-    """
-
-    """
-    df = get_pair(ticker1, ticker2, data_frame_result=True, lookback=15)
-    ln_df = np.log(df).dropna()
-    reg = ols(y=ln_df[ticker1], x=ln_df[ticker2], intercept=False)
-    result = ts.adfuller(reg.resid)
-    return result
-
-
-def test_all_pairs():
-    symbols = sorted([s['symbol'] for s in get_sp500_symbols()])[:3]
-    combs = [i for i in itertools.combinations(symbols, 2)]
-    results = []
-    for c in combs:
-        ticker1 = c[0]
-        ticker2 = c[1]
-        adf = get_adf.delay(ticker1, ticker2)
-        results.append((c, adf))
-
-    return sorted(results, key=lambda x: x[1][0])
+def engle_granger_test(y, x):
+    ols_res = ols(y=y, x=x, intercept=False)
+    adf_res = ts.adfuller(ols_res.resid)
+    return ols_res, adf_res
 
 
 def seed():
@@ -248,10 +159,13 @@ def make_all_pairs():
     return
 
 
-def make_pairs_csv():
+def make_pairs_csv(pairs=None, threshold=100):
     """
     This makes a csv file in the project
     """
+    if not pairs:
+        pairs = Pair.objects.all()
+
     companies = Company.objects.all()
     industries = {}
     sectors = {}
@@ -259,24 +173,13 @@ def make_pairs_csv():
         industries[c.symbol] = c.industry
         sectors[c.symbol] = c.sector
 
-    filepath = os.path.join(os.getcwd(), 'coint', 'static', 'pairs.csv')
-    with open(filepath, 'w') as f:
-        c = csv.writer(f)
-        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'adf_stat', 'adf_p',
-                    'industry_1', 'industry_2', 'sector_1', 'sector_2'])
-        pairs = Pair.objects.all()
-        for p in pairs:
-            row_data = p.csv_data()
-            c.writerow(row_data + [industries[row_data[1]], industries[row_data[2]],
-                                   sectors[row_data[1]], sectors[row_data[2]]])
-
-    filepath = os.path.join(os.getcwd(), 'coint', 'static', 'short_pairs.csv')
+    filepath = os.path.join(os.getcwd(), 'coint', 'static', 'pairs_' + str(threshold) + '.csv')
     with open(filepath, 'w') as f:
         c = csv.writer(f)
         c.writerow(['symbol', 'symbol_1', 'symbol_2', 'adf_stat', 'adf_p',
                     'industry_1', 'industry_2', 'sector_1', 'sector_2'])
         sorted_pairs = sorted(pairs, key=lambda x: x.adf_p)
-        short_pairs = sorted_pairs[:999]
+        short_pairs = sorted_pairs[:int(len(pairs) * threshold / 100) - 1]
         for p in short_pairs:
             row_data = p.csv_data()
             c.writerow(row_data + [industries[row_data[1]], industries[row_data[2]],

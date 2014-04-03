@@ -10,12 +10,5 @@ def ajax_coint(request, symbol=None):
     if not symbol:
         raise ValueError()
 
-    #TODO crazy nested try block until I can figure out why these calls are failing when the data is not up to date
-    try:
-        html = coint(request, symbol).content.decode(encoding='UTF-8')
-    except:
-        try:
-            html = coint(request, symbol).content.decode(encoding='UTF-8')
-        except:
-            html = coint(request, symbol).content.decode(encoding='UTF-8')
+    html = coint(request, symbol).content.decode(encoding='UTF-8')
     return json.dumps(dict(html=html))

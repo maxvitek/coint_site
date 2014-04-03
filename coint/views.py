@@ -30,8 +30,7 @@ def coint(request, symbol):
     symbol_1, symbol_2 = symbol.split('-')
     logger.warning('coint view: ' + request.META.get('REMOTE_ADDR'))
 
-    pa = PairAnalysis(symbol_1, symbol_2, update_lookback=1, lookback=1)
-    view_data = pa.get_view_data()
+    pa = PairAnalysis(symbol_1, symbol_2, lookback=1)
 
-    return render(request, template_name='coint.html', dictionary={'data': view_data})
+    return render(request, template_name='coint.html', dictionary={'pair_analysis': pa})
 

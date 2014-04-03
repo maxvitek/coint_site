@@ -5,7 +5,7 @@
 <head>
     <style>
 
-        @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
 
         body {
           font-family: "Helvetica Neue";
@@ -168,7 +168,7 @@
     <script type='text/javascript' src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     {% dajaxice_js_import %}
     <script>
-        function getPair(data) {
+        function runAjaxJS(data) {
             document.getElementById('ajax_script').innerHTML = data.html ;
             var arr = document.getElementById('ajax_script').getElementsByTagName('script')
             for (var n = 0; n < arr.length; n++)
@@ -288,7 +288,7 @@
 
                   pairEnter.append("div")
                       .attr("class", "symbol")
-                      .attr("onclick", function(d) {return "Dajaxice.coint.ajax_coint(getPair, {'symbol': '".concat(d.symbol).concat("'})")})
+                      .attr("onclick", function(d) {return "Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': '".concat(d.symbol).concat("'})")})
                       .text(function(d) { return d.symbol; });
 
 {#                  pairEnter.append("div")#}
@@ -507,7 +507,7 @@
 
     <script>
 
-        Dajaxice.coint.ajax_coint(getPair, {'symbol': 'AAPL-GOOG'});
+        Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': 'AAPL-GOOG'});
 
     </script>
 

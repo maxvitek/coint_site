@@ -1,5 +1,5 @@
 from django.db import models
-from tempodb import TempoDB, pdseries2tdbseries
+from tempodb import TempoDB, pdseries2tdbseries, tdbseries2pdseries
 import datetime
 from intradata import get_google_data
 from celery.contrib.methods import task_method
@@ -25,22 +25,28 @@ class Company(models.Model):
         start = datetime.datetime(start_time.year, start_time.month, start_time.day, 0, 0, 0)
         end = datetime.datetime.now()
         logger.info('Fetching prices for: ' + self.symbol + ' from ' + str(start) + ' to ' + str(end))
-        self.prices = tdb.db[self.tempodb].read_key(
+        prices = tdb.db[self.tempodb].read_key(
             self.symbol,
             start,
             end,
             interval='1min')
+        self.prices = tdbseries2pdseries(prices)
         return self.prices
 
     @app.task(filter=task_method)
     def update_prices(self, lookback=15):
         logger.info('Updating prices for: ' + self.symbol)
         tdb = TempoDB()
-        df = get_google_data(self.symbol, lookback=lookback)
-        series = df['close']
+        series = self.get_raw_prices(lookback=lookback)
         tbd_series = pdseries2tdbseries(series)
         tdb.db[self.tempodb].write_key(self.symbol, tbd_series)
         return None
+
+    def get_raw_prices(self, lookback=15):
+        df = get_google_data(self.symbol, lookback=lookback)
+        series = df['close']
+        self.prices = series
+        return self.prices
 
 
 class Pair(models.Model):
