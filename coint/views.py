@@ -1,10 +1,7 @@
 from django.shortcuts import render
 from django.utils.timezone import activate
-from coint_site.settings import TIME_ZONE
 import logging
 from coint.pairs import PairAnalysis
-
-activate(TIME_ZONE)
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +24,9 @@ def coint(request, symbol):
     :param request: http request object
     :return:
     """
+    if 'detected_tz' in request.session.keys():
+        tz = request.session['detected_tz']
+        activate(tz)
     symbol_1, symbol_2 = symbol.split('-')
     logger.warning('coint view: ' + request.META.get('REMOTE_ADDR'))
 

@@ -57,7 +57,6 @@
             .html("{{ pair_analysis.companies.0.symbol }} and {{ pair_analysis.companies.1.symbol }} <b>are not</b> cointegrated (with 95% confidence).");
     {% endif %}
 
-
     var series1 = [{% for i in pair_analysis.companies.0.prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var series2 = [{% for i in pair_analysis.companies.1.prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
@@ -168,18 +167,36 @@
     //stock_graph.renderer.dotSize = 2;
 
     new Rickshaw.Graph.Axis.Time({
-      graph: stock_graph
+        graph: stock_graph,
+        timeFixture: new  Rickshaw.Fixtures.Time.Local()
     });
     new Rickshaw.Graph.Axis.Time({
-      graph: log_price_graph
+        graph: log_price_graph,
+        timeFixture: new  Rickshaw.Fixtures.Time.Local()
     });
     new Rickshaw.Graph.Axis.Time({
-      graph: resid_graph
+        graph: resid_graph,
+        timeFixture: new  Rickshaw.Fixtures.Time.Local()
     });
 
-    new Rickshaw.Graph.HoverDetail({ graph: stock_graph });
-    new Rickshaw.Graph.HoverDetail({ graph: log_price_graph });
-    new Rickshaw.Graph.HoverDetail({ graph: resid_graph });
+    new Rickshaw.Graph.HoverDetail({
+        graph: stock_graph,
+        xFormatter: function(x) {
+            return new Date(x * 1000).toString();
+        }
+    });
+    new Rickshaw.Graph.HoverDetail({
+        graph: log_price_graph,
+        xFormatter: function(x) {
+            return new Date(x * 1000).toString();
+        }
+    });
+    new Rickshaw.Graph.HoverDetail({
+        graph: resid_graph,
+        xFormatter: function(x) {
+            return new Date(x * 1000).toString();
+        }
+    });
 
     new Rickshaw.Graph.Axis.Y( {
         graph: resid_graph,

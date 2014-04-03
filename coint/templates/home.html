@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load tz %}
 {% load dajaxice_templatetags %}
 <!doctype html>
 <head>
@@ -176,6 +175,8 @@
         }
     </script>
 </head>
+{% load tz_detect %}
+{% tz_detect %}
 <body>
     <div id="pairs_crossfilter">
         <div id="charts">
@@ -496,7 +497,7 @@
 
     <script>
 
-        Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': 'AAPL-GOOG'});
+        Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': 'FDX-UPS'});
 
     </script>
 

@@ -1,14 +1,12 @@
-from intradata import get_google_data
 from finsymbols import get_sp500_symbols
 import pandas as pd
 from pandas.stats.api import ols
 import statsmodels.tsa.stattools as ts
 import numpy as np
-from util import timestamp
 import logging
 from coint_site.celery import app
 import itertools
-from tempodb import TempoDB, tdbseries2pdseries
+from tempodb import TempoDB
 from models import Company, Pair
 from threadpool import ThreadPool
 import csv
