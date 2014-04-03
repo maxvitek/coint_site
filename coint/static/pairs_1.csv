@@ -1,0 +1,1247 @@
+symbol,symbol_1,symbol_2,adf_stat,adf_p,industry_1,industry_2,sector_1,sector_2
+IFF-SNA,IFF,SNA,-5.6439700237225265,1.021348506439633e-06,Specialty Chemicals,Household Appliances,Materials,Consumer Discretionary
+COST-RAI,COST,RAI,-5.425857618700371,2.9883870518159047e-06,Hypermarkets & Super Centers,Tobacco,Consumer Staples,Consumer Staples
+FDX-VIAB,FDX,VIAB,-5.18374012357712,9.489583760259395e-06,Air Freight & Logistics,Broadcasting & Cable TV,Industrials,Consumer Discretionary
+GPC-HOT,GPC,HOT,-5.095674134879325,1.4302513452727888e-05,Specialty Stores,"Hotels, Resorts & Cruise Lines",Consumer Discretionary,Consumer Discretionary
+COF-QEP,COF,QEP,-5.039456731490712,1.8530233968982186e-05,Consumer Finance,Oil & Gas Exploration & Production,Financials,Energy
+HON-PPG,HON,PPG,-5.030448400205826,1.931123331816753e-05,Industrial Conglomerates,Diversified Chemicals,Industrials,Materials
+LO-VZ,LO,VZ,-4.980592589041466,2.4241952295186623e-05,Tobacco,Integrated Telecommunications Services,Consumer Staples,Telecommunications Services
+EBAY-ICE,EBAY,ICE,-4.936706049826595,2.9568972973754136e-05,Internet Software & Services,Diversified Financial Services,Information Technology,Financials
+CAM-MMC,CAM,MMC,-4.920611392739991,3.179188284839679e-05,Oil & Gas Equipment & Services,Insurance Brokers,Energy,Financials
+LNC-PRU,LNC,PRU,-4.914103345578965,3.27356800609983e-05,Multi-line Insurance,Diversified Financial Services,Financials,Financials
+CAM-TMK,CAM,TMK,-4.852396432789137,4.313102874126396e-05,Oil & Gas Equipment & Services,Life & Health Insurance,Energy,Financials
+NOC-SYY,NOC,SYY,-4.848980606787051,4.379077274509292e-05,Aerospace & Defense,Food Distributors,Industrials,Consumer Staples
+APD-CAM,APD,CAM,-4.826953845700084,4.8283831361288044e-05,Industrial Gases,Oil & Gas Equipment & Services,Materials,Energy
+BHI-LO,BHI,LO,-4.796975338791058,5.511516560058434e-05,Oil & Gas Equipment & Services,Tobacco,Energy,Consumer Staples
+AVY-CAM,AVY,CAM,-4.791502516191067,5.645854774298106e-05,Paper Packaging,Oil & Gas Equipment & Services,Materials,Energy
+APC-LO,APC,LO,-4.790062511229421,5.681720468433059e-05,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+HRL-QEP,HRL,QEP,-4.764535848066708,6.354974886111869e-05,Packaged Foods & Meats,Oil & Gas Exploration & Production,Consumer Staples,Energy
+EQR-RAI,EQR,RAI,-4.753057361641939,6.682056348375113e-05,REITs,Tobacco,Financials,Consumer Staples
+PBI-TXT,PBI,TXT,-4.740465953010473,7.059396591246078e-05,Data Processing Services,Industrial Conglomerates,Industrials,Industrials
+FLIR-IFF,FLIR,IFF,-4.7045225844372025,8.252188092976215e-05,Aerospace & Defense,Specialty Chemicals,Industrials,Materials
+CAM-SYY,CAM,SYY,-4.69893387366435,8.454170439098586e-05,Oil & Gas Equipment & Services,Food Distributors,Energy,Consumer Staples
+BCR-M,BCR,M,-4.681892121162452,9.09970229120248e-05,Health Care Equipment & Services,Department Stores,Health Care,Consumer Discretionary
+CAM-CME,CAM,CME,-4.657274422328631,0.0001011601904486556,Oil & Gas Equipment & Services,Diversified Financial Services,Energy,Financials
+M-PG,M,PG,-4.652797509549589,0.00010312143538072068,Department Stores,Personal Products,Consumer Discretionary,Consumer Staples
+HCBK-NTRS,HCBK,NTRS,-4.639642124680035,0.00010909703988911195,Banks,Diversified Financial Services,Financials,Financials
+CAT-QEP,CAT,QEP,-4.6160263346844195,0.00012066333174653219,Construction & Farm Machinery & Heavy Trucks,Oil & Gas Exploration & Production,Industrials,Energy
+IFF-WHR,IFF,WHR,-4.599950288636569,0.00012919689467857787,Specialty Chemicals,Household Appliances,Materials,Consumer Discretionary
+DNR-LO,DNR,LO,-4.589659468821267,0.00013495861579983332,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+FLIR-XL,FLIR,XL,-4.588601603060108,0.0001355646058082099,Aerospace & Defense,Property & Casualty Insurance,Industrials,Financials
+HBAN-NTRS,HBAN,NTRS,-4.580355839524343,0.00014037789126915536,Banks,Diversified Financial Services,Financials,Financials
+AVP-SWY,AVP,SWY,-4.580211219802847,0.0001404637468450511,Personal Products,Food Retail,Consumer Staples,Consumer Staples
+MON-SYY,MON,SYY,-4.579419680514552,0.0001409345432931458,Fertilizers & Agricultural Chemicals,Food Distributors,Materials,Consumer Staples
+ADP-CAM,ADP,CAM,-4.567513126544848,0.0001482005132051727,Internet Software & Services,Oil & Gas Equipment & Services,Information Technology,Energy
+CTAS-HRS,CTAS,HRS,-4.567244991676845,0.00014836818361743342,Diversified Commercial Services,Telecommunications Equipment,Industrials,Information Technology
+CHK-LO,CHK,LO,-4.558789255397502,0.00015374946363526753,Integrated Oil & Gas,Tobacco,Energy,Consumer Staples
+PNW-RAI,PNW,RAI,-4.549090350666414,0.00016015090887689284,Multi-Utilities & Unregulated Power,Tobacco,Utilities,Consumer Staples
+KSS-XOM,KSS,XOM,-4.5396101373205875,0.00016665286220366243,General Merchandise Stores,Integrated Oil & Gas,Consumer Discretionary,Energy
+AVY-AZO,AVY,AZO,-4.539198301196296,0.00016694094017954739,Paper Packaging,Specialty Stores,Materials,Consumer Discretionary
+APA-QEP,APA,QEP,-4.527565934911004,0.00017527638928579715,Oil & Gas Exploration & Production,Oil & Gas Exploration & Production,Energy,Energy
+FLIR-QEP,FLIR,QEP,-4.52756530380196,0.00017527685208976868,Aerospace & Defense,Oil & Gas Exploration & Production,Industrials,Energy
+GOOG-SWY,GOOG,SWY,-4.5073572543158225,0.00019070753276144767,Internet Software & Services,Food Retail,Information Technology,Consumer Staples
+CAM-UNM,CAM,UNM,-4.500061264041107,0.00019658978439230702,Oil & Gas Equipment & Services,Diversified Financial Services,Energy,Financials
+M-MCD,M,MCD,-4.495980300026095,0.00019995482984015454,Department Stores,Restaurants,Consumer Discretionary,Consumer Discretionary
+CAM-RSG,CAM,RSG,-4.491039439959585,0.00020410224729353432,Oil & Gas Equipment & Services,Industrial Conglomerates,Energy,Industrials
+PCL-WYN,PCL,WYN,-4.489257788186607,0.00020561775474087847,REITs,"Hotels, Resorts & Cruise Lines",Financials,Consumer Discretionary
+CAM-HRS,CAM,HRS,-4.472895703735394,0.0002200449526189883,Oil & Gas Equipment & Services,Telecommunications Equipment,Energy,Information Technology
+CMCSA-TYC,CMCSA,TYC,-4.457629195762055,0.00023436946020085453,Broadcasting & Cable TV,Industrial Conglomerates,Consumer Discretionary,Industrials
+BEN-CHK,BEN,CHK,-4.456695308195887,0.00023527387346500774,Diversified Financial Services,Integrated Oil & Gas,Financials,Energy
+ORLY-RAI,ORLY,RAI,-4.4493775147154535,0.00024247634106922867,Specialty Stores,Tobacco,Consumer Discretionary,Consumer Staples
+RAI-SJM,RAI,SJM,-4.433479577197824,0.0002588517619037749,Tobacco,Packaged Foods & Meats,Consumer Staples,Consumer Staples
+FDX-V,FDX,V,-4.430238735875905,0.0002623162954129397,Air Freight & Logistics,Internet Software & Services,Industrials,Information Technology
+ACE-MON,ACE,MON,-4.420402947969257,0.00027310237671431925,Property & Casualty Insurance,Fertilizers & Agricultural Chemicals,Financials,Materials
+KMI-LO,KMI,LO,-4.414494885076367,0.0002797821023625413,Oil & Gas Refining & Marketing & Transportation,Tobacco,Energy,Consumer Staples
+HIG-TWC,HIG,TWC,-4.413321508538735,0.0002811270484516788,Property & Casualty Insurance,Broadcasting & Cable TV,Financials,Consumer Discretionary
+DVN-LO,DVN,LO,-4.4131945014976095,0.0002812729934693509,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+ITW-ORLY,ITW,ORLY,-4.404562015197762,0.0002913628105886313,Industrial Machinery,Specialty Stores,Industrials,Consumer Discretionary
+AVP-ICE,AVP,ICE,-4.402628573327612,0.0002936692189096994,Personal Products,Diversified Financial Services,Consumer Staples,Financials
+CAM-ROP,CAM,ROP,-4.391716740330185,0.000307013848831679,Oil & Gas Equipment & Services,Industrial Conglomerates,Energy,Industrials
+FLR-PBI,FLR,PBI,-4.377468711714484,0.0003253048981420536,Diversified Commercial Services,Data Processing Services,Industrials,Industrials
+CAM-LYB,CAM,LYB,-4.371107859872073,0.0003337997301525655,Oil & Gas Equipment & Services,Diversified Chemicals,Energy,Materials
+CAM-RAI,CAM,RAI,-4.369711358058539,0.0003356926522901412,Oil & Gas Equipment & Services,Tobacco,Energy,Consumer Staples
+PWR-QEP,PWR,QEP,-4.367731846338874,0.00033839324948566806,Industrial Conglomerates,Oil & Gas Exploration & Production,Industrials,Energy
+CAM-RL,CAM,RL,-4.359225390266532,0.00035023422818649026,Oil & Gas Equipment & Services,"Apparel, Accessories & Luxury Goods",Energy,Consumer Discretionary
+MMM-TRV,MMM,TRV,-4.348857305488638,0.0003651970368332426,Industrial Conglomerates,Property & Casualty Insurance,Industrials,Financials
+AFL-AVP,AFL,AVP,-4.346696279447534,0.00036839098934768295,Life & Health Insurance,Personal Products,Financials,Consumer Staples
+CAM-FDX,CAM,FDX,-4.344630740473865,0.0003714684982137961,Oil & Gas Equipment & Services,Air Freight & Logistics,Energy,Industrials
+BRCM-HBAN,BRCM,HBAN,-4.3396302878990465,0.0003790198259412884,Semiconductors,Banks,Information Technology,Financials
+OI-PBI,OI,PBI,-4.337294025279132,0.00038259742913594345,Metal & Glass Containers,Data Processing Services,Materials,Industrials
+HES-QEP,HES,QEP,-4.329359428650113,0.00039498782274851875,Integrated Oil & Gas,Oil & Gas Exploration & Production,Energy,Energy
+FDX-SHW,FDX,SHW,-4.315636022022137,0.00041731780297652414,Air Freight & Logistics,Specialty Chemicals,Industrials,Materials
+HBAN-XLNX,HBAN,XLNX,-4.3060785229419665,0.0004335681925789454,Banks,Semiconductors,Financials,Information Technology
+PCAR-PLL,PCAR,PLL,-4.300066084583025,0.00044409531126889394,Construction & Farm Machinery & Heavy Trucks,Industrial Conglomerates,Industrials,Industrials
+HSY-RAI,HSY,RAI,-4.297449869727644,0.00044875097346220856,Packaged Foods & Meats,Tobacco,Consumer Staples,Consumer Staples
+FLS-PBI,FLS,PBI,-4.293588885553393,0.00045570601217820024,Industrial Machinery,Data Processing Services,Industrials,Industrials
+PCL-VMC,PCL,VMC,-4.289691340301785,0.000462830032935329,REITs,Construction Materials,Financials,Materials
+RAI-TGT,RAI,TGT,-4.287163832993441,0.00046750591442433975,Tobacco,General Merchandise Stores,Consumer Staples,Consumer Discretionary
+CAM-TSCO,CAM,TSCO,-4.286497300151243,0.00046874640672704086,Oil & Gas Equipment & Services,Specialty Retail,Energy,Consumer Discretionary
+LM-QEP,LM,QEP,-4.2852337992139224,0.0004711064536239741,Diversified Financial Services,Oil & Gas Exploration & Production,Financials,Energy
+AVY-BWA,AVY,BWA,-4.2781140550373244,0.0004846161525533103,Paper Packaging,Auto Parts & Equipment,Materials,Consumer Discretionary
+ALTR-HAR,ALTR,HAR,-4.274607381331301,0.0004914036149292784,Semiconductors,Consumer Electronics,Information Technology,Consumer Discretionary
+QCOM-QEP,QCOM,QEP,-4.26868931983343,0.0005030622987882994,Semiconductors,Oil & Gas Exploration & Production,Information Technology,Energy
+COH-JEC,COH,JEC,-4.267635726620466,0.0005051650587292529,"Apparel, Accessories & Luxury Goods",Industrial Conglomerates,Consumer Discretionary,Industrials
+HOT-PBI,HOT,PBI,-4.26248654270025,0.0005155615709535085,"Hotels, Resorts & Cruise Lines",Data Processing Services,Consumer Discretionary,Industrials
+ADI-HCBK,ADI,HCBK,-4.258232521842678,0.0005243025306009705,Semiconductors,Banks,Information Technology,Financials
+PBI-SWK,PBI,SWK,-4.257267498167422,0.0005263047622915063,Data Processing Services,Household Appliances,Industrials,Consumer Discretionary
+CFN-TWX,CFN,TWX,-4.256115770022905,0.0005287038023567905,Health Care Equipment & Services,Broadcasting & Cable TV,Health Care,Consumer Discretionary
+COF-FLIR,COF,FLIR,-4.2401301545260885,0.0005630841858657847,Consumer Finance,Aerospace & Defense,Financials,Industrials
+PSA-RAI,PSA,RAI,-4.239907786632005,0.0005635769620282342,REITs,Tobacco,Financials,Consumer Staples
+MCO-V,MCO,V,-4.234687631599579,0.0005752623935876304,Diversified Financial Services,Internet Software & Services,Financials,Information Technology
+CF-PBI,CF,PBI,-4.231593168561611,0.0005822967425994538,Fertilizers & Agricultural Chemicals,Data Processing Services,Materials,Industrials
+DOV-KR,DOV,KR,-4.2287328576625915,0.0005888707765158486,Industrial Machinery,Food Retail,Industrials,Consumer Staples
+LO-SE,LO,SE,-4.2284205592478825,0.0005895927678344549,Tobacco,Oil & Gas Refining & Marketing & Transportation,Consumer Staples,Energy
+HAR-TSCO,HAR,TSCO,-4.214463469780549,0.000622723876465552,Consumer Electronics,Specialty Retail,Consumer Discretionary,Consumer Discretionary
+RAI-SIAL,RAI,SIAL,-4.2135590648026895,0.000624930078364145,Tobacco,Diversified Chemicals,Consumer Staples,Materials
+CAM-UPS,CAM,UPS,-4.209528665110763,0.0006348515283031365,Oil & Gas Equipment & Services,Air Freight & Logistics,Energy,Industrials
+ADI-HBAN,ADI,HBAN,-4.2077140352946865,0.0006393667270417918,Semiconductors,Banks,Information Technology,Financials
+LLY-RAI,LLY,RAI,-4.207417487961572,0.0006401074675056524,Pharmaceuticals,Tobacco,Health Care,Consumer Staples
+CAM-MON,CAM,MON,-4.201360754379293,0.0006554142317356771,Oil & Gas Equipment & Services,Fertilizers & Agricultural Chemicals,Energy,Materials
+ALLE-SWY,ALLE,SWY,-4.1984251778760475,0.0006629563405345093,Building Products,Food Retail,Industrials,Consumer Staples
+LO-XOM,LO,XOM,-4.194663164383201,0.0006727410662492908,Tobacco,Integrated Oil & Gas,Consumer Staples,Energy
+CAM-HAR,CAM,HAR,-4.193809727528802,0.0006749796081777199,Oil & Gas Equipment & Services,Consumer Electronics,Energy,Consumer Discretionary
+AVP-EBAY,AVP,EBAY,-4.189899557676199,0.0006853257055923743,Personal Products,Internet Software & Services,Consumer Staples,Information Technology
+INTU-SHW,INTU,SHW,-4.184454649894174,0.0006999811279975417,Internet Software & Services,Specialty Chemicals,Information Technology,Materials
+EMN-PBI,EMN,PBI,-4.184452838891959,0.0006999860510895976,Diversified Chemicals,Data Processing Services,Materials,Industrials
+GE-IFF,GE,IFF,-4.177609463330052,0.0007188234739874423,Industrial Conglomerates,Specialty Chemicals,Industrials,Materials
+ARG-RAI,ARG,RAI,-4.175032067487704,0.0007260408041229109,Industrial Gases,Tobacco,Materials,Consumer Staples
+IRM-VIAB,IRM,VIAB,-4.172139812166572,0.0007342208413163756,Data Processing Services,Broadcasting & Cable TV,Industrials,Consumer Discretionary
+CAM-PFG,CAM,PFG,-4.169682432660142,0.0007412388699109125,Oil & Gas Equipment & Services,Diversified Financial Services,Energy,Financials
+KIM-RAI,KIM,RAI,-4.166345659232504,0.0007508692400981653,REITs,Tobacco,Financials,Consumer Staples
+MO-VZ,MO,VZ,-4.164669487328335,0.0007557511050754212,Tobacco,Integrated Telecommunications Services,Consumer Staples,Telecommunications Services
+AN-AVY,AN,AVY,-4.161190519521943,0.0007659788914962298,Specialty Stores,Paper Packaging,Consumer Discretionary,Materials
+IFF-SPG,IFF,SPG,-4.159111933504192,0.0007721515649681379,Specialty Chemicals,REITs,Materials,Financials
+MAR-QEP,MAR,QEP,-4.153521555404821,0.0007889854726852396,"Hotels, Resorts & Cruise Lines",Oil & Gas Exploration & Production,Consumer Discretionary,Energy
+MO-QEP,MO,QEP,-4.148389060490644,0.0008047432541135427,Tobacco,Oil & Gas Exploration & Production,Consumer Staples,Energy
+ALLE-CME,ALLE,CME,-4.146635599467603,0.0008101940565438759,Building Products,Diversified Financial Services,Industrials,Financials
+BWA-TSS,BWA,TSS,-4.144168009563378,0.0008179234829819109,Auto Parts & Equipment,Internet Software & Services,Consumer Discretionary,Information Technology
+CAM-NOC,CAM,NOC,-4.143046715450548,0.0008214586090031034,Oil & Gas Equipment & Services,Aerospace & Defense,Energy,Industrials
+CTAS-HON,CTAS,HON,-4.142996995104163,0.0008216156946435346,Diversified Commercial Services,Industrial Conglomerates,Industrials,Industrials
+MWV-SWK,MWV,SWK,-4.141185218667547,0.0008273590469097461,Paper Packaging,Household Appliances,Materials,Consumer Discretionary
+MHK-TWX,MHK,TWX,-4.139632834411011,0.0008323100532655581,Home Furnishings,Broadcasting & Cable TV,Consumer Discretionary,Consumer Discretionary
+LO-MAC,LO,MAC,-4.128134271785414,0.0008698566535765646,Tobacco,Retail REITs,Consumer Staples,Financials
+LOW-VMC,LOW,VMC,-4.127690695901811,0.0008713364012945999,Home Improvement Retail,Construction Materials,Consumer Discretionary,Materials
+AME-SWY,AME,SWY,-4.127102916203405,0.0008733008406088991,Electrical Components and Equipment,Food Retail,Industrials,Consumer Staples
+CMI-LO,CMI,LO,-4.12681848979421,0.0008742529217227352,Industrial Machinery,Tobacco,Industrials,Consumer Staples
+APC-MOS,APC,MOS,-4.122970008441935,0.0008872312219665997,Oil & Gas Exploration & Production,Fertilizers & Agricultural Chemicals,Energy,Materials
+OXY-RAI,OXY,RAI,-4.122841935313497,0.0008876662135455275,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+AMT-HAS,AMT,HAS,-4.122171643006116,0.0008899460770114327,REITs,Leisure Products,Financials,Consumer Discretionary
+KR-TAP,KR,TAP,-4.121406485907412,0.0008925553098557434,Food Retail,Brewers,Consumer Staples,Consumer Staples
+ARG-CAM,ARG,CAM,-4.1201615084409235,0.0008968160844128872,Industrial Gases,Oil & Gas Equipment & Services,Materials,Energy
+IFF-PBI,IFF,PBI,-4.119644291216314,0.0008985917903285386,Specialty Chemicals,Data Processing Services,Materials,Industrials
+AIV-SE,AIV,SE,-4.117710003211865,0.0009052618086768705,REITs,Oil & Gas Refining & Marketing & Transportation,Financials,Energy
+LO-PVH,LO,PVH,-4.11578917772611,0.0009119312800273126,Tobacco,"Apparel, Accessories & Luxury Goods",Consumer Staples,Consumer Discretionary
+LSI-MJN,LSI,MJN,-4.114207144221954,0.0009174589384634296,Semiconductors,Packaged Foods & Meats,Information Technology,Consumer Staples
+HCBK-TXN,HCBK,TXN,-4.112500134138807,0.0009234584590435027,Banks,Semiconductors,Financials,Information Technology
+LSI-MON,LSI,MON,-4.110344226344082,0.0009310882050841989,Semiconductors,Fertilizers & Agricultural Chemicals,Information Technology,Materials
+RAI-VTR,RAI,VTR,-4.1103216761883274,0.0009311683210399458,Tobacco,Diversified Financial Services,Consumer Staples,Financials
+ECL-V,ECL,V,-4.108162286282709,0.0009388701568331194,Specialty Chemicals,Internet Software & Services,Materials,Information Technology
+MTB-QEP,MTB,QEP,-4.10754672354282,0.0009410765688274596,Banks,Oil & Gas Exploration & Production,Financials,Energy
+RAI-WAG,RAI,WAG,-4.107227859555708,0.0009422214071599783,Tobacco,Drug Retail,Consumer Staples,Consumer Staples
+CAM-TSS,CAM,TSS,-4.0998857643360545,0.0009689456819407898,Oil & Gas Equipment & Services,Internet Software & Services,Energy,Information Technology
+HCP-LO,HCP,LO,-4.099727515475247,0.0009695294228386073,REITs,Tobacco,Financials,Consumer Staples
+HOT-RAI,HOT,RAI,-4.098697915246675,0.0009733354085150814,"Hotels, Resorts & Cruise Lines",Tobacco,Consumer Discretionary,Consumer Staples
+PBI-UTX,PBI,UTX,-4.097401452657482,0.0009781477598881632,Data Processing Services,Industrial Conglomerates,Industrials,Industrials
+SWK-UTX,SWK,UTX,-4.0969034499011885,0.0009800022135542535,Household Appliances,Industrial Conglomerates,Consumer Discretionary,Industrials
+AIG-PH,AIG,PH,-4.094190434878736,0.000990162811984127,Property & Casualty Insurance,Industrial Conglomerates,Financials,Industrials
+AVP-TYC,AVP,TYC,-4.092299611508219,0.0009973023957789786,Personal Products,Industrial Conglomerates,Consumer Staples,Industrials
+CVX-QEP,CVX,QEP,-4.090262345523735,0.0010050488265028641,Integrated Oil & Gas,Oil & Gas Exploration & Production,Energy,Energy
+ALLE-ECL,ALLE,ECL,-4.082293034159357,0.0010358950993092021,Building Products,Specialty Chemicals,Industrials,Materials
+KSS-LO,KSS,LO,-4.079236764510569,0.0010479579630235574,General Merchandise Stores,Tobacco,Consumer Discretionary,Consumer Staples
+AXP-DISCA,AXP,DISCA,-4.075855033706676,0.0010614584123877612,Consumer Finance,Broadcasting & Cable TV,Financials,Consumer Discretionary
+RAI-TJX,RAI,TJX,-4.072281754031362,0.0010759001254715048,Tobacco,Apparel Retail,Consumer Staples,Consumer Discretionary
+MCO-MHK,MCO,MHK,-4.0677734290115035,0.0010943829855953073,Diversified Financial Services,Home Furnishings,Financials,Consumer Discretionary
+EMR-QEP,EMR,QEP,-4.060482341005848,0.001124903577254545,Industrial Conglomerates,Oil & Gas Exploration & Production,Industrials,Energy
+APC-PBI,APC,PBI,-4.059722739430106,0.0011281286123098538,Oil & Gas Exploration & Production,Data Processing Services,Energy,Industrials
+HBAN-PBCT,HBAN,PBCT,-4.059065779142173,0.0011309248274419348,Banks,Banks,Financials,Financials
+ETN-GE,ETN,GE,-4.057806330313943,0.0011363035220857147,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+AMP-CAM,AMP,CAM,-4.057365233912537,0.0011381929438985976,Diversified Financial Services,Oil & Gas Equipment & Services,Financials,Energy
+IBM-QEP,IBM,QEP,-4.055461817374623,0.0011463798682747283,IT Consulting & Services,Oil & Gas Exploration & Production,Information Technology,Energy
+BDX-MJN,BDX,MJN,-4.055328084332898,0.0011469571402416816,Health Care Equipment & Services,Packaged Foods & Meats,Health Care,Consumer Staples
+CAM-IRM,CAM,IRM,-4.055143607844189,0.0011477538969173094,Oil & Gas Equipment & Services,Data Processing Services,Energy,Industrials
+BEAM-MJN,BEAM,MJN,-4.053283134823339,0.0011558182533415418,Distillers & Vintners,Packaged Foods & Meats,Consumer Staples,Consumer Staples
+CAM-ECL,CAM,ECL,-4.05308853979645,0.0011566647896059427,Oil & Gas Equipment & Services,Specialty Chemicals,Energy,Materials
+INTU-V,INTU,V,-4.043255671436889,0.0012002018039214306,Internet Software & Services,Internet Software & Services,Information Technology,Information Technology
+LLTC-QEP,LLTC,QEP,-4.041118627806621,0.0012098641774042564,Semiconductors,Oil & Gas Exploration & Production,Information Technology,Energy
+DISCA-HIG,DISCA,HIG,-4.040348556637499,0.001213363715608481,Broadcasting & Cable TV,Property & Casualty Insurance,Consumer Discretionary,Financials
+JCI-PBI,JCI,PBI,-4.038167778331758,0.001223325445179879,Auto Parts & Equipment,Data Processing Services,Consumer Discretionary,Industrials
+IFF-NOC,IFF,NOC,-4.035350918349369,0.0012363057483531213,Specialty Chemicals,Aerospace & Defense,Materials,Industrials
+NSC-PCAR,NSC,PCAR,-4.033518714795246,0.0012448175357237827,Railroads,Construction & Farm Machinery & Heavy Trucks,Industrials,Industrials
+SWY-V,SWY,V,-4.029240636479402,0.0012649053368477194,Food Retail,Internet Software & Services,Consumer Staples,Information Technology
+LLTC-MTB,LLTC,MTB,-4.02882871458935,0.0012668553994708124,Semiconductors,Banks,Information Technology,Financials
+ETN-PBI,ETN,PBI,-4.026834973494926,0.0012763335812100247,Industrial Conglomerates,Data Processing Services,Industrials,Industrials
+HCBK-JPM,HCBK,JPM,-4.026187523908409,0.0012794257339364345,Banks,Banks,Financials,Financials
+HES-PWR,HES,PWR,-4.026039584894979,0.001280133255338025,Integrated Oil & Gas,Industrial Conglomerates,Energy,Industrials
+LO-WM,LO,WM,-4.025579515553048,0.0012823358789855446,Tobacco,Environmental Services,Consumer Staples,Industrials
+ALLE-V,ALLE,V,-4.0242446044743545,0.001288746907921915,Building Products,Internet Software & Services,Industrials,Information Technology
+ACN-SWY,ACN,SWY,-4.024022441630134,0.0012898167612959022,IT Consulting & Services,Food Retail,Information Technology,Consumer Staples
+CAM-LB,CAM,LB,-4.020572298320008,0.0013065380211383958,Oil & Gas Equipment & Services,Apparel Retail,Energy,Consumer Discretionary
+ITW-RAI,ITW,RAI,-4.019276747854337,0.001312868988916686,Industrial Machinery,Tobacco,Industrials,Consumer Staples
+GD-HOT,GD,HOT,-4.014215421331289,0.001337877292853783,Aerospace & Defense,"Hotels, Resorts & Cruise Lines",Industrials,Consumer Discretionary
+PBI-PCL,PBI,PCL,-4.012814694146579,0.0013448764010461098,Data Processing Services,REITs,Industrials,Financials
+COL-RAI,COL,RAI,-4.0076323686534305,0.0013710690291623654,Industrial Conglomerates,Tobacco,Industrials,Consumer Staples
+ARG-MON,ARG,MON,-4.004490749585739,0.0013871780610391915,Industrial Gases,Fertilizers & Agricultural Chemicals,Materials,Materials
+MWV-UTX,MWV,UTX,-4.00280394851716,0.0013958999142795229,Paper Packaging,Industrial Conglomerates,Materials,Industrials
+AVY-TWC,AVY,TWC,-4.002051594128872,0.0013998065223120174,Paper Packaging,Broadcasting & Cable TV,Materials,Consumer Discretionary
+KR-MMC,KR,MMC,-4.001811699203587,0.0014010543188554235,Food Retail,Insurance Brokers,Consumer Staples,Financials
+CAM-PKI,CAM,PKI,-4.000613082851989,0.0014073043715857934,Oil & Gas Equipment & Services,Health Care Equipment & Services,Energy,Health Care
+CAM-SNA,CAM,SNA,-3.9989692310594553,0.0014159182893817702,Oil & Gas Equipment & Services,Household Appliances,Energy,Consumer Discretionary
+ADS-CSC,ADS,CSC,-3.9986869475175877,0.001417402408828731,Data Processing & Outsourced Services,IT Consulting & Services,Information Technology,Information Technology
+LUV-RRC,LUV,RRC,-3.9981843903156205,0.0014200482136837807,Airlines,Oil & Gas Exploration & Production,Industrials,Energy
+AEE-POM,AEE,POM,-3.99233444303892,0.0014511865557194116,Multi-Utilities & Unregulated Power,Multi-Utilities & Unregulated Power,Utilities,Utilities
+KO-QEP,KO,QEP,-3.9921383608389593,0.0014522411984011724,Soft Drinks,Oil & Gas Exploration & Production,Consumer Staples,Energy
+AZO-SYY,AZO,SYY,-3.989866563140943,0.0014645123641647856,Specialty Stores,Food Distributors,Consumer Discretionary,Consumer Staples
+DUK-RAI,DUK,RAI,-3.988493490249883,0.0014719757719617128,Electric Utilities,Tobacco,Utilities,Consumer Staples
+ED-RAI,ED,RAI,-3.9853081103244983,0.0014894266024632755,Multi-Utilities & Unregulated Power,Tobacco,Utilities,Consumer Staples
+CTAS-PPG,CTAS,PPG,-3.983836886319385,0.0014975514029202397,Diversified Commercial Services,Diversified Chemicals,Industrials,Materials
+IFF-VNO,IFF,VNO,-3.982203169033577,0.0015066218837012574,Specialty Chemicals,REITs,Materials,Financials
+CAM-JEC,CAM,JEC,-3.9798518292394767,0.0015197663987428181,Oil & Gas Equipment & Services,Industrial Conglomerates,Energy,Industrials
+DHR-WYN,DHR,WYN,-3.979716485342807,0.0015205262391495473,Industrial Machinery,"Hotels, Resorts & Cruise Lines",Industrials,Consumer Discretionary
+MHK-SWY,MHK,SWY,-3.979400014636707,0.001522304331507297,Home Furnishings,Food Retail,Consumer Discretionary,Consumer Staples
+HRS-TSS,HRS,TSS,-3.979318730301173,0.001522761340099453,Telecommunications Equipment,Internet Software & Services,Information Technology,Information Technology
+LO-TGT,LO,TGT,-3.9778890362468644,0.0015308204676664524,Tobacco,General Merchandise Stores,Consumer Staples,Consumer Discretionary
+WHR-WM,WHR,WM,-3.9778547053255537,0.0015310144765982579,Household Appliances,Environmental Services,Consumer Discretionary,Industrials
+FLIR-MMM,FLIR,MMM,-3.9767589500508187,0.001537218774166312,Aerospace & Defense,Industrial Conglomerates,Industrials,Industrials
+ALLE-RAI,ALLE,RAI,-3.976438280386326,0.0015390388628025054,Building Products,Tobacco,Industrials,Consumer Staples
+GGP-WAG,GGP,WAG,-3.9729360786781767,0.0015590479203032553,REITs,Drug Retail,Financials,Consumer Staples
+CHK-CHRW,CHK,CHRW,-3.9722220501751937,0.0015631569410780503,Integrated Oil & Gas,Air Freight & Logistics,Energy,Industrials
+PBI-PH,PBI,PH,-3.97202815367422,0.0015642744949788527,Data Processing Services,Industrial Conglomerates,Industrials,Industrials
+SWY-TWX,SWY,TWX,-3.9704053466425266,0.0015736569794773281,Food Retail,Broadcasting & Cable TV,Consumer Staples,Consumer Discretionary
+IFF-SYK,IFF,SYK,-3.9690332008612903,0.0015816310312240722,Specialty Chemicals,Health Care Equipment & Services,Materials,Health Care
+CAM-MCO,CAM,MCO,-3.9665679287185225,0.0015960521058970608,Oil & Gas Equipment & Services,Diversified Financial Services,Energy,Financials
+CINF-HES,CINF,HES,-3.965666852680259,0.0016013535560481281,Property & Casualty Insurance,Integrated Oil & Gas,Financials,Energy
+IFF-MWV,IFF,MWV,-3.9630798240944305,0.0016166653536512044,Specialty Chemicals,Paper Packaging,Materials,Materials
+AMT-KRFT,AMT,KRFT,-3.9627336041749373,0.0016187248125913564,REITs,Packaged Foods & Meats,Financials,Consumer Staples
+PLL-R,PLL,R,-3.9615553540148465,0.001625751814635175,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+DD-TRV,DD,TRV,-3.9585361812942246,0.0016438875568376985,Diversified Chemicals,Property & Casualty Insurance,Materials,Financials
+LO-URBN,LO,URBN,-3.9581785475782705,0.0016460482210050717,Tobacco,Apparel Retail,Consumer Staples,Consumer Discretionary
+LOW-STJ,LOW,STJ,-3.9557334942284523,0.0016608909869389114,Home Improvement Retail,Health Care Equipment & Services,Consumer Discretionary,Health Care
+RF-WPX,RF,WPX,-3.9540784196600884,0.0016710086370995188,Diversified Financial Services,Integrated Oil & Gas,Financials,Energy
+AIV-HOT,AIV,HOT,-3.9540048949902102,0.0016714594269435557,REITs,"Hotels, Resorts & Cruise Lines",Financials,Consumer Discretionary
+DG-EBAY,DG,EBAY,-3.953950132880386,0.0016717952543630022,General Merchandise Stores,Internet Software & Services,Consumer Discretionary,Information Technology
+CSX-TRV,CSX,TRV,-3.9527056333446176,0.0016794440392575334,Railroads,Property & Casualty Insurance,Industrials,Financials
+MWV-PBI,MWV,PBI,-3.952224318293413,0.0016824109444673046,Paper Packaging,Data Processing Services,Materials,Industrials
+NLSN-ZMH,NLSN,ZMH,-3.950279085310867,0.0016944513501292477,Research & Consulting Services,Health Care Equipment & Services,Industrials,Health Care
+HOT-WYN,HOT,WYN,-3.9465606718656274,0.00171769022154882,"Hotels, Resorts & Cruise Lines","Hotels, Resorts & Cruise Lines",Consumer Discretionary,Consumer Discretionary
+CAM-SLM,CAM,SLM,-3.9439025672716914,0.0017344835381740754,Oil & Gas Equipment & Services,Diversified Financial Services,Energy,Financials
+AZO-RAI,AZO,RAI,-3.943166204826874,0.0017391626055120902,Specialty Stores,Tobacco,Consumer Discretionary,Consumer Staples
+HCBK-TDC,HCBK,TDC,-3.936926297507859,0.0017792858471373043,Banks,Application Software,Financials,Information Technology
+KRFT-MON,KRFT,MON,-3.9368048911306888,0.0017800749555302513,Packaged Foods & Meats,Fertilizers & Agricultural Chemicals,Consumer Staples,Materials
+COH-EMC,COH,EMC,-3.9362788815806367,0.0017834976280587135,"Apparel, Accessories & Luxury Goods",IT Consulting & Services,Consumer Discretionary,Information Technology
+AN-CAM,AN,CAM,-3.932040985853832,0.001811296687569077,Specialty Stores,Oil & Gas Equipment & Services,Consumer Discretionary,Energy
+CSX-KR,CSX,KR,-3.931145211500366,0.0018172238807149228,Railroads,Food Retail,Industrials,Consumer Staples
+BEN-KMI,BEN,KMI,-3.928289918778022,0.001836237201854235,Diversified Financial Services,Oil & Gas Refining & Marketing & Transportation,Financials,Energy
+AES-QEP,AES,QEP,-3.927951874144461,0.0018385004094357133,Electric Utilities,Oil & Gas Exploration & Production,Utilities,Energy
+DVA-JEC,DVA,JEC,-3.927082934996599,0.0018443298337168876,Health Care Facilities,Industrial Conglomerates,Health Care,Industrials
+HOT-LMT,HOT,LMT,-3.9262338021044343,0.0018500429439592071,"Hotels, Resorts & Cruise Lines",Aerospace & Defense,Consumer Discretionary,Industrials
+DVN-FLIR,DVN,FLIR,-3.9261099427165145,0.0018508776614664206,Oil & Gas Exploration & Production,Aerospace & Defense,Energy,Industrials
+NU-SO,NU,SO,-3.9255468616403704,0.0018546768028136977,Multi-Utilities & Unregulated Power,Multi-Utilities & Unregulated Power,Utilities,Utilities
+LEG-XL,LEG,XL,-3.924763837433607,0.001859971936998566,Industrial Conglomerates,Property & Casualty Insurance,Industrials,Financials
+AIG-PBI,AIG,PBI,-3.9245683095098975,0.001861296363858496,Property & Casualty Insurance,Data Processing Services,Financials,Industrials
+HPQ-NBR,HPQ,NBR,-3.920726498027036,0.001887497320344071,Computer Hardware,Oil & Gas Drilling,Information Technology,Energy
+LO-OI,LO,OI,-3.920713859451685,0.0018875840763974711,Tobacco,Metal & Glass Containers,Consumer Staples,Materials
+QEP-XOM,QEP,XOM,-3.919826766594561,0.001893682669813885,Oil & Gas Exploration & Production,Integrated Oil & Gas,Energy,Energy
+RAI-SE,RAI,SE,-3.9185515132771425,0.0019024818072999334,Tobacco,Oil & Gas Refining & Marketing & Transportation,Consumer Staples,Energy
+CMI-QEP,CMI,QEP,-3.9151714940287783,0.0019259873633942041,Industrial Machinery,Oil & Gas Exploration & Production,Industrials,Energy
+APC-BEN,APC,BEN,-3.91458036462632,0.0019301257896441654,Oil & Gas Exploration & Production,Diversified Financial Services,Energy,Financials
+PLD-RAI,PLD,RAI,-3.911998857450559,0.0019482953903227204,Diversified Financial Services,Tobacco,Financials,Consumer Staples
+AVY-HOT,AVY,HOT,-3.911263175498217,0.001953502342467526,Paper Packaging,"Hotels, Resorts & Cruise Lines",Materials,Consumer Discretionary
+SNA-SYY,SNA,SYY,-3.91036140380827,0.0019599024238862233,Household Appliances,Food Distributors,Consumer Discretionary,Consumer Staples
+MJN-SPG,MJN,SPG,-3.9074090738301828,0.0019809919860219426,Packaged Foods & Meats,REITs,Consumer Staples,Financials
+ABT-STJ,ABT,STJ,-3.9068656886240274,0.001984896421051044,Health Care Equipment & Services,Health Care Equipment & Services,Health Care,Health Care
+BLL-PCL,BLL,PCL,-3.905419884756494,0.0019953198374987125,Metal & Glass Containers,REITs,Materials,Financials
+KR-MON,KR,MON,-3.9050550842145597,0.0019979578401372227,Food Retail,Fertilizers & Agricultural Chemicals,Consumer Staples,Materials
+CCI-MJN,CCI,MJN,-3.9045407345202308,0.002001682775713888,Wireless Telecommunications Services,Packaged Foods & Meats,Telecommunications Services,Consumer Staples
+CSX-TAP,CSX,TAP,-3.900604689528679,0.002030401428515965,Railroads,Brewers,Industrials,Consumer Staples
+CINF-QEP,CINF,QEP,-3.8973704158042977,0.002054284853078904,Property & Casualty Insurance,Oil & Gas Exploration & Production,Financials,Energy
+CVX-JEC,CVX,JEC,-3.893611739448297,0.002082367449696188,Integrated Oil & Gas,Industrial Conglomerates,Energy,Industrials
+AIV-PLD,AIV,PLD,-3.893404494829426,0.002083926149619527,REITs,Diversified Financial Services,Financials,Financials
+IFF-STZ,IFF,STZ,-3.8920201770932996,0.0020943654265959174,Specialty Chemicals,Distillers & Vintners,Materials,Consumer Staples
+LSI-RAI,LSI,RAI,-3.8909337777704045,0.0021025919524625806,Semiconductors,Tobacco,Information Technology,Consumer Staples
+CAM-CTAS,CAM,CTAS,-3.888689513460981,0.002119680962296323,Oil & Gas Equipment & Services,Diversified Commercial Services,Energy,Industrials
+AFL-PCL,AFL,PCL,-3.8882591914640425,0.002122972312322379,Life & Health Insurance,REITs,Financials,Financials
+HOT-MWV,HOT,MWV,-3.887929645665341,0.0021254960654967106,"Hotels, Resorts & Cruise Lines",Paper Packaging,Consumer Discretionary,Materials
+AIV-GPS,AIV,GPS,-3.886557560276467,0.002136033752339298,REITs,Apparel Retail,Financials,Consumer Discretionary
+EMN-JEC,EMN,JEC,-3.88654176288802,0.002136155358138274,Diversified Chemicals,Industrial Conglomerates,Materials,Industrials
+ETN-MOS,ETN,MOS,-3.885820897960084,0.0021417112836878195,Industrial Conglomerates,Fertilizers & Agricultural Chemicals,Industrials,Materials
+LUV-PSX,LUV,PSX,-3.884994722527357,0.002148095313027746,Airlines,Oil & Gas Refining & Marketing & Transportation,Industrials,Energy
+AVP-ZMH,AVP,ZMH,-3.8818003605633367,0.0021729448305141813,Personal Products,Health Care Equipment & Services,Consumer Staples,Health Care
+PBI-WYN,PBI,WYN,-3.8806442792633224,0.0021820035475599835,Data Processing Services,"Hotels, Resorts & Cruise Lines",Industrials,Consumer Discretionary
+CHK-GE,CHK,GE,-3.880383836330896,0.002184049118572613,Integrated Oil & Gas,Industrial Conglomerates,Energy,Industrials
+AVP-DG,AVP,DG,-3.8796483438894,0.002189835406294283,Personal Products,General Merchandise Stores,Consumer Staples,Consumer Discretionary
+GD-VMC,GD,VMC,-3.879215725913924,0.00219324553151141,Aerospace & Defense,Construction Materials,Industrials,Materials
+LO-NBL,LO,NBL,-3.87918468919042,0.002193490368240044,Tobacco,Oil & Gas Exploration & Production,Consumer Staples,Energy
+CSC-TSCO,CSC,TSCO,-3.878796385979279,0.002196555679929006,IT Consulting & Services,Specialty Retail,Information Technology,Consumer Discretionary
+TGT-UPS,TGT,UPS,-3.876708865192976,0.002213102834985887,General Merchandise Stores,Air Freight & Logistics,Consumer Discretionary,Industrials
+HBAN-HCBK,HBAN,HCBK,-3.8758916547739823,0.0022196119614108505,Banks,Banks,Financials,Financials
+APC-CF,APC,CF,-3.875566858493115,0.0022222038952222018,Oil & Gas Exploration & Production,Fertilizers & Agricultural Chemicals,Energy,Materials
+ACN-MHK,ACN,MHK,-3.873279452828705,0.0022405372325817008,IT Consulting & Services,Home Furnishings,Information Technology,Consumer Discretionary
+AVY-SYY,AVY,SYY,-3.8719502610043985,0.00225125472550973,Paper Packaging,Food Distributors,Materials,Consumer Staples
+PPG-RAI,PPG,RAI,-3.8692777680422155,0.0022729470837062806,Diversified Chemicals,Tobacco,Materials,Consumer Staples
+ADP-IRM,ADP,IRM,-3.868420194706387,0.0022799487686480037,Internet Software & Services,Data Processing Services,Information Technology,Industrials
+CMI-FLIR,CMI,FLIR,-3.868132178555058,0.0022823047547326715,Industrial Machinery,Aerospace & Defense,Industrials,Industrials
+CF-ETN,CF,ETN,-3.8673868966915292,0.0022884116467844465,Fertilizers & Agricultural Chemicals,Industrial Conglomerates,Materials,Industrials
+HBAN-WPX,HBAN,WPX,-3.86732680238956,0.0022889047212093054,Banks,Integrated Oil & Gas,Financials,Energy
+HAS-SPG,HAS,SPG,-3.8643998467520992,0.00231303963825782,Leisure Products,REITs,Consumer Discretionary,Financials
+IRM-SIAL,IRM,SIAL,-3.864031893882649,0.002316090268441881,Data Processing Services,Diversified Chemicals,Industrials,Materials
+ACE-CSX,ACE,CSX,-3.863688651046892,0.0023189393839880496,Property & Casualty Insurance,Railroads,Financials,Industrials
+EL-WAT,EL,WAT,-3.862201889810376,0.0023313178073764095,Personal Products,Health Care Distributors & Services,Consumer Staples,Health Care
+CL-M,CL,M,-3.860316190343194,0.002347105527670194,Household Products,Department Stores,Consumer Staples,Consumer Discretionary
+EBAY-SWY,EBAY,SWY,-3.858570977244436,0.0023618050106394006,Internet Software & Services,Food Retail,Information Technology,Consumer Staples
+VMC-WYN,VMC,WYN,-3.8584641263733666,0.0023627077454065368,Construction Materials,"Hotels, Resorts & Cruise Lines",Materials,Consumer Discretionary
+DG-PCLN,DG,PCLN,-3.857369699643959,0.0023719724339595705,General Merchandise Stores,"Hotels, Resorts & Cruise Lines",Consumer Discretionary,Consumer Discretionary
+RTN-WAG,RTN,WAG,-3.8572478399171044,0.0023730060911635155,Aerospace & Defense,Drug Retail,Industrials,Consumer Staples
+DFS-TGT,DFS,TGT,-3.857227300362692,0.0023731803558857995,Consumer Finance,General Merchandise Stores,Financials,Consumer Discretionary
+BBT-BRCM,BBT,BRCM,-3.85705653361483,0.0023746296581593322,Banks,Semiconductors,Financials,Information Technology
+HUM-WPX,HUM,WPX,-3.856342221684067,0.0023807009114767165,Managed Health Care,Integrated Oil & Gas,Health Care,Energy
+CHK-RAI,CHK,RAI,-3.8562467386766284,0.002381513549390079,Integrated Oil & Gas,Tobacco,Energy,Consumer Staples
+HOG-KR,HOG,KR,-3.8560369577915083,0.0023832998550194703,Motorcycle Manufacturers,Food Retail,Consumer Discretionary,Consumer Staples
+CL-PG,CL,PG,-3.8556986327606237,0.002386183334917282,Household Products,Personal Products,Consumer Staples,Consumer Staples
+DHR-PBI,DHR,PBI,-3.854141672611703,0.002399494594085516,Industrial Machinery,Data Processing Services,Industrials,Industrials
+CAM-VFC,CAM,VFC,-3.8535883916316362,0.0024042413730179664,Oil & Gas Equipment & Services,"Apparel, Accessories & Luxury Goods",Energy,Consumer Discretionary
+ALL-TAP,ALL,TAP,-3.8525196508366064,0.002413435015785278,Property & Casualty Insurance,Brewers,Financials,Consumer Staples
+MON-OKE,MON,OKE,-3.8493264748030356,0.0024410974840024715,Fertilizers & Agricultural Chemicals,Gas Utilities,Materials,Utilities
+HOT-ISRG,HOT,ISRG,-3.8464366861315917,0.002466383768803241,"Hotels, Resorts & Cruise Lines",Health Care Equipment & Services,Consumer Discretionary,Health Care
+MS-WPX,MS,WPX,-3.845284499728944,0.002476532909191084,Diversified Financial Services,Integrated Oil & Gas,Financials,Energy
+IFF-KSU,IFF,KSU,-3.8451296366457948,0.0024778999702707726,Specialty Chemicals,Railroads,Materials,Industrials
+GHC-RAI,GHC,RAI,-3.8426791618605427,0.002499624575922138,Publishing,Tobacco,Consumer Discretionary,Consumer Staples
+RAI-SWK,RAI,SWK,-3.8422873217520777,0.002503114680392922,Tobacco,Household Appliances,Consumer Staples,Consumer Discretionary
+PCAR-SRE,PCAR,SRE,-3.8422623764159765,0.0025033370197270056,Construction & Farm Machinery & Heavy Trucks,Multi-Utilities & Unregulated Power,Industrials,Utilities
+AVP-MHK,AVP,MHK,-3.8416267997945424,0.0025090081059188584,Personal Products,Home Furnishings,Consumer Staples,Consumer Discretionary
+ACN-AME,ACN,AME,-3.84095032844274,0.002515057109235401,IT Consulting & Services,Electrical Components and Equipment,Information Technology,Industrials
+CVX-GIS,CVX,GIS,-3.84015511393707,0.0025221851217605636,Integrated Oil & Gas,Packaged Foods & Meats,Energy,Consumer Staples
+BWA-CAM,BWA,CAM,-3.839041291776571,0.0025322003627039416,Auto Parts & Equipment,Oil & Gas Equipment & Services,Consumer Discretionary,Energy
+A-AVP,A,AVP,-3.8381944482131454,0.0025398395346752423,Health Care Equipment & Services,Personal Products,Health Care,Consumer Staples
+AZO-VNO,AZO,VNO,-3.835987304820137,0.00255984968971384,Specialty Stores,REITs,Consumer Discretionary,Financials
+BAC-WPX,BAC,WPX,-3.8347630345510346,0.0025710116454070735,Banks,Integrated Oil & Gas,Financials,Energy
+ABT-CAH,ABT,CAH,-3.8332498797904635,0.002584869465401294,Health Care Equipment & Services,Health Care Distributors & Services,Health Care,Health Care
+ARG-MMC,ARG,MMC,-3.8319723062635376,0.002596623387476262,Industrial Gases,Insurance Brokers,Materials,Financials
+CPB-CVX,CPB,CVX,-3.829417545648746,0.0026202756633248764,Packaged Foods & Meats,Integrated Oil & Gas,Consumer Staples,Energy
+C-WPX,C,WPX,-3.828798065871817,0.002626040731985242,Banks,Integrated Oil & Gas,Financials,Energy
+IFF-TROW,IFF,TROW,-3.8277510875947547,0.0026358108292401355,Specialty Chemicals,Diversified Financial Services,Materials,Financials
+JOY-MUR,JOY,MUR,-3.8274684208393626,0.0026384543335664975,Industrial Machinery,Integrated Oil & Gas,Industrials,Energy
+HAS-PM,HAS,PM,-3.8268739526029107,0.0026440217893604007,Leisure Products,Tobacco,Consumer Discretionary,Consumer Staples
+M-VFC,M,VFC,-3.8255913810600783,0.002656070549865608,Department Stores,"Apparel, Accessories & Luxury Goods",Consumer Discretionary,Consumer Discretionary
+AFL-CMCSA,AFL,CMCSA,-3.8254730172687488,0.0026571850331041213,Life & Health Insurance,Broadcasting & Cable TV,Financials,Consumer Discretionary
+PCAR-R,PCAR,R,-3.824160052917193,0.002669576519721508,Construction & Farm Machinery & Heavy Trucks,Industrial Conglomerates,Industrials,Industrials
+CHK-DAL,CHK,DAL,-3.8233125077872145,0.0026776037462870124,Integrated Oil & Gas,Airlines,Energy,Industrials
+MMM-XL,MMM,XL,-3.820570755467905,0.002703723953544626,Industrial Conglomerates,Property & Casualty Insurance,Industrials,Financials
+MMM-QEP,MMM,QEP,-3.8165800294091206,0.0027421628031194705,Industrial Conglomerates,Oil & Gas Exploration & Production,Industrials,Energy
+CB-LO,CB,LO,-3.815912179481956,0.0027486445363543244,Property & Casualty Insurance,Tobacco,Financials,Consumer Staples
+HUM-MCHP,HUM,MCHP,-3.815895451909108,0.0027488070647763334,Managed Health Care,Semiconductors,Health Care,Information Technology
+AVP-TMO,AVP,TMO,-3.8155736610174227,0.0027519353731991123,Personal Products,Health Care Equipment & Services,Consumer Staples,Health Care
+CMCSA-HIG,CMCSA,HIG,-3.8148935316635333,0.002758558085720211,Broadcasting & Cable TV,Property & Casualty Insurance,Consumer Discretionary,Financials
+INTU-SWY,INTU,SWY,-3.8140417185742557,0.0027668732687805534,Internet Software & Services,Food Retail,Information Technology,Consumer Staples
+ADBE-FISV,ADBE,FISV,-3.813509658916756,0.0027720788102128025,Application Software,Internet Software & Services,Information Technology,Information Technology
+AVP-PCP,AVP,PCP,-3.8131790458972756,0.0027753179906094758,Personal Products,Industrial Conglomerates,Consumer Staples,Industrials
+OMC-PBI,OMC,PBI,-3.811922628105966,0.0027876595718352823,Advertising,Data Processing Services,Consumer Discretionary,Industrials
+LO-RDC,LO,RDC,-3.809641465367871,0.002810196356059484,Tobacco,Oil & Gas Drilling,Consumer Staples,Energy
+ADP-SYY,ADP,SYY,-3.808588837322767,0.0028206522925331,Internet Software & Services,Food Distributors,Information Technology,Consumer Staples
+MCK-VIAB,MCK,VIAB,-3.807450212861959,0.002832002777458547,Health Care Distributors & Services,Broadcasting & Cable TV,Health Care,Consumer Discretionary
+DD-PSA,DD,PSA,-3.8072932171856215,0.0028335710991059353,Diversified Chemicals,REITs,Materials,Financials
+QEP-TXN,QEP,TXN,-3.807217085440397,0.002834331911575984,Oil & Gas Exploration & Production,Semiconductors,Energy,Information Technology
+M-TAP,M,TAP,-3.8058622983850996,0.0028479022940241885,Department Stores,Brewers,Consumer Discretionary,Consumer Staples
+PBI-TGT,PBI,TGT,-3.804926045321457,0.0028573153137390747,Data Processing Services,General Merchandise Stores,Industrials,Consumer Discretionary
+ALLE-FDX,ALLE,FDX,-3.8031460550476566,0.0028752902536113185,Building Products,Air Freight & Logistics,Industrials,Industrials
+DD-IFF,DD,IFF,-3.8029985888089093,0.0028767840772206976,Diversified Chemicals,Specialty Chemicals,Materials,Materials
+PLL-QEP,PLL,QEP,-3.802086597367097,0.002886038376927883,Industrial Conglomerates,Oil & Gas Exploration & Production,Industrials,Energy
+CHK-NOV,CHK,NOV,-3.8013876964638214,0.002893148911934394,Integrated Oil & Gas,Oil & Gas Equipment & Services,Energy,Energy
+CAM-JWN,CAM,JWN,-3.7992857129778064,0.0029146315440473363,Oil & Gas Equipment & Services,Department Stores,Energy,Consumer Discretionary
+AET-WPX,AET,WPX,-3.7991928517815494,0.0029155839792945728,Managed Health Care,Integrated Oil & Gas,Health Care,Energy
+MON-PSA,MON,PSA,-3.7990444864518484,0.002917106289799356,Fertilizers & Agricultural Chemicals,REITs,Materials,Financials
+L-YUM,L,YUM,-3.796416578226642,0.0029441916084790706,Multi-Sector Holdings,Restaurants,Financials,Consumer Discretionary
+CSX-VNO,CSX,VNO,-3.796180855369482,0.0029466324326626737,Railroads,REITs,Industrials,Financials
+BEAM-JWN,BEAM,JWN,-3.796145007523467,0.002947003787112267,Distillers & Vintners,Department Stores,Consumer Staples,Consumer Discretionary
+AIZ-AVP,AIZ,AVP,-3.7955224668505094,0.0029534596728379727,Multi-line Insurance,Personal Products,Financials,Consumer Staples
+APD-CSC,APD,CSC,-3.793971548482575,0.0029695996796124903,Industrial Gases,IT Consulting & Services,Materials,Information Technology
+AIV-BHI,AIV,BHI,-3.793243156357014,0.002977207841521144,REITs,Oil & Gas Equipment & Services,Financials,Energy
+AZO-ORLY,AZO,ORLY,-3.793207765478144,0.002977577960868392,Specialty Stores,Specialty Stores,Consumer Discretionary,Consumer Discretionary
+NEE-SO,NEE,SO,-3.792692805849048,0.002982968222697995,Multi-Utilities & Unregulated Power,Multi-Utilities & Unregulated Power,Utilities,Utilities
+AMGN-LLY,AMGN,LLY,-3.7912014081043677,0.0029986298933171725,Biotechnology,Pharmaceuticals,Health Care,Health Care
+ADS-TSCO,ADS,TSCO,-3.7910597414841107,0.00300012150958089,Data Processing & Outsourced Services,Specialty Retail,Information Technology,Consumer Discretionary
+EL-EXPE,EL,EXPE,-3.7905211806031067,0.0030057982809958304,Personal Products,"Hotels, Resorts & Cruise Lines",Consumer Staples,Consumer Discretionary
+ORLY-UTX,ORLY,UTX,-3.7900589067551773,0.00301067881792949,Specialty Stores,Industrial Conglomerates,Consumer Discretionary,Industrials
+ADBE-TWX,ADBE,TWX,-3.7900322935832467,0.0030109600129326675,Application Software,Broadcasting & Cable TV,Information Technology,Consumer Discretionary
+EXPE-PRGO,EXPE,PRGO,-3.789979626051953,0.0030115165697358294,"Hotels, Resorts & Cruise Lines",Pharmaceuticals,Consumer Discretionary,Health Care
+CHRW-EXPD,CHRW,EXPD,-3.789938546238543,0.0030119507406338912,Air Freight & Logistics,Air Freight & Logistics,Industrials,Industrials
+MMM-STZ,MMM,STZ,-3.789263585118771,0.00301909262752023,Industrial Conglomerates,Distillers & Vintners,Industrials,Consumer Staples
+ALLE-MCK,ALLE,MCK,-3.7892128439174377,0.0030196301584702826,Building Products,Health Care Distributors & Services,Industrials,Health Care
+GPC-RAI,GPC,RAI,-3.789048905188238,0.0030213674581538526,Specialty Stores,Tobacco,Consumer Discretionary,Consumer Staples
+IFF-RAI,IFF,RAI,-3.7887109137226487,0.003024952140222312,Specialty Chemicals,Tobacco,Materials,Consumer Staples
+HBAN-INTC,HBAN,INTC,-3.7884457078186013,0.003027767609083734,Banks,Semiconductors,Financials,Information Technology
+EL-VIAB,EL,VIAB,-3.7872822379539457,0.0030401476973206084,Personal Products,Broadcasting & Cable TV,Consumer Staples,Consumer Discretionary
+GHC-HST,GHC,HST,-3.7867183008333853,0.0030461650975254,Publishing,REITs,Consumer Discretionary,Financials
+HAS-MON,HAS,MON,-3.7856043439651366,0.003058083594964903,Leisure Products,Fertilizers & Agricultural Chemicals,Consumer Discretionary,Materials
+ADBE-KORS,ADBE,KORS,-3.7853536035618665,0.0030607722338966145,Application Software,"Apparel, Accessories & Luxury Goods",Information Technology,Consumer Discretionary
+MCO-VIAB,MCO,VIAB,-3.784071880467851,0.003074549879990702,Diversified Financial Services,Broadcasting & Cable TV,Financials,Consumer Discretionary
+HOT-RTN,HOT,RTN,-3.783930141311034,0.0030760769756511906,"Hotels, Resorts & Cruise Lines",Aerospace & Defense,Consumer Discretionary,Industrials
+NLSN-VRSN,NLSN,VRSN,-3.7817681003265387,0.0030994573953213563,Research & Consulting Services,Internet Software & Services,Industrials,Information Technology
+PBI-PGR,PBI,PGR,-3.7812171975104136,0.003105440948755599,Data Processing Services,Property & Casualty Insurance,Industrials,Financials
+EMN-RAI,EMN,RAI,-3.7810948133411464,0.003106771648005429,Diversified Chemicals,Tobacco,Materials,Consumer Staples
+JEC-TGT,JEC,TGT,-3.780366986371701,0.003114696241607353,Industrial Conglomerates,General Merchandise Stores,Industrials,Consumer Discretionary
+CAM-KR,CAM,KR,-3.7801203504773158,0.003117385830333599,Oil & Gas Equipment & Services,Food Retail,Energy,Consumer Staples
+DOV-JWN,DOV,JWN,-3.7792384115285604,0.0031270209381598258,Industrial Machinery,Department Stores,Industrials,Consumer Discretionary
+ACN-MCO,ACN,MCO,-3.778294115607478,0.0031373676306213406,IT Consulting & Services,Diversified Financial Services,Information Technology,Financials
+CPB-QEP,CPB,QEP,-3.777446337896636,0.0031466835665283836,Packaged Foods & Meats,Oil & Gas Exploration & Production,Consumer Staples,Energy
+AVB-KMB,AVB,KMB,-3.7766725738571147,0.0031552083769343818,REITs,Household Products,Financials,Consumer Staples
+ACE-KR,ACE,KR,-3.7758460883314227,0.0031643374774225964,Property & Casualty Insurance,Food Retail,Financials,Consumer Staples
+CMG-HAR,CMG,HAR,-3.7748867058441475,0.003174964955996696,Restaurants,Consumer Electronics,Consumer Discretionary,Consumer Discretionary
+AVP-TWX,AVP,TWX,-3.77383967009778,0.003186600830815083,Personal Products,Broadcasting & Cable TV,Consumer Staples,Consumer Discretionary
+CSX-MMM,CSX,MMM,-3.773684695007894,0.0031883264190148792,Railroads,Industrial Conglomerates,Industrials,Industrials
+DFS-HIG,DFS,HIG,-3.7735505587982354,0.0031898206674350997,Consumer Finance,Property & Casualty Insurance,Financials,Financials
+LEG-ROK,LEG,ROK,-3.7729356456047842,0.0031966789075640384,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+DFS-XRAY,DFS,XRAY,-3.772623509774658,0.003200165397806778,Consumer Finance,Health Care Supplies,Financials,Health Care
+BLL-PBI,BLL,PBI,-3.7713725076020697,0.0032141739144288277,Metal & Glass Containers,Data Processing Services,Materials,Industrials
+LLY-VAR,LLY,VAR,-3.7706485595254717,0.0032223062786452144,Pharmaceuticals,Health Care Equipment & Services,Health Care,Health Care
+BWA-IRM,BWA,IRM,-3.7699833653026884,0.0032297952999272984,Auto Parts & Equipment,Data Processing Services,Consumer Discretionary,Industrials
+CPB-PCAR,CPB,PCAR,-3.7689893039635125,0.003241016642948531,Packaged Foods & Meats,Construction & Farm Machinery & Heavy Trucks,Consumer Staples,Industrials
+AIV-IFF,AIV,IFF,-3.767584653399391,0.003256933935830275,REITs,Specialty Chemicals,Financials,Materials
+AVP-LNC,AVP,LNC,-3.767582139177159,0.0032569624908894068,Personal Products,Multi-line Insurance,Consumer Staples,Financials
+BEAM-MON,BEAM,MON,-3.7649386112502397,0.003287113675469793,Distillers & Vintners,Fertilizers & Agricultural Chemicals,Consumer Staples,Materials
+RAI-STJ,RAI,STJ,-3.7634131957191728,0.0033046284682124285,Tobacco,Health Care Equipment & Services,Consumer Staples,Health Care
+CAM-LNC,CAM,LNC,-3.7618577056073295,0.003322576786509055,Oil & Gas Equipment & Services,Multi-line Insurance,Energy,Financials
+CHK-KMI,CHK,KMI,-3.760360531502077,0.003339936704993439,Integrated Oil & Gas,Oil & Gas Refining & Marketing & Transportation,Energy,Energy
+ADBE-CFN,ADBE,CFN,-3.7574528605942716,0.0033738896225119592,Application Software,Health Care Equipment & Services,Information Technology,Health Care
+KR-UNP,KR,UNP,-3.757434068843717,0.0033741100807582708,Food Retail,Railroads,Consumer Staples,Industrials
+IRM-V,IRM,V,-3.7574200414693366,0.0033742746536279842,Data Processing Services,Internet Software & Services,Industrials,Information Technology
+HAS-PSA,HAS,PSA,-3.7561467334354988,0.003389244166006751,Leisure Products,REITs,Consumer Discretionary,Financials
+NSC-SRE,NSC,SRE,-3.7558381048373035,0.003392881691206634,Railroads,Multi-Utilities & Unregulated Power,Industrials,Utilities
+MOS-PBI,MOS,PBI,-3.7526338056320667,0.0034308601317404193,Fertilizers & Agricultural Chemicals,Data Processing Services,Materials,Industrials
+AON-HIG,AON,HIG,-3.7510527289194187,0.003449742957267421,Insurance Brokers,Property & Casualty Insurance,Financials,Financials
+PBI-VMC,PBI,VMC,-3.7508142168813516,0.003452599773281863,Data Processing Services,Construction Materials,Industrials,Materials
+HES-R,HES,R,-3.7490724589128406,0.003473527846440776,Integrated Oil & Gas,Industrial Conglomerates,Energy,Industrials
+BBY-PWR,BBY,PWR,-3.7477555585779614,0.003489428232839125,Computer & Electronics Retail,Industrial Conglomerates,Consumer Discretionary,Industrials
+DAL-NLSN,DAL,NLSN,-3.7474082621955525,0.003493632635000806,Airlines,Research & Consulting Services,Industrials,Industrials
+PWR-XL,PWR,XL,-3.746995278924284,0.00349863829654676,Industrial Conglomerates,Property & Casualty Insurance,Industrials,Financials
+ARG-TMK,ARG,TMK,-3.746181948137851,0.0035085157049972097,Industrial Gases,Life & Health Insurance,Materials,Financials
+HOT-NOC,HOT,NOC,-3.745885910967485,0.003512117240903125,"Hotels, Resorts & Cruise Lines",Aerospace & Defense,Consumer Discretionary,Industrials
+STI-WPX,STI,WPX,-3.7454032969242537,0.0035179959083815418,Banks,Integrated Oil & Gas,Financials,Energy
+ROK-XL,ROK,XL,-3.744096732086095,0.0035339563434595898,Industrial Conglomerates,Property & Casualty Insurance,Industrials,Financials
+IFF-TAP,IFF,TAP,-3.7429549366991006,0.0035479583660211907,Specialty Chemicals,Brewers,Materials,Consumer Staples
+RAI-ROST,RAI,ROST,-3.741967111861054,0.0035601132472086274,Tobacco,Apparel Retail,Consumer Staples,Consumer Discretionary
+AIV-COST,AIV,COST,-3.7418102530455526,0.003562046855789561,REITs,Hypermarkets & Super Centers,Financials,Consumer Staples
+BLL-HOT,BLL,HOT,-3.7415301430631667,0.0035655021846002295,Metal & Glass Containers,"Hotels, Resorts & Cruise Lines",Materials,Consumer Discretionary
+BBBY-TGT,BBBY,TGT,-3.7410993723273034,0.003570822003935321,Specialty Stores,General Merchandise Stores,Consumer Discretionary,Consumer Discretionary
+AAPL-KO,AAPL,KO,-3.7406709782910985,0.003576119688408332,Computer Hardware,Soft Drinks,Information Technology,Consumer Staples
+CSC-IRM,CSC,IRM,-3.7400984725416886,0.0035832107633072263,IT Consulting & Services,Data Processing Services,Information Technology,Industrials
+CAM-SRCL,CAM,SRCL,-3.7398865699470396,0.0035858386627663913,Oil & Gas Equipment & Services,Industrial Conglomerates,Energy,Industrials
+FLIR-RDC,FLIR,RDC,-3.739608995421031,0.0035892836625123804,Aerospace & Defense,Oil & Gas Drilling,Industrials,Energy
+FLIR-HES,FLIR,HES,-3.7392894437795503,0.0035932534006085275,Aerospace & Defense,Integrated Oil & Gas,Industrials,Energy
+IFF-XRAY,IFF,XRAY,-3.738361592404089,0.0036048027687051176,Specialty Chemicals,Health Care Supplies,Materials,Health Care
+BA-RAI,BA,RAI,-3.7379387565321758,0.0036100772687841444,Aerospace & Defense,Tobacco,Industrials,Consumer Staples
+CAM-CSC,CAM,CSC,-3.7362700365529635,0.0036309621832147083,Oil & Gas Equipment & Services,IT Consulting & Services,Energy,Information Technology
+GHC-LUV,GHC,LUV,-3.7348487385466242,0.0036488377456404516,Publishing,Airlines,Consumer Discretionary,Industrials
+ORLY-UPS,ORLY,UPS,-3.7324237652728347,0.003679522746933207,Specialty Stores,Air Freight & Logistics,Consumer Discretionary,Industrials
+CF-IFF,CF,IFF,-3.731508922771805,0.003691160230684598,Fertilizers & Agricultural Chemicals,Specialty Chemicals,Materials,Materials
+COV-LO,COV,LO,-3.7287938757635595,0.0037258965059181514,Health Care Equipment & Services,Tobacco,Health Care,Consumer Staples
+LO-SWK,LO,SWK,-3.728760130492143,0.003726330120356665,Tobacco,Household Appliances,Consumer Staples,Consumer Discretionary
+MSI-NVDA,MSI,NVDA,-3.7271661110953676,0.003746865430975247,Telecommunications Equipment,Semiconductors,Information Technology,Information Technology
+RAI-SYY,RAI,SYY,-3.7268915805373246,0.00375041257792326,Tobacco,Food Distributors,Consumer Staples,Consumer Staples
+BBBY-MDLZ,BBBY,MDLZ,-3.7259665992714495,0.003762386703003675,Specialty Stores,Packaged Foods & Meats,Consumer Discretionary,Consumer Staples
+MCO-TWX,MCO,TWX,-3.7257898714682836,0.0037646784709668836,Diversified Financial Services,Broadcasting & Cable TV,Financials,Consumer Discretionary
+NLSN-RAI,NLSN,RAI,-3.7235252311851292,0.0037941592146876263,Research & Consulting Services,Tobacco,Industrials,Consumer Staples
+RAI-V,RAI,V,-3.7219299616734145,0.0038150529389344248,Tobacco,Internet Software & Services,Consumer Staples,Information Technology
+AEP-RAI,AEP,RAI,-3.7216942018132846,0.00381814967634893,Electric Utilities,Tobacco,Utilities,Consumer Staples
+CCI-RAI,CCI,RAI,-3.7212509862504866,0.003823977603462249,Wireless Telecommunications Services,Tobacco,Telecommunications Services,Consumer Staples
+IPG-ZMH,IPG,ZMH,-3.7208008898208345,0.003829904342680165,Advertising,Health Care Equipment & Services,Consumer Discretionary,Health Care
+ICE-SWY,ICE,SWY,-3.7207348238419953,0.003830774987797302,Diversified Financial Services,Food Retail,Financials,Consumer Staples
+QEP-XL,QEP,XL,-3.72051198170417,0.0038337130313451174,Oil & Gas Exploration & Production,Property & Casualty Insurance,Energy,Financials
+AN-HIG,AN,HIG,-3.7191826264328682,0.00385128270761099,Specialty Stores,Property & Casualty Insurance,Consumer Discretionary,Financials
+ABT-SWY,ABT,SWY,-3.7167193801808778,0.0038840336371199803,Health Care Equipment & Services,Food Retail,Health Care,Consumer Staples
+LO-QEP,LO,QEP,-3.716548675659824,0.003886312715430795,Tobacco,Oil & Gas Exploration & Production,Consumer Staples,Energy
+WPX-XLNX,WPX,XLNX,-3.712613667974494,0.003939189539103959,Integrated Oil & Gas,Semiconductors,Energy,Information Technology
+BF.B-COH,BF.B,COH,-3.712497961449025,0.0039407542665247375,Distillers & Vintners,"Apparel, Accessories & Luxury Goods",Consumer Staples,Consumer Discretionary
+RAI-VAR,RAI,VAR,-3.712163548275299,0.003945279814708102,Tobacco,Health Care Equipment & Services,Consumer Staples,Health Care
+BRCM-PNC,BRCM,PNC,-3.711681124080338,0.003951816745603592,Semiconductors,Banks,Information Technology,Financials
+APD-RAI,APD,RAI,-3.711587875119851,0.003953081427385696,Industrial Gases,Tobacco,Materials,Consumer Staples
+ISRG-TGT,ISRG,TGT,-3.71037666774928,0.003969542010125148,Health Care Equipment & Services,General Merchandise Stores,Health Care,Consumer Discretionary
+AVP-WMB,AVP,WMB,-3.7084417136948002,0.003995968622298148,Personal Products,Oil & Gas Exploration & Production,Consumer Staples,Energy
+RAI-TWC,RAI,TWC,-3.708083853187245,0.004000873696433547,Tobacco,Broadcasting & Cable TV,Consumer Staples,Consumer Discretionary
+AVP-RAI,AVP,RAI,-3.7067734192313906,0.0040188824221765035,Personal Products,Tobacco,Consumer Staples,Consumer Staples
+RAI-RSG,RAI,RSG,-3.706020477024735,0.004029263288567555,Tobacco,Industrial Conglomerates,Consumer Staples,Industrials
+KR-PX,KR,PX,-3.7037828432595594,0.004060258603474779,Food Retail,Industrial Gases,Consumer Staples,Materials
+QEP-TEL,QEP,TEL,-3.703590657441237,0.004062930869650471,Oil & Gas Exploration & Production,Electronic Equipment & Instruments,Energy,Information Technology
+BBBY-IFF,BBBY,IFF,-3.703326665990758,0.0040666041860039515,Specialty Stores,Specialty Chemicals,Consumer Discretionary,Materials
+CPB-M,CPB,M,-3.70255526819461,0.004077355230484753,Packaged Foods & Meats,Department Stores,Consumer Staples,Consumer Discretionary
+CF-CHK,CF,CHK,-3.7019845614443057,0.004085325944165638,Fertilizers & Agricultural Chemicals,Integrated Oil & Gas,Materials,Energy
+BDX-RAI,BDX,RAI,-3.7019577926945666,0.004085700156550222,Health Care Equipment & Services,Tobacco,Health Care,Consumer Staples
+CAG-COP,CAG,COP,-3.7008016056658617,0.004101892955765148,Packaged Foods & Meats,Integrated Oil & Gas,Consumer Staples,Energy
+HAS-LLL,HAS,LLL,-3.7006707920133373,0.004103728736224182,Leisure Products,Industrial Conglomerates,Consumer Discretionary,Industrials
+CAM-XRAY,CAM,XRAY,-3.7006614617389584,0.004103859701827139,Oil & Gas Equipment & Services,Health Care Supplies,Energy,Health Care
+CAM-SYK,CAM,SYK,-3.6998998580909674,0.004114562944912072,Oil & Gas Equipment & Services,Health Care Equipment & Services,Energy,Health Care
+KSS-QEP,KSS,QEP,-3.699872090234002,0.0041149536639206105,General Merchandise Stores,Oil & Gas Exploration & Production,Consumer Discretionary,Energy
+AZO-SYK,AZO,SYK,-3.6998627146148264,0.004115085595071023,Specialty Stores,Health Care Equipment & Services,Consumer Discretionary,Health Care
+LO-PXD,LO,PXD,-3.6974460042314092,0.004149222131308812,Tobacco,Oil & Gas Exploration & Production,Consumer Staples,Energy
+DISCA-UNM,DISCA,UNM,-3.6960362548288543,0.004169254468775476,Broadcasting & Cable TV,Diversified Financial Services,Consumer Discretionary,Financials
+INTU-VIAB,INTU,VIAB,-3.6958901651704905,0.004171335428489721,Internet Software & Services,Broadcasting & Cable TV,Information Technology,Consumer Discretionary
+ORLY-XRAY,ORLY,XRAY,-3.6958048252754665,0.0041725514833718625,Specialty Stores,Health Care Supplies,Consumer Discretionary,Health Care
+AVP-HD,AVP,HD,-3.695697161961193,0.004174086099078561,Personal Products,Home Improvement Retail,Consumer Staples,Consumer Discretionary
+PLD-SE,PLD,SE,-3.6956310877352565,0.0041750281659597155,Diversified Financial Services,Oil & Gas Refining & Marketing & Transportation,Financials,Energy
+RTN-STJ,RTN,STJ,-3.695607329597662,0.004175366949991149,Aerospace & Defense,Health Care Equipment & Services,Industrials,Health Care
+DVA-PAYX,DVA,PAYX,-3.6955180588365972,0.004176640149272023,Health Care Facilities,Internet Software & Services,Health Care,Information Technology
+MWV-TGT,MWV,TGT,-3.6939419129378455,0.004199178001949774,Paper Packaging,General Merchandise Stores,Materials,Consumer Discretionary
+ACN-AVP,ACN,AVP,-3.6929731457600172,0.004213085826928941,IT Consulting & Services,Personal Products,Information Technology,Consumer Staples
+AIV-ORLY,AIV,ORLY,-3.691933771348248,0.004228054096217467,REITs,Specialty Stores,Financials,Consumer Discretionary
+LLL-PM,LLL,PM,-3.6916875369247877,0.0042316072861167025,Industrial Conglomerates,Tobacco,Industrials,Consumer Staples
+LYB-SYY,LYB,SYY,-3.6916127686628983,0.0042326867402322004,Diversified Chemicals,Food Distributors,Materials,Consumer Staples
+CF-UTX,CF,UTX,-3.6914504475277234,0.004235031090136905,Fertilizers & Agricultural Chemicals,Industrial Conglomerates,Materials,Industrials
+BLL-WYN,BLL,WYN,-3.6912086593422426,0.004238525355779594,Metal & Glass Containers,"Hotels, Resorts & Cruise Lines",Materials,Consumer Discretionary
+JWN-KMB,JWN,KMB,-3.690548207294411,0.004248083480594518,Department Stores,Household Products,Consumer Discretionary,Consumer Staples
+AMT-MJN,AMT,MJN,-3.689648472743877,0.004261136209920851,REITs,Packaged Foods & Meats,Financials,Consumer Staples
+BRCM-HCBK,BRCM,HCBK,-3.689579937962539,0.004262131965446867,Semiconductors,Banks,Information Technology,Financials
+IPG-YUM,IPG,YUM,-3.6893820542540676,0.0042650082504058036,Advertising,Restaurants,Consumer Discretionary,Consumer Discretionary
+CAM-HOG,CAM,HOG,-3.689141872340621,0.004268501731549277,Oil & Gas Equipment & Services,Motorcycle Manufacturers,Energy,Consumer Discretionary
+BMY-MAS,BMY,MAS,-3.68899479795414,0.004270642240238764,Health Care Distributors & Services,Building Products,Health Care,Industrials
+ALL-HES,ALL,HES,-3.688286304927254,0.004280967335087507,Property & Casualty Insurance,Integrated Oil & Gas,Financials,Energy
+BEN-ETN,BEN,ETN,-3.688030586438372,0.004284699598795377,Diversified Financial Services,Industrial Conglomerates,Financials,Industrials
+SHW-V,SHW,V,-3.686720570421666,0.004303866204815014,Specialty Chemicals,Internet Software & Services,Materials,Information Technology
+LM-MRO,LM,MRO,-3.6864209361410563,0.004308261088462767,Diversified Financial Services,Oil & Gas Exploration & Production,Financials,Energy
+KR-M,KR,M,-3.686401795266099,0.004308541976336445,Food Retail,Department Stores,Consumer Staples,Consumer Discretionary
+IP-VRSN,IP,VRSN,-3.6862920717832193,0.004310152465608057,Paper Products,Internet Software & Services,Materials,Information Technology
+CAM-OKE,CAM,OKE,-3.68620845142464,0.00431138018996558,Oil & Gas Equipment & Services,Gas Utilities,Energy,Utilities
+AVP-GS,AVP,GS,-3.6848534805188327,0.004331318606420674,Personal Products,Diversified Financial Services,Consumer Staples,Financials
+CAM-RTN,CAM,RTN,-3.684616534817761,0.004334813903268042,Oil & Gas Equipment & Services,Aerospace & Defense,Energy,Industrials
+PFG-RHI,PFG,RHI,-3.683332722717016,0.004353796840683788,Diversified Financial Services,Industrial Conglomerates,Financials,Industrials
+AMGN-RAI,AMGN,RAI,-3.683074054197466,0.004357630787880901,Biotechnology,Tobacco,Health Care,Consumer Staples
+RAI-SPG,RAI,SPG,-3.6826516454159854,0.004363898297243051,Tobacco,REITs,Consumer Staples,Financials
+FITB-HUM,FITB,HUM,-3.6809432054145246,0.004389331403257575,Banks,Managed Health Care,Financials,Health Care
+AVB-M,AVB,M,-3.680453097969227,0.00439665244396322,REITs,Department Stores,Financials,Consumer Discretionary
+ARG-PFG,ARG,PFG,-3.680382690589808,0.00439770507814573,Industrial Gases,Diversified Financial Services,Materials,Financials
+HBAN-TDC,HBAN,TDC,-3.680005263858372,0.004403351766133198,Banks,Application Software,Financials,Information Technology
+MON-UNP,MON,UNP,-3.679672571969824,0.004408334662871875,Fertilizers & Agricultural Chemicals,Railroads,Materials,Industrials
+DD-RAI,DD,RAI,-3.6791112635598764,0.004416753335616264,Diversified Chemicals,Tobacco,Materials,Consumer Staples
+PBI-SE,PBI,SE,-3.678975227447813,0.0044187958543179355,Data Processing Services,Oil & Gas Refining & Marketing & Transportation,Industrials,Energy
+NLSN-WU,NLSN,WU,-3.678669145619488,0.004423394682775152,Research & Consulting Services,Internet Software & Services,Industrials,Information Technology
+RAI-XEL,RAI,XEL,-3.678449295817047,0.004426700584844334,Tobacco,Multi-Utilities & Unregulated Power,Consumer Staples,Utilities
+AZO-CAM,AZO,CAM,-3.677926273407565,0.004434574387923825,Specialty Stores,Oil & Gas Equipment & Services,Consumer Discretionary,Energy
+AVP-CFN,AVP,CFN,-3.6773783276968026,0.004442837106228154,Personal Products,Health Care Equipment & Services,Consumer Staples,Health Care
+CAM-INTU,CAM,INTU,-3.6771145335813635,0.004446819984103863,Oil & Gas Equipment & Services,Internet Software & Services,Energy,Information Technology
+HBAN-TXN,HBAN,TXN,-3.6752211537231076,0.004475502821008052,Banks,Semiconductors,Financials,Information Technology
+HCBK-QEP,HCBK,QEP,-3.6747068874656805,0.004483322549923372,Banks,Oil & Gas Exploration & Production,Financials,Energy
+AMGN-TSS,AMGN,TSS,-3.6744576542571847,0.004487116774774916,Biotechnology,Internet Software & Services,Health Care,Information Technology
+MDLZ-TGT,MDLZ,TGT,-3.673427759617943,0.004502826560667394,Packaged Foods & Meats,General Merchandise Stores,Consumer Staples,Consumer Discretionary
+GGP-RTN,GGP,RTN,-3.6724429240493364,0.004517895947717607,REITs,Aerospace & Defense,Financials,Industrials
+DOV-LSI,DOV,LSI,-3.6723082352706657,0.004519960450707507,Industrial Machinery,Semiconductors,Industrials,Information Technology
+BEN-BLK,BEN,BLK,-3.6709905196697936,0.0045402037788993144,Diversified Financial Services,Diversified Financial Services,Financials,Financials
+GOOG-INTU,GOOG,INTU,-3.670001101997038,0.004555457977235464,Internet Software & Services,Internet Software & Services,Information Technology,Information Technology
+JNPR-MSI,JNPR,MSI,-3.6696266606726584,0.004561243053774242,Networking Equipment,Telecommunications Equipment,Information Technology,Information Technology
+PCL-RAI,PCL,RAI,-3.669528573187866,0.004562759601673498,REITs,Tobacco,Financials,Consumer Staples
+EMN-UNM,EMN,UNM,-3.669238724137135,0.004567243696982273,Diversified Chemicals,Diversified Financial Services,Materials,Financials
+UPS-VNO,UPS,VNO,-3.6683134478223227,0.004581585047906359,Air Freight & Logistics,REITs,Industrials,Financials
+IFF-MMC,IFF,MMC,-3.6674975025530374,0.004594265885483437,Specialty Chemicals,Insurance Brokers,Materials,Financials
+DFS-PBI,DFS,PBI,-3.6673695403348234,0.004596257483824047,Consumer Finance,Data Processing Services,Financials,Industrials
+CVS-QEP,CVS,QEP,-3.6670068904077406,0.0046019060298477755,Drug Retail,Oil & Gas Exploration & Production,Consumer Staples,Energy
+BEAM-CSX,BEAM,CSX,-3.665523167102905,0.0046250821343793306,Distillers & Vintners,Railroads,Consumer Staples,Industrials
+IRM-TSS,IRM,TSS,-3.6642795848450085,0.004644589113685727,Data Processing Services,Internet Software & Services,Industrials,Information Technology
+CSX-LSI,CSX,LSI,-3.663914510359316,0.004650329942572287,Railroads,Semiconductors,Industrials,Information Technology
+PXD-RAI,PXD,RAI,-3.663258675892851,0.004660659251367769,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+AFL-ED,AFL,ED,-3.6631842441240505,0.004661832862960591,Life & Health Insurance,Multi-Utilities & Unregulated Power,Financials,Utilities
+GIS-QEP,GIS,QEP,-3.66246286191168,0.004673221309137082,Packaged Foods & Meats,Oil & Gas Exploration & Production,Consumer Staples,Energy
+FFIV-GCI,FFIV,GCI,-3.661947627535274,0.004681370824402463,Networking Equipment,Publishing,Information Technology,Consumer Discretionary
+MOS-PGR,MOS,PGR,-3.661514433662165,0.004688232719946559,Fertilizers & Agricultural Chemicals,Property & Casualty Insurance,Materials,Financials
+BXP-PCAR,BXP,PCAR,-3.661424268801477,0.004689662105425403,REITs,Construction & Farm Machinery & Heavy Trucks,Financials,Industrials
+AVP-CMCSA,AVP,CMCSA,-3.6602701302835143,0.004707993809984839,Personal Products,Broadcasting & Cable TV,Consumer Staples,Consumer Discretionary
+CNX-GRMN,CNX,GRMN,-3.6602580786351906,0.004708185575883363,Oil & Gas Exploration & Production,Consumer Electronics,Energy,Consumer Discretionary
+KEY-LRCX,KEY,LRCX,-3.6597788331962566,0.004715817105502416,Banks,Semiconductor Equipment,Financials,Information Technology
+BDX-LUV,BDX,LUV,-3.6594404338091246,0.004721212584837341,Health Care Equipment & Services,Airlines,Health Care,Industrials
+AVY-RL,AVY,RL,-3.6593784964552483,0.004722200730181462,Paper Packaging,"Apparel, Accessories & Luxury Goods",Materials,Consumer Discretionary
+CFN-FISV,CFN,FISV,-3.6580454692689583,0.004743513515301723,Health Care Equipment & Services,Internet Software & Services,Health Care,Information Technology
+AFL-IPG,AFL,IPG,-3.6572813359005756,0.0047557701715056685,Life & Health Insurance,Advertising,Financials,Consumer Discretionary
+BEAM-RAI,BEAM,RAI,-3.657137414363366,0.004758081892143285,Distillers & Vintners,Tobacco,Consumer Staples,Consumer Staples
+CAM-MCK,CAM,MCK,-3.657092625174422,0.004758801521462655,Oil & Gas Equipment & Services,Health Care Distributors & Services,Energy,Health Care
+DGX-NRG,DGX,NRG,-3.655004985944746,0.004792453940694865,Health Care Facilities,Multi-Utilities & Unregulated Power,Health Care,Utilities
+CSCO-QEP,CSCO,QEP,-3.654679365032386,0.004797722403813619,Networking Equipment,Oil & Gas Exploration & Production,Information Technology,Energy
+VMC-ZMH,VMC,ZMH,-3.6538539451329424,0.0048111011380292685,Construction Materials,Health Care Equipment & Services,Materials,Health Care
+HAS-KRFT,HAS,KRFT,-3.6531791413405754,0.004822063869108296,Leisure Products,Packaged Foods & Meats,Consumer Discretionary,Consumer Staples
+JWN-KR,JWN,KR,-3.6520322842512254,0.004840747703188933,Department Stores,Food Retail,Consumer Discretionary,Consumer Staples
+NTAP-RAI,NTAP,RAI,-3.651883321512048,0.0048431793383174266,Internet Software & Services,Tobacco,Information Technology,Consumer Staples
+BBY-STI,BBY,STI,-3.6510522609931493,0.004856765819829845,Computer & Electronics Retail,Banks,Consumer Discretionary,Financials
+HUM-SLM,HUM,SLM,-3.650679927468508,0.004862864118408901,Managed Health Care,Diversified Financial Services,Health Care,Financials
+CSX-KRFT,CSX,KRFT,-3.650574369374098,0.004864594279787792,Railroads,Packaged Foods & Meats,Industrials,Consumer Staples
+CHRW-TGT,CHRW,TGT,-3.650360757782078,0.004868097219209388,Air Freight & Logistics,General Merchandise Stores,Industrials,Consumer Discretionary
+BA-PBI,BA,PBI,-3.6501132311554647,0.004872159192571264,Aerospace & Defense,Data Processing Services,Industrials,Industrials
+GHC-KR,GHC,KR,-3.6499808690464266,0.004874332554147692,Publishing,Food Retail,Consumer Discretionary,Consumer Staples
+GPC-PBI,GPC,PBI,-3.649957184883536,0.004874721536886572,Specialty Stores,Data Processing Services,Consumer Discretionary,Industrials
+PPG-SWY,PPG,SWY,-3.6468002178134613,0.004926824533517548,Diversified Chemicals,Food Retail,Materials,Consumer Staples
+AVY-HIG,AVY,HIG,-3.646327725161337,0.0049346660951334045,Paper Packaging,Property & Casualty Insurance,Materials,Financials
+AVP-INTU,AVP,INTU,-3.6452924615570916,0.004951887234111896,Personal Products,Internet Software & Services,Consumer Staples,Information Technology
+CSX-JWN,CSX,JWN,-3.64527544036765,0.004952170830515139,Railroads,Department Stores,Industrials,Consumer Discretionary
+BCR-K,BCR,K,-3.6448187214522965,0.004959785919098999,Health Care Equipment & Services,Packaged Foods & Meats,Health Care,Consumer Staples
+EMC-HUM,EMC,HUM,-3.6443468171431173,0.0049676653983306,IT Consulting & Services,Managed Health Care,Information Technology,Health Care
+DPS-QEP,DPS,QEP,-3.644116209183237,0.004971520048730186,Soft Drinks,Oil & Gas Exploration & Production,Consumer Staples,Energy
+JWN-KRFT,JWN,KRFT,-3.641474535100347,0.005015870732879845,Department Stores,Packaged Foods & Meats,Consumer Discretionary,Consumer Staples
+CF-GE,CF,GE,-3.641115941238174,0.005021918795114279,Fertilizers & Agricultural Chemicals,Industrial Conglomerates,Materials,Industrials
+JBL-NTAP,JBL,NTAP,-3.640841003264811,0.005026560407627065,IT Consulting & Services,Internet Software & Services,Information Technology,Information Technology
+NVDA-WPX,NVDA,WPX,-3.640422828018206,0.005033627695280902,Semiconductors,Integrated Oil & Gas,Information Technology,Energy
+TGT-WYN,TGT,WYN,-3.639976669112813,0.005041177885812924,General Merchandise Stores,"Hotels, Resorts & Cruise Lines",Consumer Discretionary,Consumer Discretionary
+CVX-KSS,CVX,KSS,-3.6393931503749335,0.005051068123502911,Integrated Oil & Gas,General Merchandise Stores,Energy,Consumer Discretionary
+CHK-PBI,CHK,PBI,-3.6386427682395595,0.0050638125342186875,Integrated Oil & Gas,Data Processing Services,Energy,Industrials
+BDX-HAS,BDX,HAS,-3.6373397653036594,0.005086012138893414,Health Care Equipment & Services,Leisure Products,Health Care,Consumer Discretionary
+ADI-NTRS,ADI,NTRS,-3.6370711814057053,0.005090599067240369,Semiconductors,Diversified Financial Services,Information Technology,Financials
+IFF-LO,IFF,LO,-3.636781407583167,0.005095552102264726,Specialty Chemicals,Tobacco,Materials,Consumer Staples
+MTB-PWR,MTB,PWR,-3.6362105301975167,0.0051053228043462,Banks,Industrial Conglomerates,Financials,Industrials
+ALL-CINF,ALL,CINF,-3.635819652817213,0.005112022591683739,Property & Casualty Insurance,Property & Casualty Insurance,Financials,Financials
+APC-GE,APC,GE,-3.634707430865608,0.0051311302871759,Oil & Gas Exploration & Production,Industrial Conglomerates,Energy,Industrials
+AVY-ORLY,AVY,ORLY,-3.634238856629434,0.005139199710581657,Paper Packaging,Specialty Stores,Materials,Consumer Discretionary
+APD-CME,APD,CME,-3.6330460865429064,0.005159792797024914,Industrial Gases,Diversified Financial Services,Materials,Financials
+CSX-IFF,CSX,IFF,-3.6313164350542793,0.005189788457314675,Railroads,Specialty Chemicals,Industrials,Materials
+FOSL-WPX,FOSL,WPX,-3.6309498920911616,0.005196165384825674,"Apparel, Accessories & Luxury Goods",Integrated Oil & Gas,Consumer Discretionary,Energy
+JWN-UNP,JWN,UNP,-3.63082049428228,0.005198418283270836,Department Stores,Railroads,Consumer Discretionary,Industrials
+CAM-LOW,CAM,LOW,-3.6304790305194525,0.005204367651151727,Oil & Gas Equipment & Services,Home Improvement Retail,Energy,Consumer Discretionary
+BWA-RAI,BWA,RAI,-3.6304765853925662,0.005204410275237728,Auto Parts & Equipment,Tobacco,Consumer Discretionary,Consumer Staples
+CAM-DISCA,CAM,DISCA,-3.628687203770429,0.005235688504434013,Oil & Gas Equipment & Services,Broadcasting & Cable TV,Energy,Consumer Discretionary
+BRCM-USB,BRCM,USB,-3.627831448718791,0.005250707363184307,Semiconductors,Banks,Information Technology,Financials
+KIM-LO,KIM,LO,-3.6270473053489236,0.005264503788505515,REITs,Tobacco,Financials,Consumer Staples
+KR-LB,KR,LB,-3.6260154739613717,0.005282708320238841,Food Retail,Apparel Retail,Consumer Staples,Consumer Discretionary
+CSC-NVDA,CSC,NVDA,-3.6239750043698034,0.005318876773464088,IT Consulting & Services,Semiconductors,Information Technology,Information Technology
+CAM-CSX,CAM,CSX,-3.623623918420811,0.0053251226146697325,Oil & Gas Equipment & Services,Railroads,Energy,Industrials
+AON-CTAS,AON,CTAS,-3.623595892434188,0.005325621485953085,Insurance Brokers,Diversified Commercial Services,Financials,Industrials
+GD-OMC,GD,OMC,-3.622584840983416,0.0053436469498062125,Aerospace & Defense,Advertising,Industrials,Consumer Discretionary
+CME-COST,CME,COST,-3.6223655337635217,0.0053475641650410225,Diversified Financial Services,Hypermarkets & Super Centers,Financials,Consumer Staples
+EMN-HIG,EMN,HIG,-3.6222019394835887,0.005350487947873364,Diversified Chemicals,Property & Casualty Insurance,Materials,Financials
+QEP-ROK,QEP,ROK,-3.6217345587299756,0.00535884905696775,Oil & Gas Exploration & Production,Industrial Conglomerates,Energy,Industrials
+CAM-PX,CAM,PX,-3.621436077312098,0.005364194888372108,Oil & Gas Equipment & Services,Industrial Gases,Energy,Materials
+LNC-UNM,LNC,UNM,-3.6212281269227833,0.005367922164141533,Multi-line Insurance,Diversified Financial Services,Financials,Financials
+SWY-TYC,SWY,TYC,-3.620693461658365,0.0053775162425151015,Food Retail,Industrial Conglomerates,Consumer Staples,Industrials
+CMG-TSCO,CMG,TSCO,-3.6195985903501566,0.0053972113477111835,Restaurants,Specialty Retail,Consumer Discretionary,Consumer Discretionary
+AMP-AZO,AMP,AZO,-3.619493176539677,0.005399111040171436,Diversified Financial Services,Specialty Stores,Financials,Consumer Discretionary
+LO-THC,LO,THC,-3.6190741927802654,0.005406667674515126,Tobacco,Health Care Facilities,Consumer Staples,Health Care
+FDX-INTU,FDX,INTU,-3.619069389588963,0.005406754358763909,Air Freight & Logistics,Internet Software & Services,Industrials,Information Technology
+BWA-OKE,BWA,OKE,-3.619002899933375,0.005407954441925354,Auto Parts & Equipment,Gas Utilities,Consumer Discretionary,Utilities
+BEN-CMI,BEN,CMI,-3.618324755722774,0.005420208212628292,Diversified Financial Services,Industrial Machinery,Financials,Industrials
+AON-DISCA,AON,DISCA,-3.6181261826697098,0.005423801113211351,Insurance Brokers,Broadcasting & Cable TV,Financials,Consumer Discretionary
+HOT-ITW,HOT,ITW,-3.6176586569976434,0.005432268880047532,"Hotels, Resorts & Cruise Lines",Industrial Machinery,Consumer Discretionary,Industrials
+BBY-JEC,BBY,JEC,-3.617398519054541,0.0054369856651332,Computer & Electronics Retail,Industrial Conglomerates,Consumer Discretionary,Industrials
+HON-RAI,HON,RAI,-3.6164343202260127,0.005454500855959107,Industrial Conglomerates,Tobacco,Industrials,Consumer Staples
+CAT-IBM,CAT,IBM,-3.6162278871991007,0.005458257478551892,Construction & Farm Machinery & Heavy Trucks,IT Consulting & Services,Industrials,Information Technology
+RAI-SYK,RAI,SYK,-3.6154913701579714,0.005471679612364105,Tobacco,Health Care Equipment & Services,Consumer Staples,Health Care
+GRMN-QEP,GRMN,QEP,-3.6154448556432097,0.0054725282889132,Consumer Electronics,Oil & Gas Exploration & Production,Consumer Discretionary,Energy
+IP-XYL,IP,XYL,-3.6141616734643214,0.005495987676146277,Paper Products,Industrial Conglomerates,Materials,Industrials
+CLX-KMB,CLX,KMB,-3.613063934576626,0.005516129205715623,Household Products,Household Products,Consumer Staples,Consumer Staples
+CHK-ETN,CHK,ETN,-3.612778559800829,0.005521376285782435,Integrated Oil & Gas,Industrial Conglomerates,Energy,Industrials
+EQR-ITW,EQR,ITW,-3.6123683358893617,0.0055289268619359835,REITs,Industrial Machinery,Financials,Industrials
+DNR-HCBK,DNR,HCBK,-3.611177272497324,0.0055509027266253735,Oil & Gas Exploration & Production,Banks,Energy,Financials
+PPG-TSS,PPG,TSS,-3.6110726920916667,0.005552836083430825,Diversified Chemicals,Internet Software & Services,Materials,Information Technology
+ARG-JWN,ARG,JWN,-3.610661299457793,0.005560447350883446,Industrial Gases,Department Stores,Materials,Consumer Discretionary
+HBAN-JPM,HBAN,JPM,-3.6101063639348276,0.005570729345325615,Banks,Banks,Financials,Financials
+AVP-HON,AVP,HON,-3.610065323410054,0.0055714904403274135,Personal Products,Industrial Conglomerates,Consumer Staples,Industrials
+CHRW-MWV,CHRW,MWV,-3.608799143796281,0.005595018133673831,Air Freight & Logistics,Paper Packaging,Industrials,Materials
+BEAM-HAS,BEAM,HAS,-3.6074666263653383,0.005619875874804439,Distillers & Vintners,Leisure Products,Consumer Staples,Consumer Discretionary
+AVY-CTAS,AVY,CTAS,-3.607273684644071,0.005623483446230413,Paper Packaging,Diversified Commercial Services,Materials,Industrials
+CHK-UPS,CHK,UPS,-3.607234414129429,0.005624217972983398,Integrated Oil & Gas,Air Freight & Logistics,Energy,Industrials
+IFF-R,IFF,R,-3.6071567072308697,0.005625671681353608,Specialty Chemicals,Industrial Conglomerates,Materials,Industrials
+AVP-MCO,AVP,MCO,-3.6070012939939304,0.00562858011091193,Personal Products,Diversified Financial Services,Consumer Staples,Financials
+CTAS-TSS,CTAS,TSS,-3.6055993180901145,0.00565487868294814,Diversified Commercial Services,Internet Software & Services,Industrials,Information Technology
+KIM-VTR,KIM,VTR,-3.604241265682116,0.005680459619728268,REITs,Diversified Financial Services,Financials,Financials
+DIS-TSS,DIS,TSS,-3.603784155548835,0.005689093564357149,Broadcasting & Cable TV,Internet Software & Services,Consumer Discretionary,Information Technology
+JEC-MMM,JEC,MMM,-3.6037833380361244,0.005689109016286709,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+CAM-VNO,CAM,VNO,-3.602948210097253,0.005704913800899866,Oil & Gas Equipment & Services,REITs,Energy,Financials
+K-QEP,K,QEP,-3.60242766497471,0.005714785256793901,Packaged Foods & Meats,Oil & Gas Exploration & Production,Consumer Staples,Energy
+BF.B-R,BF.B,R,-3.60234454315183,0.005716362987537591,Distillers & Vintners,Industrial Conglomerates,Consumer Staples,Industrials
+COH-NSC,COH,NSC,-3.6019864556783445,0.00572316434613954,"Apparel, Accessories & Luxury Goods",Railroads,Consumer Discretionary,Industrials
+ECL-FDX,ECL,FDX,-3.6018290931196026,0.00572615554428852,Specialty Chemicals,Air Freight & Logistics,Materials,Industrials
+AVP-PNR,AVP,PNR,-3.600732152242276,0.005747045988716894,Personal Products,Industrial Conglomerates,Consumer Staples,Industrials
+FDO-NWSA,FDO,NWSA,-3.6000691927865427,0.005759705071464031,General Merchandise Stores,Publishing,Consumer Discretionary,Consumer Discretionary
+HIG-ORLY,HIG,ORLY,-3.599726409947228,0.005766260360459089,Property & Casualty Insurance,Specialty Stores,Financials,Consumer Discretionary
+AVP-FIS,AVP,FIS,-3.5994895624779693,0.0057707937225722015,Personal Products,Internet Software & Services,Consumer Staples,Information Technology
+BCR-KR,BCR,KR,-3.599432600887833,0.005771884474033868,Health Care Equipment & Services,Food Retail,Health Care,Consumer Staples
+SWY-TMO,SWY,TMO,-3.59913236929683,0.005777636668489583,Food Retail,Health Care Equipment & Services,Consumer Staples,Health Care
+ISRG-PBI,ISRG,PBI,-3.5974369473256043,0.005810217294750727,Health Care Equipment & Services,Data Processing Services,Health Care,Industrials
+RRC-SLM,RRC,SLM,-3.597029708899161,0.005818067904941483,Oil & Gas Exploration & Production,Diversified Financial Services,Energy,Financials
+CAM-DOV,CAM,DOV,-3.5964278609441025,0.0058296877517306,Oil & Gas Equipment & Services,Industrial Machinery,Energy,Industrials
+DFS-IFF,DFS,IFF,-3.5962004994247323,0.005834082883482489,Consumer Finance,Specialty Chemicals,Financials,Materials
+ALL-MMM,ALL,MMM,-3.5943043825645287,0.005870853973111939,Property & Casualty Insurance,Industrial Conglomerates,Financials,Industrials
+OKE-RAI,OKE,RAI,-3.593985715202141,0.005877054426274295,Gas Utilities,Tobacco,Utilities,Consumer Staples
+CVS-PCAR,CVS,PCAR,-3.5930784739530854,0.005894739556422001,Drug Retail,Construction & Farm Machinery & Heavy Trucks,Consumer Staples,Industrials
+PCP-PPG,PCP,PPG,-3.5924702880160355,0.005906622112236616,Industrial Conglomerates,Diversified Chemicals,Industrials,Materials
+AZO-TMK,AZO,TMK,-3.591789780515734,0.005919943406933927,Specialty Stores,Life & Health Insurance,Consumer Discretionary,Financials
+GPS-RAI,GPS,RAI,-3.5917218111944273,0.005921275437454087,Apparel Retail,Tobacco,Consumer Discretionary,Consumer Staples
+KR-LSI,KR,LSI,-3.59160975319656,0.005923472090245149,Food Retail,Semiconductors,Consumer Staples,Information Technology
+DVA-MON,DVA,MON,-3.5909908406115827,0.005935617836876361,Health Care Facilities,Fertilizers & Agricultural Chemicals,Health Care,Materials
+AZO-XRAY,AZO,XRAY,-3.5906745779480147,0.005941832992953141,Specialty Stores,Health Care Supplies,Consumer Discretionary,Health Care
+PCP-RAI,PCP,RAI,-3.5904182890061884,0.005946873879595901,Industrial Conglomerates,Tobacco,Industrials,Consumer Staples
+AON-HRS,AON,HRS,-3.5902787643788185,0.0059496197860125916,Insurance Brokers,Telecommunications Equipment,Financials,Information Technology
+ARG-KR,ARG,KR,-3.590240027135558,0.00595038235593053,Industrial Gases,Food Retail,Materials,Consumer Staples
+STJ-SWY,STJ,SWY,-3.5899594621724313,0.0059559081201870185,Health Care Equipment & Services,Food Retail,Health Care,Consumer Staples
+PBCT-PNC,PBCT,PNC,-3.5888054765072384,0.005978684967542954,Banks,Banks,Financials,Financials
+KR-PSX,KR,PSX,-3.5884748423776585,0.005985225410088032,Food Retail,Oil & Gas Refining & Marketing & Transportation,Consumer Staples,Energy
+ACN-GOOG,ACN,GOOG,-3.588149590814316,0.00599166570436609,IT Consulting & Services,Internet Software & Services,Information Technology,Information Technology
+EL-SHW,EL,SHW,-3.5874567123079877,0.006005406313223649,Personal Products,Specialty Chemicals,Consumer Staples,Materials
+CINF-DE,CINF,DE,-3.5872038722677395,0.00601042754140286,Property & Casualty Insurance,Construction & Farm Machinery & Heavy Trucks,Financials,Industrials
+ORLY-SNA,ORLY,SNA,-3.58711189923428,0.006012255005754899,Specialty Stores,Household Appliances,Consumer Discretionary,Consumer Discretionary
+FLIR-LEG,FLIR,LEG,-3.585621193700843,0.006041944987742957,Aerospace & Defense,Industrial Conglomerates,Industrials,Industrials
+CAG-INTC,CAG,INTC,-3.5850899352997407,0.006052557988722712,Packaged Foods & Meats,Semiconductors,Consumer Staples,Information Technology
+CSX-K,CSX,K,-3.5850391771203074,0.006053572873403413,Railroads,Packaged Foods & Meats,Industrials,Consumer Staples
+AZO-RL,AZO,RL,-3.5843338873632042,0.006067690759303875,Specialty Stores,"Apparel, Accessories & Luxury Goods",Consumer Discretionary,Consumer Discretionary
+IFF-VFC,IFF,VFC,-3.5843116565247906,0.0060681362417698455,Specialty Chemicals,"Apparel, Accessories & Luxury Goods",Materials,Consumer Discretionary
+APC-FLR,APC,FLR,-3.5836269587487783,0.006081871380889967,Oil & Gas Exploration & Production,Diversified Commercial Services,Energy,Industrials
+CPB-NSC,CPB,NSC,-3.582827656262249,0.006097941137995516,Packaged Foods & Meats,Railroads,Consumer Staples,Industrials
+EQR-RTN,EQR,RTN,-3.5827878251708887,0.006098742936471318,REITs,Aerospace & Defense,Financials,Industrials
+RAI-UTX,RAI,UTX,-3.5826355437539332,0.006101809236761581,Tobacco,Industrial Conglomerates,Consumer Staples,Industrials
+BHI-KMI,BHI,KMI,-3.5812463127179055,0.00612984699959769,Oil & Gas Equipment & Services,Oil & Gas Refining & Marketing & Transportation,Energy,Energy
+CAH-WAG,CAH,WAG,-3.5811842053554086,0.006131103184911299,Health Care Distributors & Services,Drug Retail,Health Care,Consumer Staples
+DFS-ORLY,DFS,ORLY,-3.5808901084796014,0.006137054763968275,Consumer Finance,Specialty Stores,Financials,Consumer Discretionary
+QEP-VZ,QEP,VZ,-3.580779874723632,0.006139286890254444,Oil & Gas Exploration & Production,Integrated Telecommunications Services,Energy,Telecommunications Services
+AIV-GPC,AIV,GPC,-3.580741634915403,0.00614006138094234,REITs,Specialty Stores,Financials,Consumer Discretionary
+NOC-PSA,NOC,PSA,-3.579272571616861,0.006169882173839429,Aerospace & Defense,REITs,Industrials,Financials
+CAM-CMG,CAM,CMG,-3.5785130706265695,0.006185350811848917,Oil & Gas Equipment & Services,Restaurants,Energy,Consumer Discretionary
+HAR-WPX,HAR,WPX,-3.578188294381996,0.006191976193057265,Consumer Electronics,Integrated Oil & Gas,Consumer Discretionary,Energy
+CF-DFS,CF,DFS,-3.577936602742034,0.006197115080086374,Fertilizers & Agricultural Chemicals,Consumer Finance,Materials,Financials
+PBCT-WPX,PBCT,WPX,-3.575685993870981,0.006243238608186692,Banks,Integrated Oil & Gas,Financials,Energy
+ADS-ALLE,ADS,ALLE,-3.574905384445897,0.006259308718168528,Data Processing & Outsourced Services,Building Products,Information Technology,Industrials
+AVP-HIG,AVP,HIG,-3.574325853546915,0.006271263513313325,Personal Products,Property & Casualty Insurance,Consumer Staples,Financials
+HUM-XLNX,HUM,XLNX,-3.573023907216155,0.006298195999580079,Managed Health Care,Semiconductors,Health Care,Information Technology
+AVB-RAI,AVB,RAI,-3.572424796831988,0.006310624532622653,REITs,Tobacco,Financials,Consumer Staples
+AVP-DLTR,AVP,DLTR,-3.5709881020078216,0.006340519239137418,Personal Products,General Merchandise Stores,Consumer Staples,Consumer Discretionary
+IRM-LLY,IRM,LLY,-3.570947817117804,0.00634135933038031,Data Processing Services,Pharmaceuticals,Industrials,Health Care
+HOG-MMC,HOG,MMC,-3.5683337851419283,0.006396087548066119,Motorcycle Manufacturers,Insurance Brokers,Consumer Discretionary,Financials
+JBL-PXD,JBL,PXD,-3.568233966131241,0.006398185837756991,IT Consulting & Services,Oil & Gas Exploration & Production,Information Technology,Energy
+LO-PLD,LO,PLD,-3.567245085592288,0.0064190067145888175,Tobacco,Diversified Financial Services,Consumer Staples,Financials
+AN-RAI,AN,RAI,-3.566880618349426,0.0064266960194517084,Specialty Stores,Tobacco,Consumer Discretionary,Consumer Staples
+PBI-PNR,PBI,PNR,-3.5667328977450206,0.006429814910233536,Data Processing Services,Industrial Conglomerates,Industrials,Industrials
+DUK-MJN,DUK,MJN,-3.5659221209620764,0.006446957598785361,Electric Utilities,Packaged Foods & Meats,Utilities,Consumer Staples
+AES-MAC,AES,MAC,-3.565683484465526,0.006452011088562704,Electric Utilities,Retail REITs,Utilities,Financials
+GPS-MCO,GPS,MCO,-3.5653485876849573,0.006459109079417252,Apparel Retail,Diversified Financial Services,Consumer Discretionary,Financials
+LO-MOS,LO,MOS,-3.564779087866921,0.006471195600970572,Tobacco,Fertilizers & Agricultural Chemicals,Consumer Staples,Materials
+BBY-PBCT,BBY,PBCT,-3.5647660985636924,0.006471471512053523,Computer & Electronics Retail,Banks,Consumer Discretionary,Financials
+TMO-TWX,TMO,TWX,-3.5643475887832676,0.006480366945871725,Health Care Equipment & Services,Broadcasting & Cable TV,Health Care,Consumer Discretionary
+JNPR-WPX,JNPR,WPX,-3.5638056186257465,0.006491902968233058,Networking Equipment,Integrated Oil & Gas,Information Technology,Energy
+ORLY-TMK,ORLY,TMK,-3.5626255731061742,0.006517084922881794,Specialty Stores,Life & Health Insurance,Consumer Discretionary,Financials
+AMT-LLL,AMT,LLL,-3.5621103090591912,0.006528108247307278,REITs,Industrial Conglomerates,Financials,Industrials
+PPG-STJ,PPG,STJ,-3.5616949901482244,0.006537005661894828,Diversified Chemicals,Health Care Equipment & Services,Materials,Health Care
+AVB-NSC,AVB,NSC,-3.561422639041188,0.006542846216742945,REITs,Railroads,Financials,Industrials
+EQR-LLY,EQR,LLY,-3.5607926070552938,0.006556375308454836,REITs,Pharmaceuticals,Financials,Health Care
+HON-PCP,HON,PCP,-3.5606502672304874,0.006559435366449693,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+CHK-MRK,CHK,MRK,-3.5603945227655354,0.006564936671531019,Integrated Oil & Gas,Pharmaceuticals,Energy,Health Care
+MON-ORLY,MON,ORLY,-3.5596500171131025,0.006580975451635076,Fertilizers & Agricultural Chemicals,Specialty Stores,Materials,Consumer Discretionary
+HOT-LO,HOT,LO,-3.5593645736689568,0.006587134109840158,"Hotels, Resorts & Cruise Lines",Tobacco,Consumer Discretionary,Consumer Staples
+ARG-AVY,ARG,AVY,-3.5588467795273364,0.0065983192123131385,Industrial Gases,Paper Packaging,Materials,Materials
+SE-UTX,SE,UTX,-3.5585614451809007,0.006604490183065952,Oil & Gas Refining & Marketing & Transportation,Industrial Conglomerates,Energy,Industrials
+EMN-UTX,EMN,UTX,-3.557430697067351,0.006628996395377656,Diversified Chemicals,Industrial Conglomerates,Materials,Industrials
+EMN-ISRG,EMN,ISRG,-3.5572935574013704,0.006631974146709623,Diversified Chemicals,Health Care Equipment & Services,Materials,Health Care
+NLSN-WMB,NLSN,WMB,-3.5568981732801648,0.006640566001128978,Research & Consulting Services,Oil & Gas Exploration & Production,Industrials,Energy
+MON-PNW,MON,PNW,-3.5568113887788138,0.006642453209103392,Fertilizers & Agricultural Chemicals,Multi-Utilities & Unregulated Power,Materials,Utilities
+AFL-SWY,AFL,SWY,-3.5565930695442516,0.006647202903783849,Life & Health Insurance,Food Retail,Financials,Consumer Staples
+DAL-MRK,DAL,MRK,-3.5565554616331956,0.0066480214013247595,Airlines,Pharmaceuticals,Industrials,Health Care
+BBY-VFC,BBY,VFC,-3.5558990135953215,0.006662323000422023,Computer & Electronics Retail,"Apparel, Accessories & Luxury Goods",Consumer Discretionary,Consumer Discretionary
+AES-XOM,AES,XOM,-3.555160276656218,0.006678450627463215,Electric Utilities,Integrated Oil & Gas,Utilities,Energy
+PCL-TYC,PCL,TYC,-3.555097218781251,0.0066798288995050005,REITs,Industrial Conglomerates,Financials,Industrials
+HD-VMC,HD,VMC,-3.5543391992523854,0.006696417258388375,Home Improvement Retail,Construction Materials,Consumer Discretionary,Materials
+GOOG-MCO,GOOG,MCO,-3.554280671424196,0.006697699617606616,Internet Software & Services,Diversified Financial Services,Information Technology,Financials
+ALL-CSX,ALL,CSX,-3.554071306987229,0.006702288661529246,Property & Casualty Insurance,Railroads,Financials,Industrials
+PEG-TSN,PEG,TSN,-3.553175899182073,0.006721947123043726,Multi-Utilities & Unregulated Power,Packaged Foods & Meats,Utilities,Consumer Staples
+BBY-PLL,BBY,PLL,-3.553059470875632,0.006724507103022384,Computer & Electronics Retail,Industrial Conglomerates,Consumer Discretionary,Industrials
+PBI-URBN,PBI,URBN,-3.552894900488914,0.006728127115064482,Data Processing Services,Apparel Retail,Industrials,Consumer Discretionary
+GGP-RAI,GGP,RAI,-3.5527809621082773,0.006730634419642418,REITs,Tobacco,Financials,Consumer Staples
+GPS-SWY,GPS,SWY,-3.5516371289577253,0.006755852204309296,Apparel Retail,Food Retail,Consumer Discretionary,Consumer Staples
+HAS-TRV,HAS,TRV,-3.5505434046637405,0.006780045068090992,Leisure Products,Property & Casualty Insurance,Consumer Discretionary,Financials
+CMI-MO,CMI,MO,-3.5503342851728514,0.006784679634753509,Industrial Machinery,Tobacco,Industrials,Consumer Staples
+PNR-WYN,PNR,WYN,-3.5489409680455704,0.006815631869080357,Industrial Conglomerates,"Hotels, Resorts & Cruise Lines",Industrials,Consumer Discretionary
+CSX-RHI,CSX,RHI,-3.5488913275879597,0.006816736970620242,Railroads,Industrial Conglomerates,Industrials,Industrials
+AVY-COST,AVY,COST,-3.548717997621394,0.006820596931646048,Paper Packaging,Hypermarkets & Super Centers,Materials,Consumer Staples
+RTN-VAR,RTN,VAR,-3.5486882386841403,0.006821259845036452,Aerospace & Defense,Health Care Equipment & Services,Industrials,Health Care
+AMT-TRV,AMT,TRV,-3.5482180498070313,0.0068317415523924075,REITs,Property & Casualty Insurance,Financials,Financials
+AZO-RTN,AZO,RTN,-3.5480147761787157,0.006836277542250303,Specialty Stores,Aerospace & Defense,Consumer Discretionary,Industrials
+CHK-PFG,CHK,PFG,-3.5471974780435462,0.0068545427761029,Integrated Oil & Gas,Diversified Financial Services,Energy,Financials
+KMB-MON,KMB,MON,-3.5471165204996433,0.006856354437894502,Household Products,Fertilizers & Agricultural Chemicals,Consumer Staples,Materials
+EL-FDX,EL,FDX,-3.546373045395374,0.006873012102242232,Personal Products,Air Freight & Logistics,Consumer Staples,Industrials
+AMGN-IRM,AMGN,IRM,-3.5456420144707512,0.006889426584265479,Biotechnology,Data Processing Services,Health Care,Industrials
+MCO-SHW,MCO,SHW,-3.5455943889861086,0.006890497188697014,Diversified Financial Services,Specialty Chemicals,Financials,Materials
+KIM-PLD,KIM,PLD,-3.5454942887297225,0.006892747897664718,REITs,Diversified Financial Services,Financials,Financials
+KO-MMM,KO,MMM,-3.5447516525221436,0.006909466482502169,Soft Drinks,Industrial Conglomerates,Consumer Staples,Industrials
+FRX-RAI,FRX,RAI,-3.544654196982257,0.006911663164736774,Pharmaceuticals,Tobacco,Health Care,Consumer Staples
+JEC-MCHP,JEC,MCHP,-3.5446520438506104,0.006911711704203451,Industrial Conglomerates,Semiconductors,Industrials,Information Technology
+HRS-RL,HRS,RL,-3.544393647741695,0.006917539133856201,Telecommunications Equipment,"Apparel, Accessories & Luxury Goods",Information Technology,Consumer Discretionary
+CHK-MDLZ,CHK,MDLZ,-3.5439736750166704,0.006927019956210536,Integrated Oil & Gas,Packaged Foods & Meats,Energy,Consumer Staples
+CTAS-HIG,CTAS,HIG,-3.5437762500115877,0.006931480849719175,Diversified Commercial Services,Property & Casualty Insurance,Industrials,Financials
+OXY-RTN,OXY,RTN,-3.543270139910813,0.006942928452368298,Oil & Gas Exploration & Production,Aerospace & Defense,Energy,Industrials
+HCN-RAI,HCN,RAI,-3.542176158644586,0.006967731346287242,REITs,Tobacco,Financials,Consumer Staples
+FAST-KR,FAST,KR,-3.5418262177572117,0.0069756821257584475,Building Products,Food Retail,Industrials,Consumer Staples
+BA-LO,BA,LO,-3.541803798773251,0.0069761917720051365,Aerospace & Defense,Tobacco,Industrials,Consumer Staples
+BEN-VZ,BEN,VZ,-3.5417593250305983,0.0069772028841312275,Diversified Financial Services,Integrated Telecommunications Services,Financials,Telecommunications Services
+BBY-SLM,BBY,SLM,-3.5412448462363715,0.006988909199826826,Computer & Electronics Retail,Diversified Financial Services,Consumer Discretionary,Financials
+RAI-RL,RAI,RL,-3.541218331360295,0.0069895129925655495,Tobacco,"Apparel, Accessories & Luxury Goods",Consumer Staples,Consumer Discretionary
+RSG-SNA,RSG,SNA,-3.5411346040448706,0.006991419927458483,Industrial Conglomerates,Household Appliances,Industrials,Consumer Discretionary
+COH-VFC,COH,VFC,-3.5406536209549015,0.007002383679505506,"Apparel, Accessories & Luxury Goods","Apparel, Accessories & Luxury Goods",Consumer Discretionary,Consumer Discretionary
+CFN-IPG,CFN,IPG,-3.5401233636785534,0.00701448859590148,Health Care Equipment & Services,Advertising,Health Care,Consumer Discretionary
+AVY-TGT,AVY,TGT,-3.5398939019525537,0.0070197326894979074,Paper Packaging,General Merchandise Stores,Materials,Consumer Discretionary
+HBAN-QEP,HBAN,QEP,-3.5396759054182483,0.007024718036784001,Banks,Oil & Gas Exploration & Production,Financials,Energy
+PM-PSA,PM,PSA,-3.5391968639874456,0.007035684431033864,Tobacco,REITs,Consumer Staples,Financials
+TGT-ZMH,TGT,ZMH,-3.5385681682720795,0.007050100214614262,General Merchandise Stores,Health Care Equipment & Services,Consumer Discretionary,Health Care
+BA-OMC,BA,OMC,-3.5383144134251814,0.0070559262768127295,Aerospace & Defense,Advertising,Industrials,Consumer Discretionary
+KIM-OMC,KIM,OMC,-3.537841964933371,0.007066784994680601,REITs,Advertising,Financials,Consumer Discretionary
+QEP-XLNX,QEP,XLNX,-3.537067270797746,0.007084623147225062,Oil & Gas Exploration & Production,Semiconductors,Energy,Information Technology
+AZO-NOC,AZO,NOC,-3.536646717168722,0.007094323848175827,Specialty Stores,Aerospace & Defense,Consumer Discretionary,Industrials
+GPS-PRGO,GPS,PRGO,-3.5365136853326438,0.007097394921901259,Apparel Retail,Pharmaceuticals,Consumer Discretionary,Health Care
+AIG-ALTR,AIG,ALTR,-3.5362371117844567,0.0071037835327020845,Property & Casualty Insurance,Semiconductors,Financials,Information Technology
+HAR-LB,HAR,LB,-3.5354531889827134,0.007121919683948512,Consumer Electronics,Apparel Retail,Consumer Discretionary,Consumer Discretionary
+HCBK-PWR,HCBK,PWR,-3.535287831616432,0.007125750579015655,Banks,Industrial Conglomerates,Financials,Industrials
+GS-TWX,GS,TWX,-3.5345879926897865,0.007141984601298785,Diversified Financial Services,Broadcasting & Cable TV,Financials,Consumer Discretionary
+CAM-LUV,CAM,LUV,-3.5344585996654314,0.007144989757895764,Oil & Gas Equipment & Services,Airlines,Energy,Industrials
+HST-LLY,HST,LLY,-3.534393157243539,0.007146510094364531,REITs,Pharmaceuticals,Financials,Health Care
+CSX-DE,CSX,DE,-3.53427994467473,0.007149140900174859,Railroads,Construction & Farm Machinery & Heavy Trucks,Industrials,Industrials
+FRX-GPS,FRX,GPS,-3.5336328893484983,0.007164193788343548,Pharmaceuticals,Apparel Retail,Health Care,Consumer Discretionary
+BBY-LO,BBY,LO,-3.533439904383633,0.007168688861663015,Computer & Electronics Retail,Tobacco,Consumer Discretionary,Consumer Staples
+MMM-ROK,MMM,ROK,-3.5314250324992447,0.007215772152372133,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+BBY-MTB,BBY,MTB,-3.5313415668969665,0.007217728570083196,Computer & Electronics Retail,Banks,Consumer Discretionary,Financials
+DIS-STJ,DIS,STJ,-3.5311408355214353,0.007222435634236091,Broadcasting & Cable TV,Health Care Equipment & Services,Consumer Discretionary,Health Care
+APC-UTX,APC,UTX,-3.5309268101206053,0.007227457487449702,Oil & Gas Exploration & Production,Industrial Conglomerates,Energy,Industrials
+APH-COH,APH,COH,-3.530571814203798,0.007235793992109359,Electrical Components & Equipment,"Apparel, Accessories & Luxury Goods",Industrials,Consumer Discretionary
+EQR-HSY,EQR,HSY,-3.529482292895416,0.007261433821212579,REITs,Packaged Foods & Meats,Financials,Consumer Staples
+PX-RAI,PX,RAI,-3.52859743712318,0.007282317498255655,Industrial Gases,Tobacco,Materials,Consumer Staples
+EMC-USB,EMC,USB,-3.5281870453151125,0.007292021619481078,IT Consulting & Services,Banks,Information Technology,Financials
+HRS-PPG,HRS,PPG,-3.5281375293378074,0.00729319326189024,Telecommunications Equipment,Diversified Chemicals,Information Technology,Materials
+DAL-ED,DAL,ED,-3.527449137882779,0.007309499510611741,Airlines,Multi-Utilities & Unregulated Power,Industrials,Utilities
+AMGN-VAR,AMGN,VAR,-3.5268039343070794,0.007324812585935852,Biotechnology,Health Care Equipment & Services,Health Care,Health Care
+BBY-PCAR,BBY,PCAR,-3.5265854985426386,0.00733000342772804,Computer & Electronics Retail,Construction & Farm Machinery & Heavy Trucks,Consumer Discretionary,Industrials
+BXP-LO,BXP,LO,-3.5264628349223477,0.007332919823120149,REITs,Tobacco,Financials,Consumer Staples
+LO-VTR,LO,VTR,-3.5260274758251913,0.007343279174413059,Tobacco,Diversified Financial Services,Consumer Staples,Financials
+GGP-LLY,GGP,LLY,-3.525666262254318,0.007351884249443019,REITs,Pharmaceuticals,Financials,Health Care
+HST-SIAL,HST,SIAL,-3.5255195277235205,0.007355382454996993,REITs,Diversified Chemicals,Financials,Materials
+LO-ORCL,LO,ORCL,-3.5254548319822776,0.0073569253020629825,Tobacco,Application Software,Consumer Staples,Information Technology
+KMI-MO,KMI,MO,-3.5233113779818868,0.007408207081967223,Oil & Gas Refining & Marketing & Transportation,Tobacco,Energy,Consumer Staples
+LSI-UPS,LSI,UPS,-3.5227372773646923,0.007421996942114646,Semiconductors,Air Freight & Logistics,Information Technology,Industrials
+PBI-XRAY,PBI,XRAY,-3.5221988688145007,0.00743495050018987,Data Processing Services,Health Care Supplies,Industrials,Health Care
+NLSN-WYN,NLSN,WYN,-3.5218657328195224,0.007442975611727868,Research & Consulting Services,"Hotels, Resorts & Cruise Lines",Industrials,Consumer Discretionary
+RL-TSS,RL,TSS,-3.521721926747879,0.00744644225366903,"Apparel, Accessories & Luxury Goods",Internet Software & Services,Consumer Discretionary,Information Technology
+KR-VFC,KR,VFC,-3.5216255367079787,0.007448766681862835,Food Retail,"Apparel, Accessories & Luxury Goods",Consumer Staples,Consumer Discretionary
+BMS-HOT,BMS,HOT,-3.5208096271166247,0.007468468402389556,Paper Packaging,"Hotels, Resorts & Cruise Lines",Materials,Consumer Discretionary
+AON-TSS,AON,TSS,-3.5204452236514765,0.007477282792289447,Insurance Brokers,Internet Software & Services,Financials,Information Technology
+LUV-MCD,LUV,MCD,-3.520124824582967,0.0074850405235649805,Airlines,Restaurants,Industrials,Consumer Discretionary
+ADBE-SWY,ADBE,SWY,-3.519649811682302,0.007496555223359437,Application Software,Food Retail,Information Technology,Consumer Staples
+EMC-WIN,EMC,WIN,-3.519196128097704,0.007507567783468319,IT Consulting & Services,Integrated Telecommunications Services,Information Technology,Telecommunications Services
+AIV-COV,AIV,COV,-3.5187496866453776,0.00751841877824776,REITs,Health Care Equipment & Services,Financials,Health Care
+DAL-NOV,DAL,NOV,-3.5185575682486068,0.007523092664579697,Airlines,Oil & Gas Equipment & Services,Industrials,Energy
+PEP-QEP,PEP,QEP,-3.5184154667462724,0.007526551416239676,Soft Drinks,Oil & Gas Exploration & Production,Consumer Staples,Energy
+ALL-QEP,ALL,QEP,-3.517702851741947,0.007543918088350549,Property & Casualty Insurance,Oil & Gas Exploration & Production,Financials,Energy
+FLR-PGR,FLR,PGR,-3.517532721478604,0.007548069555997174,Diversified Commercial Services,Property & Casualty Insurance,Industrials,Financials
+DIS-SWY,DIS,SWY,-3.517482107646858,0.007549305016722335,Broadcasting & Cable TV,Food Retail,Consumer Discretionary,Consumer Staples
+AFL-PCP,AFL,PCP,-3.5174149710876486,0.007550944070847865,Life & Health Insurance,Industrial Conglomerates,Financials,Industrials
+ED-TYC,ED,TYC,-3.5173108207553634,0.007553487403861959,Multi-Utilities & Unregulated Power,Industrial Conglomerates,Utilities,Industrials
+FLIR-TRV,FLIR,TRV,-3.5156754994200714,0.007593522987108451,Aerospace & Defense,Property & Casualty Insurance,Industrials,Financials
+PCP-SWY,PCP,SWY,-3.5154906036135207,0.007598061572967035,Industrial Conglomerates,Food Retail,Industrials,Consumer Staples
+CERN-PCLN,CERN,PCLN,-3.5150037605335567,0.007610023664008396,Health Care Distributors & Services,"Hotels, Resorts & Cruise Lines",Health Care,Consumer Discretionary
+AMT-MON,AMT,MON,-3.5149494069282934,0.0076113602239949825,REITs,Fertilizers & Agricultural Chemicals,Financials,Materials
+BDX-NOC,BDX,NOC,-3.5147674092045493,0.00761583710362758,Health Care Equipment & Services,Aerospace & Defense,Health Care,Industrials
+ALTR-RSG,ALTR,RSG,-3.5140702087041835,0.007633009177306481,Semiconductors,Industrial Conglomerates,Information Technology,Industrials
+AVP-SHW,AVP,SHW,-3.5134338749717196,0.007648712530791581,Personal Products,Specialty Chemicals,Consumer Staples,Materials
+MMC-TGT,MMC,TGT,-3.5134200653761307,0.007649053644358102,Insurance Brokers,General Merchandise Stores,Financials,Consumer Discretionary
+BEN-NBL,BEN,NBL,-3.513178892926995,0.007655013102342041,Diversified Financial Services,Oil & Gas Exploration & Production,Financials,Energy
+QEP-WMT,QEP,WMT,-3.5129692059952284,0.007660197939762516,Oil & Gas Exploration & Production,Hypermarkets & Super Centers,Energy,Consumer Staples
+CSX-PG,CSX,PG,-3.5123769093854564,0.007674860487572609,Railroads,Personal Products,Industrials,Consumer Staples
+ALL-BBY,ALL,BBY,-3.5123666262785473,0.007675115273194517,Property & Casualty Insurance,Computer & Electronics Retail,Financials,Consumer Discretionary
+GD-KIM,GD,KIM,-3.5119041630501187,0.007686581650234129,Aerospace & Defense,REITs,Industrials,Financials
+LB-MMC,LB,MMC,-3.51168765820796,0.007691955000451999,Apparel Retail,Insurance Brokers,Consumer Discretionary,Financials
+CCI-LUV,CCI,LUV,-3.511664739867921,0.0076925239998259995,Wireless Telecommunications Services,Airlines,Telecommunications Services,Industrials
+ARG-VNO,ARG,VNO,-3.511306646801722,0.0077014193900226185,Industrial Gases,REITs,Materials,Financials
+CAM-UNP,CAM,UNP,-3.5110367748227316,0.007708129399392247,Oil & Gas Equipment & Services,Railroads,Energy,Industrials
+QEP-R,QEP,R,-3.510957508114625,0.007710101261005926,Oil & Gas Exploration & Production,Industrial Conglomerates,Energy,Industrials
+DRI-WFC,DRI,WFC,-3.5109330129734775,0.007710710701096976,Restaurants,Banks,Consumer Discretionary,Financials
+DIS-TYC,DIS,TYC,-3.51074864956111,0.007715299062133699,Broadcasting & Cable TV,Industrial Conglomerates,Consumer Discretionary,Industrials
+CPB-KR,CPB,KR,-3.510718703340495,0.00771604458344221,Packaged Foods & Meats,Food Retail,Consumer Staples,Consumer Staples
+EMN-LO,EMN,LO,-3.5102230852156944,0.00772839258819529,Diversified Chemicals,Tobacco,Materials,Consumer Staples
+BEAM-KRFT,BEAM,KRFT,-3.50911610113811,0.0077560366488136955,Distillers & Vintners,Packaged Foods & Meats,Consumer Staples,Consumer Staples
+JBL-VMC,JBL,VMC,-3.508929382320333,0.007760708231743173,IT Consulting & Services,Construction Materials,Information Technology,Materials
+SHW-SWY,SHW,SWY,-3.5084483285383254,0.0077727555552426515,Specialty Chemicals,Food Retail,Materials,Consumer Staples
+ALLE-TJX,ALLE,TJX,-3.5073600997976753,0.007800070872294771,Building Products,Apparel Retail,Industrials,Consumer Discretionary
+HIG-PCP,HIG,PCP,-3.507312136795102,0.0078012767634563435,Property & Casualty Insurance,Industrial Conglomerates,Financials,Industrials
+LLY-RTN,LLY,RTN,-3.507003507191713,0.007809040378200671,Pharmaceuticals,Aerospace & Defense,Health Care,Industrials
+RDC-XRX,RDC,XRX,-3.506938201709607,0.007810684036604848,Oil & Gas Drilling,IT Consulting & Services,Energy,Information Technology
+HBAN-UNH,HBAN,UNH,-3.506388243433662,0.007824538165373951,Banks,Managed Health Care,Financials,Health Care
+AVY-DISCA,AVY,DISCA,-3.5048944378153686,0.007862280668434323,Paper Packaging,Broadcasting & Cable TV,Materials,Consumer Discretionary
+ED-JBL,ED,JBL,-3.504835751911175,0.007863766765932171,Multi-Utilities & Unregulated Power,IT Consulting & Services,Utilities,Information Technology
+PLL-PWR,PLL,PWR,-3.5036158334042997,0.00789471594056585,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+DHR-RAI,DHR,RAI,-3.5034321275227174,0.007899386018227041,Industrial Machinery,Tobacco,Industrials,Consumer Staples
+KR-KRFT,KR,KRFT,-3.5033299966894162,0.007901983411397879,Food Retail,Packaged Foods & Meats,Consumer Staples,Consumer Staples
+PM-RAI,PM,RAI,-3.503005738651532,0.007910235041359667,Tobacco,Tobacco,Consumer Staples,Consumer Staples
+SE-SWK,SE,SWK,-3.5028004643426076,0.007915462812685167,Oil & Gas Refining & Marketing & Transportation,Household Appliances,Energy,Consumer Discretionary
+ED-WMB,ED,WMB,-3.502791345281756,0.007915695122149543,Multi-Utilities & Unregulated Power,Oil & Gas Exploration & Production,Utilities,Energy
+KR-PAYX,KR,PAYX,-3.5027703768899285,0.007916229318395742,Food Retail,Internet Software & Services,Consumer Staples,Information Technology
+FLIR-STZ,FLIR,STZ,-3.5022083846715395,0.007930558869564815,Aerospace & Defense,Distillers & Vintners,Industrials,Consumer Staples
+CAM-VAR,CAM,VAR,-3.501687878918782,0.007943851419977884,Oil & Gas Equipment & Services,Health Care Equipment & Services,Energy,Health Care
+APC-RAI,APC,RAI,-3.5015910701260866,0.007946325909125728,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+DOW-WPX,DOW,WPX,-3.501002924590064,0.007961374161119599,Diversified Chemicals,Integrated Oil & Gas,Materials,Energy
+ACN-CBG,ACN,CBG,-3.50096764535547,0.007962277627706293,IT Consulting & Services,Real Estate Management & Development,Information Technology,Financials
+CTAS-RAI,CTAS,RAI,-3.500712309889916,0.007968819268377215,Diversified Commercial Services,Tobacco,Industrials,Consumer Staples
+RTN-TGT,RTN,TGT,-3.4998766811193684,0.007990261716430904,Aerospace & Defense,General Merchandise Stores,Industrials,Consumer Discretionary
+APA-QCOM,APA,QCOM,-3.499875177778591,0.007990300339263463,Oil & Gas Exploration & Production,Semiconductors,Energy,Information Technology
+DE-QEP,DE,QEP,-3.4997134826779885,0.007994455482887703,Construction & Farm Machinery & Heavy Trucks,Oil & Gas Exploration & Production,Industrials,Energy
+AVP-UNM,AVP,UNM,-3.4990616687051164,0.00801122512316839,Personal Products,Diversified Financial Services,Consumer Staples,Financials
+TGT-UTX,TGT,UTX,-3.4987772404637756,0.00801855270313878,General Merchandise Stores,Industrial Conglomerates,Consumer Discretionary,Industrials
+ALLE-AVY,ALLE,AVY,-3.498606799701214,0.008022946569651466,Building Products,Paper Packaging,Industrials,Materials
+RAI-VMC,RAI,VMC,-3.4974261495780063,0.008053442562588185,Tobacco,Construction Materials,Consumer Staples,Materials
+ADP-RAI,ADP,RAI,-3.4972883346580153,0.008057009084607835,Internet Software & Services,Tobacco,Information Technology,Consumer Staples
+AZO-HIG,AZO,HIG,-3.4968497119768114,0.008068369688110285,Specialty Stores,Property & Casualty Insurance,Consumer Discretionary,Financials
+HON-SWY,HON,SWY,-3.4958486239847826,0.008094352471587293,Industrial Conglomerates,Food Retail,Industrials,Consumer Staples
+IP-NLSN,IP,NLSN,-3.4955523479789834,0.00810205659574452,Paper Products,Research & Consulting Services,Materials,Industrials
+AKAM-GPS,AKAM,GPS,-3.495452741253235,0.00810464816985987,Internet Software & Services,Apparel Retail,Information Technology,Consumer Discretionary
+DHR-HIG,DHR,HIG,-3.4953641774940034,0.008106953053326009,Industrial Machinery,Property & Casualty Insurance,Industrials,Financials
+CB-FLIR,CB,FLIR,-3.4949966326233928,0.008116524756457197,Property & Casualty Insurance,Aerospace & Defense,Financials,Industrials
+AVB-KRFT,AVB,KRFT,-3.494881771329015,0.008119518088586719,REITs,Packaged Foods & Meats,Financials,Consumer Staples
+CFN-WAG,CFN,WAG,-3.4945406722734385,0.00812841312009335,Health Care Equipment & Services,Drug Retail,Health Care,Consumer Staples
+CLX-PCAR,CLX,PCAR,-3.4933933700147546,0.008158396293667249,Household Products,Construction & Farm Machinery & Heavy Trucks,Consumer Staples,Industrials
+DFS-HOT,DFS,HOT,-3.4921224774726776,0.008191725366260437,Consumer Finance,"Hotels, Resorts & Cruise Lines",Financials,Consumer Discretionary
+GS-SWY,GS,SWY,-3.491868030602957,0.00819841290481671,Diversified Financial Services,Food Retail,Financials,Consumer Staples
+LO-OMC,LO,OMC,-3.4912031915672928,0.00821590980637336,Tobacco,Advertising,Consumer Staples,Consumer Discretionary
+ACN-V,ACN,V,-3.490890437817123,0.008224152305247714,IT Consulting & Services,Internet Software & Services,Information Technology,Information Technology
+HON-VMC,HON,VMC,-3.490392887868903,0.00823728035061332,Industrial Conglomerates,Construction Materials,Industrials,Materials
+SYY-VNO,SYY,VNO,-3.490354852522625,0.00823828470223749,Food Distributors,REITs,Consumer Staples,Financials
+BCR-CL,BCR,CL,-3.49030098328575,0.008239707347842578,Health Care Equipment & Services,Household Products,Health Care,Consumer Staples
+MET-WPX,MET,WPX,-3.489869981784571,0.008251097722378949,Life & Health Insurance,Integrated Oil & Gas,Financials,Energy
+ABT-FISV,ABT,FISV,-3.4896068892696146,0.008258057603378261,Health Care Equipment & Services,Internet Software & Services,Health Care,Information Technology
+RHI-TROW,RHI,TROW,-3.4894462549098075,0.008262309637568587,Industrial Conglomerates,Diversified Financial Services,Industrials,Financials
+HES-MTB,HES,MTB,-3.489296788454132,0.008266267821297562,Integrated Oil & Gas,Banks,Energy,Financials
+LOW-RAI,LOW,RAI,-3.489227367512675,0.008268106812184286,Home Improvement Retail,Tobacco,Consumer Discretionary,Consumer Staples
+ARG-HAR,ARG,HAR,-3.4892036699737408,0.008268734654447161,Industrial Gases,Consumer Electronics,Materials,Consumer Discretionary
+CVX-NSC,CVX,NSC,-3.4890526684971226,0.008272736291801617,Integrated Oil & Gas,Railroads,Energy,Industrials
+DNB-SLM,DNB,SLM,-3.4889856568382185,0.008274512701795586,Data Processing Services,Diversified Financial Services,Industrials,Financials
+AVP-GOOG,AVP,GOOG,-3.4885597548552556,0.008285810938812716,Personal Products,Internet Software & Services,Consumer Staples,Information Technology
+ALL-DE,ALL,DE,-3.488373318399899,0.008290761046111844,Property & Casualty Insurance,Construction & Farm Machinery & Heavy Trucks,Financials,Industrials
+HOT-VMC,HOT,VMC,-3.488243744803312,0.008294202942614841,"Hotels, Resorts & Cruise Lines",Construction Materials,Consumer Discretionary,Materials
+CAM-LO,CAM,LO,-3.4873399232888147,0.00831824711855396,Oil & Gas Equipment & Services,Tobacco,Energy,Consumer Staples
+ITW-KIM,ITW,KIM,-3.486728874282848,0.008334538191296616,Industrial Machinery,REITs,Industrials,Financials
+BF.B-DRI,BF.B,DRI,-3.4862234855588485,0.008348033925655128,Distillers & Vintners,Restaurants,Consumer Staples,Consumer Discretionary
+ADS-V,ADS,V,-3.4850939373998084,0.00837826800681081,Data Processing & Outsourced Services,Internet Software & Services,Information Technology,Information Technology
+WMB-XYL,WMB,XYL,-3.4850527076007687,0.008379373443674043,Oil & Gas Exploration & Production,Industrial Conglomerates,Energy,Industrials
+BMS-GPC,BMS,GPC,-3.485047267176201,0.008379519319943499,Paper Packaging,Specialty Stores,Materials,Consumer Discretionary
+ALTR-AMP,ALTR,AMP,-3.4841398842078948,0.008403881283541708,Semiconductors,Diversified Financial Services,Information Technology,Financials
+BBY-HCBK,BBY,HCBK,-3.4838880396187992,0.008410654228217858,Computer & Electronics Retail,Banks,Consumer Discretionary,Financials
+CVX-R,CVX,R,-3.4826929807155866,0.008442860242534218,Integrated Oil & Gas,Industrial Conglomerates,Energy,Industrials
+AVP-AVY,AVP,AVY,-3.4816242330989025,0.008471756022979152,Personal Products,Paper Packaging,Consumer Staples,Materials
+CAM-HST,CAM,HST,-3.481305542606882,0.008480389645860568,Oil & Gas Equipment & Services,REITs,Energy,Financials
+BRK.B-XOM,BRK.B,XOM,-3.481046173470517,0.008487422028724672,Multi-Sector Holdings,Integrated Oil & Gas,Financials,Energy
+DAL-HOT,DAL,HOT,-3.4809104421407255,0.008491104255323732,Airlines,"Hotels, Resorts & Cruise Lines",Industrials,Consumer Discretionary
+CSX-DUK,CSX,DUK,-3.4795476525745572,0.008528154667212027,Railroads,Electric Utilities,Industrials,Utilities
+DFS-SWK,DFS,SWK,-3.4775760327468377,0.0085820143768656,Consumer Finance,Household Appliances,Financials,Consumer Discretionary
+BEN-BHI,BEN,BHI,-3.4774774520434715,0.008584715352288904,Diversified Financial Services,Oil & Gas Equipment & Services,Financials,Energy
+HIG-PCL,HIG,PCL,-3.4769281905718716,0.00859977833439876,Property & Casualty Insurance,REITs,Financials,Financials
+LO-MO,LO,MO,-3.476299417268912,0.008617050974567357,Tobacco,Tobacco,Consumer Staples,Consumer Staples
+AIG-APC,AIG,APC,-3.4761535878806824,0.008621061408635637,Property & Casualty Insurance,Oil & Gas Exploration & Production,Financials,Energy
+HES-LLTC,HES,LLTC,-3.475498682478015,0.008639092535292698,Integrated Oil & Gas,Semiconductors,Energy,Information Technology
+LMT-RAI,LMT,RAI,-3.4754707956687176,0.008639861077229609,Aerospace & Defense,Tobacco,Industrials,Consumer Staples
+CAM-MET,CAM,MET,-3.474870820708494,0.008656410856915271,Oil & Gas Equipment & Services,Life & Health Insurance,Energy,Financials
+HON-HRS,HON,HRS,-3.472707384078563,0.00871632385344906,Industrial Conglomerates,Telecommunications Equipment,Industrials,Information Technology
+BF.B-CVX,BF.B,CVX,-3.472583295428327,0.008719771550376385,Distillers & Vintners,Integrated Oil & Gas,Consumer Staples,Energy
+AES-IFF,AES,IFF,-3.4723682740925907,0.00872574863133738,Electric Utilities,Specialty Chemicals,Utilities,Materials
+ABT-WAG,ABT,WAG,-3.471396706827329,0.008752801742720867,Health Care Equipment & Services,Drug Retail,Health Care,Consumer Staples
+PBI-TWC,PBI,TWC,-3.4712332693325028,0.008757360016248491,Data Processing Services,Broadcasting & Cable TV,Industrials,Consumer Discretionary
+F-PBI,F,PBI,-3.4710398336092023,0.00876275769248822,Automobile Manufacturers,Data Processing Services,Consumer Discretionary,Industrials
+CRM-LEN,CRM,LEN,-3.471016912132096,0.008763397496562747,Internet Software & Services,Homebuilding,Information Technology,Consumer Discretionary
+ITW-TGT,ITW,TGT,-3.4706388594859545,0.008773956076195771,Industrial Machinery,General Merchandise Stores,Industrials,Consumer Discretionary
+HIG-PBI,HIG,PBI,-3.4703626271268684,0.008781678145437375,Property & Casualty Insurance,Data Processing Services,Financials,Industrials
+SYK-VNO,SYK,VNO,-3.4684642212395462,0.00883491316726131,Health Care Equipment & Services,REITs,Health Care,Financials
+HBAN-RF,HBAN,RF,-3.4679472259275244,0.00884946078683031,Banks,Diversified Financial Services,Financials,Financials
+CAM-PPG,CAM,PPG,-3.4674506170982586,0.008863454981248386,Oil & Gas Equipment & Services,Diversified Chemicals,Energy,Materials
+AON-UNM,AON,UNM,-3.4671089411053027,0.008873094765316548,Insurance Brokers,Diversified Financial Services,Financials,Financials
+CCE-KR,CCE,KR,-3.4669728943557923,0.008876935700229101,Soft Drinks,Food Retail,Consumer Staples,Consumer Staples
+BDX-CSX,BDX,CSX,-3.466892825092281,0.008879196949732378,Health Care Equipment & Services,Railroads,Health Care,Industrials
+DRI-HCBK,DRI,HCBK,-3.4664351099124286,0.008892133280125222,Restaurants,Banks,Consumer Discretionary,Financials
+AVB-JEC,AVB,JEC,-3.466143540957302,0.00890038265607252,REITs,Industrial Conglomerates,Financials,Industrials
+CTAS-DISCA,CTAS,DISCA,-3.4657995843540985,0.00891012306092594,Diversified Commercial Services,Broadcasting & Cable TV,Industrials,Consumer Discretionary
+RL-VAR,RL,VAR,-3.4645379881856395,0.008945931704957917,"Apparel, Accessories & Luxury Goods",Health Care Equipment & Services,Consumer Discretionary,Health Care
+SHW-VIAB,SHW,VIAB,-3.4641820324441817,0.008956058322164251,Specialty Chemicals,Broadcasting & Cable TV,Materials,Consumer Discretionary
+LO-SJM,LO,SJM,-3.4640243008362557,0.00896054892808839,Tobacco,Packaged Foods & Meats,Consumer Staples,Consumer Staples
+PM-ROK,PM,ROK,-3.4640184364611226,0.00896071592528088,Tobacco,Industrial Conglomerates,Consumer Staples,Industrials
+CPB-R,CPB,R,-3.463304817201436,0.008981058182815397,Packaged Foods & Meats,Industrial Conglomerates,Consumer Staples,Industrials
+CI-HBAN,CI,HBAN,-3.4627629367566977,0.008996532538211999,Managed Health Care,Banks,Health Care,Financials
+CSX-HOT,CSX,HOT,-3.4626173291655533,0.009000694692711324,Railroads,"Hotels, Resorts & Cruise Lines",Industrials,Consumer Discretionary
+COL-STJ,COL,STJ,-3.462585851159618,0.009001594710069916,Industrial Conglomerates,Health Care Equipment & Services,Industrials,Health Care
+COP-LM,COP,LM,-3.4622860184222324,0.009010171555398782,Integrated Oil & Gas,Diversified Financial Services,Energy,Financials
+ALLE-IRM,ALLE,IRM,-3.4620614940116208,0.009016598969208572,Building Products,Data Processing Services,Industrials,Industrials
+BA-KIM,BA,KIM,-3.4613434264409912,0.009037182539913752,Aerospace & Defense,REITs,Industrials,Financials
+PBI-WU,PBI,WU,-3.4610918316008505,0.009044404520800912,Data Processing Services,Internet Software & Services,Industrials,Information Technology
+BBY-FITB,BBY,FITB,-3.4600047375992427,0.009075668838935298,Computer & Electronics Retail,Banks,Consumer Discretionary,Financials
+ALL-IFF,ALL,IFF,-3.4597142872327784,0.009084038435679053,Property & Casualty Insurance,Specialty Chemicals,Financials,Materials
+AMZN-NKE,AMZN,NKE,-3.4590290709484535,0.009103810992235293,Internet Retail,"Apparel, Accessories & Luxury Goods",Consumer Discretionary,Consumer Discretionary
+BCR-KSU,BCR,KSU,-3.4589936629685445,0.009104833769736096,Health Care Equipment & Services,Railroads,Health Care,Industrials
+AIV-LO,AIV,LO,-3.4586282822658903,0.009115393992060912,REITs,Tobacco,Financials,Consumer Staples
+ALLE-MMC,ALLE,MMC,-3.4585567630538345,0.009117462322158506,Building Products,Insurance Brokers,Industrials,Financials
+EXPE-WAT,EXPE,WAT,-3.458321977112243,0.009124255270130584,"Hotels, Resorts & Cruise Lines",Health Care Distributors & Services,Consumer Discretionary,Health Care
+KR-ROST,KR,ROST,-3.458290624005683,0.009125162737529585,Food Retail,Apparel Retail,Consumer Staples,Consumer Discretionary
+FISV-TMO,FISV,TMO,-3.4582192347152887,0.009127229292342694,Internet Software & Services,Health Care Equipment & Services,Information Technology,Health Care
+DNB-WPX,DNB,WPX,-3.4580349309571217,0.009132566398727497,Data Processing Services,Integrated Oil & Gas,Industrials,Energy
+IRM-OKE,IRM,OKE,-3.4576113921159126,0.009144841922366488,Data Processing Services,Gas Utilities,Industrials,Utilities
+STJ-TYC,STJ,TYC,-3.4566278413739417,0.009173405445379992,Health Care Equipment & Services,Industrial Conglomerates,Health Care,Industrials
+CHK-TROW,CHK,TROW,-3.4561534812077195,0.009187209997604872,Integrated Oil & Gas,Diversified Financial Services,Energy,Financials
+ABT-INTU,ABT,INTU,-3.4555815893972066,0.009203877599972439,Health Care Equipment & Services,Internet Software & Services,Health Care,Information Technology
+NLSN-PBI,NLSN,PBI,-3.4552348047315973,0.0092139977152591,Research & Consulting Services,Data Processing Services,Industrials,Industrials
+AZO-UPS,AZO,UPS,-3.4551270390409683,0.00921714463928725,Specialty Stores,Air Freight & Logistics,Consumer Discretionary,Industrials
+QEP-WFC,QEP,WFC,-3.4550762178080974,0.009218629031551571,Oil & Gas Exploration & Production,Banks,Energy,Financials
+CAM-RHI,CAM,RHI,-3.4547419901039063,0.00922839652788436,Oil & Gas Equipment & Services,Industrial Conglomerates,Energy,Industrials
+KMB-KR,KMB,KR,-3.45460701857679,0.009232343573172003,Household Products,Food Retail,Consumer Staples,Consumer Staples
+DNR-MO,DNR,MO,-3.4543897107359562,0.009238701600999849,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+AVY-HRS,AVY,HRS,-3.4543218758447893,0.009240687128239255,Paper Packaging,Telecommunications Equipment,Materials,Information Technology
+AVB-PCAR,AVB,PCAR,-3.4542439596101433,0.009242968208026997,REITs,Construction & Farm Machinery & Heavy Trucks,Financials,Industrials
+CI-RF,CI,RF,-3.4540978916046168,0.00924724586169447,Managed Health Care,Diversified Financial Services,Health Care,Financials
+DLPH-LEG,DLPH,LEG,-3.4539021819494624,0.00925298006827186,Auto Parts & Equipment,Industrial Conglomerates,Consumer Discretionary,Industrials
+DIS-VMC,DIS,VMC,-3.4535907337661977,0.009262111929651796,Broadcasting & Cable TV,Construction Materials,Consumer Discretionary,Materials
+AZO-HRS,AZO,HRS,-3.4529786442134083,0.009280082312885202,Specialty Stores,Telecommunications Equipment,Consumer Discretionary,Information Technology
+GWW-RAI,GWW,RAI,-3.4520430941182982,0.009307609539521733,Industrial Materials,Tobacco,Industrials,Consumer Staples
+NDAQ-XYL,NDAQ,XYL,-3.4516723093971082,0.009318539568075004,Diversified Financial Services,Industrial Conglomerates,Financials,Industrials
+M-PCAR,M,PCAR,-3.4516373685011468,0.009319570151599866,Department Stores,Construction & Farm Machinery & Heavy Trucks,Consumer Discretionary,Industrials
+AZO-ITW,AZO,ITW,-3.451083823644777,0.009335910607451278,Specialty Stores,Industrial Machinery,Consumer Discretionary,Industrials
+K-TAP,K,TAP,-3.4507775967628773,0.009344961338370233,Packaged Foods & Meats,Brewers,Consumer Staples,Consumer Staples
+CFN-PCP,CFN,PCP,-3.4507724665275137,0.009345113032639473,Health Care Equipment & Services,Industrial Conglomerates,Health Care,Industrials
+AON-AVY,AON,AVY,-3.4505161668299316,0.009352694282572493,Insurance Brokers,Paper Packaging,Financials,Materials
+DNR-TEL,DNR,TEL,-3.450346205934749,0.00935772469898231,Oil & Gas Exploration & Production,Electronic Equipment & Instruments,Energy,Information Technology
+AME-GOOG,AME,GOOG,-3.4502164132833433,0.00936156786730817,Electrical Components and Equipment,Internet Software & Services,Industrials,Information Technology
+APC-MO,APC,MO,-3.4501957273037704,0.009362180510971242,Oil & Gas Exploration & Production,Tobacco,Energy,Consumer Staples
+K-M,K,M,-3.4501136585939434,0.009364611442129253,Packaged Foods & Meats,Department Stores,Consumer Staples,Consumer Discretionary
+GIS-K,GIS,K,-3.4498947207098185,0.00937109929662538,Packaged Foods & Meats,Packaged Foods & Meats,Consumer Staples,Consumer Staples
+PBCT-XLNX,PBCT,XLNX,-3.4494148675452396,0.009385333012622102,Banks,Semiconductors,Financials,Information Technology
+ABC-AVP,ABC,AVP,-3.4490405807814786,0.009396448782879112,Health Care Distribution & Services,Personal Products,Health Care,Consumer Staples
+ACT-RAI,ACT,RAI,-3.448670732761156,0.009407444304760235,Pharmaceuticals,Tobacco,Health Care,Consumer Staples
+CAM-MSI,CAM,MSI,-3.448156254713465,0.009422758809510615,Oil & Gas Equipment & Services,Telecommunications Equipment,Energy,Information Technology
+SLM-WPX,SLM,WPX,-3.4477753087218224,0.009434112832319156,Diversified Financial Services,Integrated Oil & Gas,Financials,Energy
+HRS-STJ,HRS,STJ,-3.4476440747584896,0.009438027070810238,Telecommunications Equipment,Health Care Equipment & Services,Information Technology,Health Care
+AFL-TYC,AFL,TYC,-3.4475888804242487,0.009439673754086704,Life & Health Insurance,Industrial Conglomerates,Financials,Industrials
+CMCSA-PCP,CMCSA,PCP,-3.447343538454082,0.00944699646799549,Broadcasting & Cable TV,Industrial Conglomerates,Consumer Discretionary,Industrials
+DVA-SLM,DVA,SLM,-3.4473294432983947,0.009447417320063134,Health Care Facilities,Diversified Financial Services,Health Care,Financials
+AMT-SPG,AMT,SPG,-3.447267557874331,0.009449265288861763,REITs,REITs,Financials,Financials
+BLK-QEP,BLK,QEP,-3.447237224949663,0.009450171182474414,Diversified Financial Services,Oil & Gas Exploration & Production,Financials,Energy
+ROK-WHR,ROK,WHR,-3.4461631459665565,0.009482298732439113,Industrial Conglomerates,Household Appliances,Industrials,Consumer Discretionary
+CMCSA-SWY,CMCSA,SWY,-3.4453625725338948,0.009506308809582384,Broadcasting & Cable TV,Food Retail,Consumer Discretionary,Consumer Staples
+CVX-PCAR,CVX,PCAR,-3.4452819014616227,0.009508731238637259,Integrated Oil & Gas,Construction & Farm Machinery & Heavy Trucks,Energy,Industrials
+KR-MCD,KR,MCD,-3.4446861859365483,0.009526636774175203,Food Retail,Restaurants,Consumer Staples,Consumer Discretionary
+DAL-ETN,DAL,ETN,-3.444196043247225,0.009541391705956156,Airlines,Industrial Conglomerates,Industrials,Industrials
+EXPE-RAI,EXPE,RAI,-3.4440707210565074,0.009545167603608833,"Hotels, Resorts & Cruise Lines",Tobacco,Consumer Discretionary,Consumer Staples
+LEG-TRV,LEG,TRV,-3.443891894711169,0.009550557871073315,Industrial Conglomerates,Property & Casualty Insurance,Industrials,Financials
+CMG-MS,CMG,MS,-3.443730605433837,0.00955542186400571,Restaurants,Diversified Financial Services,Consumer Discretionary,Financials
+DE-XL,DE,XL,-3.44368536830194,0.009556786475966337,Construction & Farm Machinery & Heavy Trucks,Property & Casualty Insurance,Industrials,Financials
+GPS-GT,GPS,GT,-3.4434301207532827,0.009564489477674831,Apparel Retail,Tires & Rubber,Consumer Discretionary,Consumer Discretionary
+TGT-TMK,TGT,TMK,-3.4427301547191926,0.009585641953708163,General Merchandise Stores,Life & Health Insurance,Consumer Discretionary,Financials
+ADS-CMG,ADS,CMG,-3.442475123434352,0.009593359214532499,Data Processing & Outsourced Services,Restaurants,Information Technology,Consumer Discretionary
+COF-PWR,COF,PWR,-3.4415486213375184,0.009621442019055163,Consumer Finance,Industrial Conglomerates,Financials,Industrials
+CB-CHK,CB,CHK,-3.441511754126502,0.009622561005017682,Property & Casualty Insurance,Integrated Oil & Gas,Financials,Energy
+GWW-PFG,GWW,PFG,-3.4414491974622083,0.009624459978326262,Industrial Materials,Diversified Financial Services,Industrials,Financials
+AMT-KR,AMT,KR,-3.440931286646512,0.009640194587342306,REITs,Food Retail,Financials,Consumer Staples
+AVB-CPB,AVB,CPB,-3.4407852821507072,0.009644634494768422,REITs,Packaged Foods & Meats,Financials,Consumer Staples
+DFS-DHR,DFS,DHR,-3.4407609243600357,0.009645375378295724,Consumer Finance,Industrial Machinery,Financials,Industrials
+MSFT-SNDK,MSFT,SNDK,-3.4404723240221387,0.009654157523103673,Systems Software,Computer Storage & Peripherals,Information Technology,Information Technology
+BCR-JWN,BCR,JWN,-3.44019366261242,0.009662644011719918,Health Care Equipment & Services,Department Stores,Health Care,Consumer Discretionary
+MJN-PSA,MJN,PSA,-3.440115564311226,0.009665023651791576,Packaged Foods & Meats,REITs,Consumer Staples,Financials
+HSP-PBI,HSP,PBI,-3.4399962261556403,0.009668660874706393,Health Care Equipment & Services,Data Processing Services,Health Care,Industrials
+LO-MMM,LO,MMM,-3.4383393996143186,0.009719284758679666,Tobacco,Industrial Conglomerates,Consumer Staples,Industrials
+LEG-WM,LEG,WM,-3.4382437614631987,0.009722214179936227,Industrial Conglomerates,Environmental Services,Industrials,Industrials
+COST-IRM,COST,IRM,-3.438239067027522,0.009722357992041287,Hypermarkets & Super Centers,Data Processing Services,Consumer Staples,Industrials
+CNX-NUE,CNX,NUE,-3.437994106236534,0.009729864905260089,Oil & Gas Exploration & Production,Steel,Energy,Materials
+MAR-PWR,MAR,PWR,-3.437634372630782,0.009740898469091597,"Hotels, Resorts & Cruise Lines",Industrial Conglomerates,Consumer Discretionary,Industrials
+AVP-FDX,AVP,FDX,-3.4375267375941174,0.009744201969531885,Personal Products,Air Freight & Logistics,Consumer Staples,Industrials
+COST-SWY,COST,SWY,-3.4372206510354486,0.009753601757352624,Hypermarkets & Super Centers,Food Retail,Consumer Staples,Consumer Staples
+AZO-KR,AZO,KR,-3.4370868101819703,0.009757714500254118,Specialty Stores,Food Retail,Consumer Discretionary,Consumer Staples
+PCL-ZMH,PCL,ZMH,-3.4370327809307275,0.00975937518315553,REITs,Health Care Equipment & Services,Financials,Health Care
+BCR-TAP,BCR,TAP,-3.4366475144845072,0.00977122434492026,Health Care Equipment & Services,Brewers,Health Care,Consumer Staples
+AON-AVP,AON,AVP,-3.4359725286734015,0.009792015060298444,Insurance Brokers,Personal Products,Financials,Consumer Staples
+DD-MON,DD,MON,-3.4359219649341095,0.009793574101106005,Diversified Chemicals,Fertilizers & Agricultural Chemicals,Materials,Materials
+DNR-XOM,DNR,XOM,-3.4354487107501583,0.009808176795008812,Oil & Gas Exploration & Production,Integrated Oil & Gas,Energy,Energy
+GPC-KIM,GPC,KIM,-3.43477459018545,0.009829011020045497,Specialty Stores,REITs,Consumer Discretionary,Financials
+MON-RAI,MON,RAI,-3.43461070401262,0.00983408202554299,Fertilizers & Agricultural Chemicals,Tobacco,Materials,Consumer Staples
+AVP-YUM,AVP,YUM,-3.434491980392969,0.009837757061195994,Personal Products,Restaurants,Consumer Staples,Consumer Discretionary
+AVP-CAH,AVP,CAH,-3.434263250668944,0.009844840747193885,Personal Products,Health Care Distributors & Services,Consumer Staples,Health Care
+HCBK-XLNX,HCBK,XLNX,-3.433954770693907,0.009854401494383276,Banks,Semiconductors,Financials,Information Technology
+HAS-RAI,HAS,RAI,-3.433200287939621,0.009877820229504279,Leisure Products,Tobacco,Consumer Discretionary,Consumer Staples
+DIS-HIG,DIS,HIG,-3.432598974576757,0.00989652028006951,Broadcasting & Cable TV,Property & Casualty Insurance,Consumer Discretionary,Financials
+CSX-TGT,CSX,TGT,-3.4323212945880965,0.009905166435688182,Railroads,General Merchandise Stores,Industrials,Consumer Discretionary
+CVX-M,CVX,M,-3.4314719247448933,0.009931655293303136,Integrated Oil & Gas,Department Stores,Energy,Consumer Discretionary
+DVN-QEP,DVN,QEP,-3.431322464821386,0.009936322967313341,Oil & Gas Exploration & Production,Oil & Gas Exploration & Production,Energy,Energy
+CF-SWK,CF,SWK,-3.431125652803942,0.009942472450669784,Fertilizers & Agricultural Chemicals,Household Appliances,Materials,Consumer Discretionary
+DVA-JWN,DVA,JWN,-3.430796192169455,0.009952774214617452,Health Care Facilities,Department Stores,Health Care,Consumer Discretionary
+CSX-KO,CSX,KO,-3.4307576626610183,0.009953979600164255,Railroads,Soft Drinks,Industrials,Consumer Staples
+F-MOS,F,MOS,-3.4305248763184375,0.009961265035303618,Automobile Manufacturers,Fertilizers & Agricultural Chemicals,Consumer Discretionary,Materials
+PCL-WMB,PCL,WMB,-3.430012224776863,0.009977326121040726,REITs,Oil & Gas Exploration & Production,Financials,Energy
+IFF-LYB,IFF,LYB,-3.429715934044611,0.009986619292133986,Specialty Chemicals,Diversified Chemicals,Materials,Materials
+AVP-FOXA,AVP,FOXA,-3.4287110996502523,0.010018193586304696,Personal Products,Publishing,Consumer Staples,Consumer Discretionary
+DNR-LM,DNR,LM,-3.4286539399167255,0.010019992359769006,Oil & Gas Exploration & Production,Diversified Financial Services,Energy,Financials
+CAH-SWY,CAH,SWY,-3.4282304519196893,0.010033328197071782,Health Care Distributors & Services,Food Retail,Health Care,Consumer Staples
+BLL-ZMH,BLL,ZMH,-3.4273457796115414,0.010061238121976178,Metal & Glass Containers,Health Care Equipment & Services,Materials,Health Care
+CTAS-DHR,CTAS,DHR,-3.4272811596875385,0.010063279487548137,Diversified Commercial Services,Industrial Machinery,Industrials,Industrials
+ROK-TRV,ROK,TRV,-3.426952742700672,0.010073660012744068,Industrial Conglomerates,Property & Casualty Insurance,Industrials,Financials
+VFC-XOM,VFC,XOM,-3.42677884574084,0.01007916037855357,"Apparel, Accessories & Luxury Goods",Integrated Oil & Gas,Consumer Discretionary,Energy
+GD-RAI,GD,RAI,-3.426619297448658,0.010084209255352472,Aerospace & Defense,Tobacco,Industrials,Consumer Staples
+ALTR-RAI,ALTR,RAI,-3.4262826544243303,0.010094869675954764,Semiconductors,Tobacco,Information Technology,Consumer Staples
+ADBE-WAG,ADBE,WAG,-3.4251916007437715,0.010129489113791287,Application Software,Drug Retail,Information Technology,Consumer Staples
+BMS-ZMH,BMS,ZMH,-3.4249063643422226,0.010138557211796944,Paper Packaging,Health Care Equipment & Services,Materials,Health Care
+HAR-PKI,HAR,PKI,-3.4248984908119544,0.010138807626069527,Consumer Electronics,Health Care Equipment & Services,Consumer Discretionary,Health Care
+ARG-CSX,ARG,CSX,-3.424846367517013,0.010140465524574182,Industrial Gases,Railroads,Materials,Industrials
+DFS-VNO,DFS,VNO,-3.4236326324289137,0.010179139621306364,Consumer Finance,REITs,Financials,Financials
+HAR-RSG,HAR,RSG,-3.4233906894854766,0.010186864546532833,Consumer Electronics,Industrial Conglomerates,Consumer Discretionary,Industrials
+BEAM-UPS,BEAM,UPS,-3.4233456871767185,0.01018830198934603,Distillers & Vintners,Air Freight & Logistics,Consumer Staples,Industrials
+NOC-SE,NOC,SE,-3.4233187772789435,0.010189161619318932,Aerospace & Defense,Oil & Gas Refining & Marketing & Transportation,Industrials,Energy
+ED-LMT,ED,LMT,-3.423149316045866,0.010194576504512356,Multi-Utilities & Unregulated Power,Aerospace & Defense,Utilities,Industrials
+DISCA-L,DISCA,L,-3.423090878586169,0.010196444383615756,Broadcasting & Cable TV,Multi-Sector Holdings,Consumer Discretionary,Financials
+BMS-RAI,BMS,RAI,-3.422849911905645,0.010204149805878351,Paper Packaging,Tobacco,Materials,Consumer Staples
+AMGN-CAM,AMGN,CAM,-3.4226799598737454,0.010209587510128869,Biotechnology,Oil & Gas Equipment & Services,Health Care,Energy
+FDO-WYNN,FDO,WYNN,-3.4226124141206156,0.010211749390310887,General Merchandise Stores,Casinos & Gaming,Consumer Discretionary,Consumer Discretionary
+AEP-LO,AEP,LO,-3.4224509004521058,0.010216920480031458,Electric Utilities,Tobacco,Utilities,Consumer Staples
+AVY-VNO,AVY,VNO,-3.4221931916881774,0.010225176234340763,Paper Packaging,REITs,Materials,Financials
+ADP-AZO,ADP,AZO,-3.4219249817374466,0.010233774721455272,Internet Software & Services,Specialty Stores,Information Technology,Consumer Discretionary
+KR-MMM,KR,MMM,-3.4216157495750017,0.010243696343332309,Food Retail,Industrial Conglomerates,Consumer Staples,Industrials
+ED-ZMH,ED,ZMH,-3.421434233207671,0.010249524241324217,Multi-Utilities & Unregulated Power,Health Care Equipment & Services,Utilities,Health Care
+JEC-PX,JEC,PX,-3.420936515701236,0.01026551951566883,Industrial Conglomerates,Industrial Gases,Industrials,Materials
+LEG-WHR,LEG,WHR,-3.420916740021252,0.01026615551181385,Industrial Conglomerates,Household Appliances,Industrials,Consumer Discretionary
+KRFT-RAI,KRFT,RAI,-3.4209091159743625,0.010266400714518965,Packaged Foods & Meats,Tobacco,Consumer Staples,Consumer Staples
+DNR-MTB,DNR,MTB,-3.4207499220525652,0.010271521864507383,Oil & Gas Exploration & Production,Banks,Energy,Financials
+ARG-LYB,ARG,LYB,-3.4203574044888865,0.010284158607833594,Industrial Gases,Diversified Chemicals,Materials,Materials
+BF.B-HES,BF.B,HES,-3.4201426389079645,0.010291078661767114,Distillers & Vintners,Integrated Oil & Gas,Consumer Staples,Energy
+HCBK-LLTC,HCBK,LLTC,-3.419213334115501,0.010321070122447306,Banks,Semiconductors,Financials,Information Technology
+ALTR-UNM,ALTR,UNM,-3.419024528449489,0.010327172976491465,Semiconductors,Diversified Financial Services,Information Technology,Financials
+HOT-ZMH,HOT,ZMH,-3.4187222700534927,0.010336949722460007,"Hotels, Resorts & Cruise Lines",Health Care Equipment & Services,Consumer Discretionary,Health Care
+JNPR-NVDA,JNPR,NVDA,-3.4186298864347924,0.010339939579159706,Networking Equipment,Semiconductors,Information Technology,Information Technology
+ACN-MA,ACN,MA,-3.418161668513361,0.010355104619897658,IT Consulting & Services,Internet Software & Services,Information Technology,Information Technology
+BLK-IFF,BLK,IFF,-3.4177741966393365,0.010367669397170372,Diversified Financial Services,Specialty Chemicals,Financials,Materials
+LEG-QEP,LEG,QEP,-3.4176220245242313,0.010372607691574578,Industrial Conglomerates,Oil & Gas Exploration & Production,Industrials,Energy
+CPB-CSX,CPB,CSX,-3.4175898594123435,0.010373651783553555,Packaged Foods & Meats,Railroads,Consumer Staples,Industrials
+BEAM-DOV,BEAM,DOV,-3.4174578333678736,0.010377938382769472,Distillers & Vintners,Industrial Machinery,Consumer Staples,Industrials
+FLIR-VZ,FLIR,VZ,-3.417170941278996,0.010387258596774173,Aerospace & Defense,Integrated Telecommunications Services,Industrials,Telecommunications Services
+PFE-PVH,PFE,PVH,-3.4162350391878995,0.010417715041452301,Pharmaceuticals,"Apparel, Accessories & Luxury Goods",Health Care,Consumer Discretionary
+HIG-HON,HIG,HON,-3.4152714379211235,0.010449156119825186,Property & Casualty Insurance,Industrial Conglomerates,Financials,Industrials
+ABT-CFN,ABT,CFN,-3.4144087315683493,0.010477376932029579,Health Care Equipment & Services,Health Care Equipment & Services,Health Care,Health Care
+CSC-HAR,CSC,HAR,-3.414295856591062,0.010481074319576797,IT Consulting & Services,Consumer Electronics,Information Technology,Consumer Discretionary
+IFF-SE,IFF,SE,-3.414250445184921,0.01048256216599208,Specialty Chemicals,Oil & Gas Refining & Marketing & Transportation,Materials,Energy
+CTAS-DIS,CTAS,DIS,-3.414109520619434,0.010487180578259337,Diversified Commercial Services,Broadcasting & Cable TV,Industrials,Consumer Discretionary
+ROK-RSG,ROK,RSG,-3.4139073451237962,0.01049380949050185,Industrial Conglomerates,Industrial Conglomerates,Industrials,Industrials
+AVP-SRCL,AVP,SRCL,-3.413523002989954,0.010506421575242779,Personal Products,Industrial Conglomerates,Consumer Staples,Industrials
+AN-AZO,AN,AZO,-3.413320244166017,0.0105130804992533,Specialty Stores,Specialty Stores,Consumer Discretionary,Consumer Discretionary
+IFF-UTX,IFF,UTX,-3.412151039587039,0.010551552551559044,Specialty Chemicals,Industrial Conglomerates,Materials,Industrials
+FDX-MCK,FDX,MCK,-3.412126441391286,0.010552363289124777,Air Freight & Logistics,Health Care Distributors & Services,Industrials,Health Care
+DOV-SYY,DOV,SYY,-3.4117491593272513,0.010564805178933455,Industrial Machinery,Food Distributors,Industrials,Consumer Staples
+ARG-UNM,ARG,UNM,-3.4110191731035666,0.010588915593116284,Industrial Gases,Diversified Financial Services,Materials,Financials
+BWA-SYY,BWA,SYY,-3.4109457346904626,0.010591343875032237,Auto Parts & Equipment,Food Distributors,Consumer Discretionary,Consumer Staples
+JNPR-RAI,JNPR,RAI,-3.410591488452232,0.010603064201088613,Networking Equipment,Tobacco,Information Technology,Consumer Staples
+EQR-OXY,EQR,OXY,-3.4105155052380884,0.010605579630984225,REITs,Oil & Gas Exploration & Production,Financials,Energy
+COP-QEP,COP,QEP,-3.410446154768802,0.01060787594791416,Integrated Oil & Gas,Oil & Gas Exploration & Production,Energy,Energy
+OMC-RAI,OMC,RAI,-3.4103145214102843,0.010612235781308066,Advertising,Tobacco,Consumer Discretionary,Consumer Staples
+CME-MSI,CME,MSI,-3.4097790464693474,0.010629987744237596,Diversified Financial Services,Telecommunications Equipment,Financials,Information Technology
+AVY-SIAL,AVY,SIAL,-3.409201159463375,0.010649175450541098,Paper Packaging,Diversified Chemicals,Materials,Materials
+CAM-TJX,CAM,TJX,-3.4089119624111786,0.010658789312946745,Oil & Gas Equipment & Services,Apparel Retail,Energy,Consumer Discretionary
+AAPL-CSX,AAPL,CSX,-3.408841628969893,0.010661128597837792,Computer Hardware,Railroads,Information Technology,Industrials
+RF-XLNX,RF,XLNX,-3.408599251555348,0.010669193559739557,Diversified Financial Services,Semiconductors,Financials,Information Technology
+MMC-SIAL,MMC,SIAL,-3.4084062843673757,0.010675618315440963,Insurance Brokers,Diversified Chemicals,Financials,Materials
+CME-CSC,CME,CSC,-3.4080587707463215,0.010687197325960778,Diversified Financial Services,IT Consulting & Services,Financials,Information Technology
+HAR-UNM,HAR,UNM,-3.4079608090973337,0.01069046339028377,Consumer Electronics,Diversified Financial Services,Consumer Discretionary,Financials
+AVY-HON,AVY,HON,-3.407411914060791,0.010708780148145199,Paper Packaging,Industrial Conglomerates,Materials,Industrials
+GD-PCL,GD,PCL,-3.4071112537458546,0.010718825110733155,Aerospace & Defense,REITs,Industrials,Financials
+AVB-HAS,AVB,HAS,-3.40709706239434,0.01071929944667909,REITs,Leisure Products,Financials,Consumer Discretionary
+BBY-BRCM,BBY,BRCM,-3.4069236247919084,0.010725097988711012,Computer & Electronics Retail,Semiconductors,Consumer Discretionary,Information Technology
+A-CMCSA,A,CMCSA,-3.406619788187193,0.010735262903492424,Health Care Equipment & Services,Broadcasting & Cable TV,Health Care,Consumer Discretionary
+ABT-RAI,ABT,RAI,-3.4064762029591527,0.010740069563973172,Health Care Equipment & Services,Tobacco,Health Care,Consumer Staples
+BLK-GE,BLK,GE,-3.406301665991449,0.0107459149487117,Diversified Financial Services,Industrial Conglomerates,Financials,Industrials
+ACE-HAS,ACE,HAS,-3.406120490278293,0.010751985670272319,Property & Casualty Insurance,Leisure Products,Financials,Consumer Discretionary
+CERN-GPS,CERN,GPS,-3.40597929216392,0.010756718967273898,Health Care Distributors & Services,Apparel Retail,Health Care,Consumer Discretionary
+JNJ-QEP,JNJ,QEP,-3.405889756895982,0.010759721364951947,Health Care Equipment & Services,Oil & Gas Exploration & Production,Health Care,Energy
+IP-ZMH,IP,ZMH,-3.4057667392348367,0.01076384775035786,Paper Products,Health Care Equipment & Services,Materials,Health Care
+BBY-EMC,BBY,EMC,-3.4053867974725263,0.010776601057193063,Computer & Electronics Retail,IT Consulting & Services,Consumer Discretionary,Information Technology
+BEN-PVH,BEN,PVH,-3.404965408509731,0.010790761352579219,Diversified Financial Services,"Apparel, Accessories & Luxury Goods",Financials,Consumer Discretionary
+BF.B-QEP,BF.B,QEP,-3.403682612232287,0.010833970403947485,Distillers & Vintners,Oil & Gas Exploration & Production,Consumer Staples,Energy
+AVP-KMX,AVP,KMX,-3.4023992644208536,0.010877352267613978,Personal Products,Specialty Stores,Consumer Staples,Consumer Discretionary
+IRM-STJ,IRM,STJ,-3.4023621788369423,0.01087860819443187,Data Processing Services,Health Care Equipment & Services,Industrials,Health Care
+AIV-MO,AIV,MO,-3.4018925027287663,0.010894525258882102,REITs,Tobacco,Financials,Consumer Staples
+PPG-VMC,PPG,VMC,-3.401788534068829,0.01089805150356246,Diversified Chemicals,Construction Materials,Materials,Materials
+FLS-TXT,FLS,TXT,-3.4010948026613064,0.010921606432888503,Industrial Machinery,Industrial Conglomerates,Industrials,Industrials
+AVY-PCL,AVY,PCL,-3.4010594093428166,0.010922809391542351,Paper Packaging,REITs,Materials,Financials
+BRK.B-DRI,BRK.B,DRI,-3.4008091461699648,0.01093131878003549,Multi-Sector Holdings,Restaurants,Financials,Consumer Discretionary
+STI-USB,STI,USB,-3.400564438077161,0.01093964499679454,Banks,Banks,Financials,Financials
+ALLE-COST,ALLE,COST,-3.4004787706716555,0.010942561173647431,Building Products,Hypermarkets & Super Centers,Industrials,Consumer Staples
+FLS-PNR,FLS,PNR,-3.400445531368887,0.010943692848645896,Industrial Machinery,Industrial Conglomerates,Industrials,Industrials
+BDX-MON,BDX,MON,-3.4003596812627817,0.010946616208869468,Health Care Equipment & Services,Fertilizers & Agricultural Chemicals,Health Care,Materials
+MJN-VNO,MJN,VNO,-3.400128325811272,0.010954497768369011,Packaged Foods & Meats,REITs,Consumer Staples,Financials
+BEN-QEP,BEN,QEP,-3.4001012147293284,0.01095542168932894,Diversified Financial Services,Oil & Gas Exploration & Production,Financials,Energy
+NOC-RAI,NOC,RAI,-3.400042120047228,0.010957435822819455,Aerospace & Defense,Tobacco,Industrials,Consumer Staples
+MCHP-WPX,MCHP,WPX,-3.399506623139305,0.010975702294084386,Semiconductors,Integrated Oil & Gas,Information Technology,Energy
+LMT-WAG,LMT,WAG,-3.399353021206368,0.010980946852908319,Aerospace & Defense,Drug Retail,Industrials,Consumer Staples
+APD-HAR,APD,HAR,-3.3989650052672,0.010994205148577242,Industrial Gases,Consumer Electronics,Materials,Consumer Discretionary
+COH-SLM,COH,SLM,-3.3989108307650437,0.01099605739617227,"Apparel, Accessories & Luxury Goods",Diversified Financial Services,Consumer Discretionary,Financials
+FOSL-HBAN,FOSL,HBAN,-3.398654154827156,0.011004837026866377,"Apparel, Accessories & Luxury Goods",Banks,Consumer Discretionary,Financials
+R-XOM,R,XOM,-3.3981066440886,0.011023585564896935,Industrial Conglomerates,Integrated Oil & Gas,Industrials,Energy
+CCI-GHC,CCI,GHC,-3.3978048375689616,0.01103393255555033,Wireless Telecommunications Services,Publishing,Telecommunications Services,Consumer Discretionary
+AVP-PCLN,AVP,PCLN,-3.3972028598627757,0.011054596309520257,Personal Products,"Hotels, Resorts & Cruise Lines",Consumer Staples,Consumer Discretionary
+ALLE-LNC,ALLE,LNC,-3.396989953966275,0.011061912858285464,Building Products,Multi-line Insurance,Industrials,Financials
+AIG-CF,AIG,CF,-3.39693011335027,0.011063970067938494,Property & Casualty Insurance,Fertilizers & Agricultural Chemicals,Financials,Materials
+BHI-MO,BHI,MO,-3.396768689797354,0.011069521210426363,Oil & Gas Equipment & Services,Tobacco,Energy,Consumer Staples
+DAL-SWK,DAL,SWK,-3.396499154173509,0.011078795712985546,Airlines,Household Appliances,Industrials,Consumer Discretionary
+APH-EMC,APH,EMC,-3.396308702138309,0.011085353185164975,Electrical Components & Equipment,IT Consulting & Services,Industrials,Information Technology
+ALL-CPB,ALL,CPB,-3.3961228844368816,0.011091754423369266,Property & Casualty Insurance,Packaged Foods & Meats,Financials,Consumer Staples
+CAM-DNB,CAM,DNB,-3.3952623330866496,0.01112144251946244,Oil & Gas Equipment & Services,Data Processing Services,Energy,Industrials
+ADP-MON,ADP,MON,-3.3951319585572612,0.01112594646734173,Internet Software & Services,Fertilizers & Agricultural Chemicals,Information Technology,Materials
+NOC-ORLY,NOC,ORLY,-3.3949545553832112,0.01113207768605077,Aerospace & Defense,Specialty Stores,Industrials,Consumer Discretionary
+BMS-PBI,BMS,PBI,-3.3945405278057623,0.01114639856991871,Paper Packaging,Data Processing Services,Materials,Industrials
+AVY-PPG,AVY,PPG,-3.394123250885094,0.011160848441349326,Paper Packaging,Diversified Chemicals,Materials,Materials
+AVP-FISV,AVP,FISV,-3.3936103542173988,0.011178632374459147,Personal Products,Internet Software & Services,Consumer Staples,Information Technology
+FOSL-SLM,FOSL,SLM,-3.3928148933035738,0.011206263713778995,"Apparel, Accessories & Luxury Goods",Diversified Financial Services,Consumer Discretionary,Financials
+AET-FOSL,AET,FOSL,-3.392802242628853,0.011206703641692671,Managed Health Care,"Apparel, Accessories & Luxury Goods",Health Care,Consumer Discretionary
+AIV-CHK,AIV,CHK,-3.392724487579478,0.01120940791551405,REITs,Integrated Oil & Gas,Financials,Energy
+AVP-IR,AVP,IR,-3.3925963177512175,0.011213866853072463,Personal Products,Industrial Conglomerates,Consumer Staples,Industrials
+KR-SIAL,KR,SIAL,-3.3923685166664224,0.011221795788791676,Food Retail,Diversified Chemicals,Consumer Staples,Materials
+KMB-M,KMB,M,-3.3918735935527247,0.01123903948317324,Household Products,Department Stores,Consumer Staples,Consumer Discretionary
+MJN-TGT,MJN,TGT,-3.3913333271993897,0.011257889911994865,Packaged Foods & Meats,General Merchandise Stores,Consumer Staples,Consumer Discretionary
+KR-ORLY,KR,ORLY,-3.391001732406281,0.011269473515254992,Food Retail,Specialty Stores,Consumer Staples,Consumer Discretionary
+AA-GME,AA,GME,-3.390843855107776,0.011274992371002527,Aluminum,Specialty Stores,Materials,Consumer Discretionary
+MON-VNO,MON,VNO,-3.3905336258157557,0.011285843944683327,Fertilizers & Agricultural Chemicals,REITs,Materials,Financials
+BMY-CA,BMY,CA,-3.3905274888925203,0.011286058703102104,Health Care Distributors & Services,Systems Software,Health Care,Information Technology
+DNR-VZ,DNR,VZ,-3.390363698398754,0.011291791809910237,Oil & Gas Exploration & Production,Integrated Telecommunications Services,Energy,Telecommunications Services
+BDX-VFC,BDX,VFC,-3.390004126634883,0.01130438687856698,Health Care Equipment & Services,"Apparel, Accessories & Luxury Goods",Health Care,Consumer Discretionary
+MMM-WHR,MMM,WHR,-3.3895835011383606,0.011319136402271475,Industrial Conglomerates,Household Appliances,Industrials,Consumer Discretionary
+CF-LO,CF,LO,-3.389505202417184,0.011321883891054247,Fertilizers & Agricultural Chemicals,Tobacco,Materials,Consumer Staples
+GPS-KORS,GPS,KORS,-3.3892293435404937,0.011331568461573883,Apparel Retail,"Apparel, Accessories & Luxury Goods",Consumer Discretionary,Consumer Discretionary
+AON-CAM,AON,CAM,-3.388824430029406,0.011345797102089454,Insurance Brokers,Oil & Gas Equipment & Services,Financials,Energy
+DNR-PWR,DNR,PWR,-3.3887175397432348,0.011349555872921569,Oil & Gas Exploration & Production,Industrial Conglomerates,Energy,Industrials
+PEP-PG,PEP,PG,-3.388681561456404,0.011350821289837505,Soft Drinks,Personal Products,Consumer Staples,Consumer Staples
+AZO-VAR,AZO,VAR,-3.3885212475324207,0.011356461326633009,Specialty Stores,Health Care Equipment & Services,Consumer Discretionary,Health Care
+AVP-LOW,AVP,LOW,-3.387555160666001,0.011390502250074494,Personal Products,Home Improvement Retail,Consumer Staples,Consumer Discretionary
+AIV-KIM,AIV,KIM,-3.3875351964737908,0.01139120666245946,REITs,REITs,Financials,Financials
+V-VIAB,V,VIAB,-3.387115264084427,0.011406032453986026,Internet Software & Services,Broadcasting & Cable TV,Information Technology,Consumer Discretionary
+ALLE-UNM,ALLE,UNM,-3.386834672589472,0.011415948354964584,Building Products,Diversified Financial Services,Industrials,Financials
+HCBK-RDC,HCBK,RDC,-3.3867278989286103,0.011419723673184615,Banks,Oil & Gas Drilling,Financials,Energy
+DD-KR,DD,KR,-3.386673314368415,0.011421654110837157,Diversified Chemicals,Food Retail,Materials,Consumer Staples
+MMC-PX,MMC,PX,-3.3866560229982983,0.011422265698013242,Insurance Brokers,Industrial Gases,Financials,Materials
+ADP-AVY,ADP,AVY,-3.3861383479239686,0.01144058910674809,Internet Software & Services,Paper Packaging,Information Technology,Materials
+MWV-OI,MWV,OI,-3.3859965541546884,0.011445612539350954,Paper Packaging,Metal & Glass Containers,Materials,Materials
+HCBK-MAR,HCBK,MAR,-3.385920948078353,0.011448291893685708,Banks,"Hotels, Resorts & Cruise Lines",Financials,Consumer Discretionary
+APA-CAT,APA,CAT,-3.3857062074832793,0.011455904988614967,Oil & Gas Exploration & Production,Construction & Farm Machinery & Heavy Trucks,Energy,Industrials
+HES-QCOM,HES,QCOM,-3.385539852317284,0.011461805793766931,Integrated Oil & Gas,Semiconductors,Energy,Information Technology
+HST-TGT,HST,TGT,-3.384437854679577,0.011500963216990697,REITs,General Merchandise Stores,Financials,Consumer Discretionary
+CHK-MWV,CHK,MWV,-3.3842841299924498,0.011506434982564555,Integrated Oil & Gas,Paper Packaging,Energy,Materials
+ORLY-SE,ORLY,SE,-3.3842719318067576,0.011506869270996067,Specialty Stores,Oil & Gas Refining & Marketing & Transportation,Consumer Discretionary,Energy
+ISRG-VMC,ISRG,VMC,-3.3837557294270306,0.011525260841241822,Health Care Equipment & Services,Construction Materials,Health Care,Materials
+PBI-PLD,PBI,PLD,-3.3835240597758602,0.01153352340399965,Data Processing Services,Diversified Financial Services,Industrials,Financials
+BA-GD,BA,GD,-3.3829964838299387,0.0115523592096493,Aerospace & Defense,Aerospace & Defense,Industrials,Industrials
+AIV-AVP,AIV,AVP,-3.3829638131234128,0.011553526536144436,REITs,Personal Products,Financials,Consumer Staples
+BBY-R,BBY,R,-3.382476861682809,0.011570937781280361,Computer & Electronics Retail,Industrial Conglomerates,Consumer Discretionary,Industrials
+ADS-CAM,ADS,CAM,-3.381800471136852,0.011595161252405563,Data Processing & Outsourced Services,Oil & Gas Equipment & Services,Information Technology,Energy
+LO-UTX,LO,UTX,-3.3817670053157207,0.011596360928642031,Tobacco,Industrial Conglomerates,Consumer Staples,Industrials
+NSC-XOM,NSC,XOM,-3.3811483324165232,0.011618558883645793,Railroads,Integrated Oil & Gas,Industrials,Energy
+CBG-MCO,CBG,MCO,-3.3804771373843767,0.01164268405281687,Real Estate Management & Development,Diversified Financial Services,Financials,Financials
+AIG-EMN,AIG,EMN,-3.3804310405874314,0.01164434257121192,Property & Casualty Insurance,Diversified Chemicals,Financials,Materials
+M-SRE,M,SRE,-3.380234086061973,0.01165143117184006,Department Stores,Multi-Utilities & Unregulated Power,Consumer Discretionary,Utilities
+STT-TDC,STT,TDC,-3.379913588772888,0.011662974408042405,Diversified Financial Services,Application Software,Financials,Information Technology
+DUK-HST,DUK,HST,-3.379813022272223,0.011666598570826482,Electric Utilities,REITs,Utilities,Financials
+ORLY-PBI,ORLY,PBI,-3.379789202420134,0.011667457124802081,Specialty Stores,Data Processing Services,Consumer Discretionary,Industrials
+HOT-KR,HOT,KR,-3.3788958446924315,0.01169969756719045,"Hotels, Resorts & Cruise Lines",Food Retail,Consumer Discretionary,Consumer Staples
+TMK-UNM,TMK,UNM,-3.3776978264526263,0.011743057227437726,Life & Health Insurance,Diversified Financial Services,Financials,Financials
+SWY-WAG,SWY,WAG,-3.3761804273860907,0.011798181170622962,Food Retail,Drug Retail,Consumer Staples,Consumer Staples
+HAS-KR,HAS,KR,-3.375969969583781,0.0118058447953984,Leisure Products,Food Retail,Consumer Discretionary,Consumer Staples
+ORLY-PFG,ORLY,PFG,-3.375961441757105,0.011806155421500021,Specialty Stores,Diversified Financial Services,Consumer Discretionary,Financials
+EA-EQT,EA,EQT,-3.3759234737917194,0.011807538492863525,Application Software,Oil & Gas Exploration & Production,Information Technology,Energy
+DAL-TGT,DAL,TGT,-3.3758801320776954,0.011809117491505825,Airlines,General Merchandise Stores,Industrials,Consumer Discretionary
+CBS-FDO,CBS,FDO,-3.375208812139112,0.011833598580136426,Broadcasting & Cable TV,General Merchandise Stores,Consumer Discretionary,Consumer Discretionary
+BXP-HAS,BXP,HAS,-3.3751000232722075,0.011837570037665198,REITs,Leisure Products,Financials,Consumer Discretionary
+EXPD-TGT,EXPD,TGT,-3.375097436096334,0.01183766449978942,Air Freight & Logistics,General Merchandise Stores,Industrials,Consumer Discretionary
+MMC-ORLY,MMC,ORLY,-3.374259398898628,0.01186829791280679,Insurance Brokers,Specialty Stores,Financials,Consumer Discretionary
+KMB-RAI,KMB,RAI,-3.3738736044102358,0.011882423814521774,Household Products,Tobacco,Consumer Staples,Consumer Staples
+CCI-UPS,CCI,UPS,-3.373553326153769,0.011894162179462599,Wireless Telecommunications Services,Air Freight & Logistics,Telecommunications Services,Industrials
+APA-LM,APA,LM,-3.373510339651313,0.011895738441104467,Oil & Gas Exploration & Production,Diversified Financial Services,Energy,Financials
+HIG-HOT,HIG,HOT,-3.373481553732197,0.011896794088747812,Property & Casualty Insurance,"Hotels, Resorts & Cruise Lines",Financials,Consumer Discretionary
+CINF-MMM,CINF,MMM,-3.37269796960454,0.011925561956719543,Property & Casualty Insurance,Industrial Conglomerates,Financials,Industrials
+F-ROK,F,ROK,-3.372657373249901,0.011927054060543478,Automobile Manufacturers,Industrial Conglomerates,Consumer Discretionary,Industrials
+EMC-FAST,EMC,FAST,-3.3725435499605303,0.011931238477384882,IT Consulting & Services,Building Products,Information Technology,Industrials
+CTAS-DFS,CTAS,DFS,-3.3722079774222107,0.011943582519104995,Diversified Commercial Services,Consumer Finance,Industrials,Financials
+AMT-RAI,AMT,RAI,-3.372164266196925,0.011945191272155617,REITs,Tobacco,Financials,Consumer Staples
+FB-TRIP,FB,TRIP,-3.37216100983084,0.011945311127538046,Internet Software & Services,Internet Retail,Information Technology,Consumer Discretionary
+IRM-TGT,IRM,TGT,-3.3712119719832114,0.011980287431114222,Data Processing Services,General Merchandise Stores,Industrials,Consumer Discretionary
+EMC-PG,EMC,PG,-3.371178583066687,0.011981519617309883,IT Consulting & Services,Personal Products,Information Technology,Consumer Staples
+D-NSC,D,NSC,-3.3708804313731195,0.011992527613446923,Multi-Utilities & Unregulated Power,Railroads,Utilities,Industrials
+NOC-SNA,NOC,SNA,-3.3708354582682527,0.011994188835475936,Aerospace & Defense,Household Appliances,Industrials,Consumer Discretionary
+AVP-KORS,AVP,KORS,-3.37018415367708,0.012018269727473737,Personal Products,"Apparel, Accessories & Luxury Goods",Consumer Staples,Consumer Discretionary
+DHR-UNM,DHR,UNM,-3.3699496149130628,0.012026951913704427,Industrial Machinery,Diversified Financial Services,Industrials,Financials
+FLIR-KSS,FLIR,KSS,-3.3696652587462554,0.01203748571754787,Aerospace & Defense,General Merchandise Stores,Industrials,Consumer Discretionary
+AFL-NLSN,AFL,NLSN,-3.3690052238963233,0.012061967900988978,Life & Health Insurance,Research & Consulting Services,Financials,Industrials
