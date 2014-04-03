@@ -213,14 +213,16 @@
                 d.industry_2 = d.industry_2;
                 d.sector_1 = d.sector_1;
                 d.sector_2 = d.sector_2;
-                d.adf_stat = Math.floor(+d.adf_stat * 100000) / 100000;
-                d.adf_p = Math.floor(+d.adf_p * 100000) / 100000;
+                d.adf_stat = +d.adf_stat;
+                d.adf_p = +d.adf_p;
               });
 
-            var pair = crossfilter(pairs),
+            var coarseness = 1000 ;
+                pair = crossfilter(pairs),
                 all = pair.groupAll(),
                 adf_p = pair.dimension(function(d) { return d.adf_p; }),
-                adf_ps = adf_p.group(function(d) { return Math.floor(d * 20) / 20; });
+                adf_ps = adf_p.group(function(d) { return Math.floor(d * coarseness) / coarseness; }),
+                adf_p_extent = d3.extent(pairs, function(d) { return d.adf_p; });
 
             var charts = [
 
@@ -228,7 +230,7 @@
                     .dimension(adf_p)
                     .group(adf_ps)
                     .x(d3.scale.linear()
-                    .domain([0, 1])
+                    .domain([Math.floor(adf_p_extent[0]), Math.ceil(adf_p_extent[1] * coarseness) / coarseness])
                     .rangeRound([0, 10 * 24]))
 
             ];
@@ -275,8 +277,6 @@
                   adf_p.enter().append("div")
                       .attr("class", "adf_p")
                       .append("div")
-                      //.attr("class", "day")
-                      //.text(function(d) { return d.values[0].adf_p; });
 
                   adf_p.exit().remove();
 
@@ -288,20 +288,9 @@
 
                   pairEnter.append("div")
                       .attr("class", "symbol")
+                      .attr("style", "cursor: pointer; cursor: hand;")
                       .attr("onclick", function(d) {return "Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': '".concat(d.symbol).concat("'})")})
                       .text(function(d) { return d.symbol; });
-
-{#                  pairEnter.append("div")#}
-{#                      .attr("class", "symbol_1")#}
-{#                      .text(function(d) { return d.symbol_1; });#}
-{##}
-{#                  pairEnter.append("div")#}
-{#                      .attr("class", "symbol_2")#}
-{#                      .text(function(d) { return d.symbol_2; });#}
-{##}
-{#                  pairEnter.append("div")#}
-{#                      .attr("class", "adf_stat")#}
-{#                      .text(function(d) { return d.adf_stat; });#}
 
                   pairEnter.append("div")
                       .attr("class", "adf_p")
@@ -432,7 +421,7 @@
                       extent = brush.extent();
                   if (round) g.select(".brush")
                       .call(brush.extent(extent = extent.map(round)))
-                    .selectAll(".resize")
+                      .selectAll(".resize")
                       .style("display", null);
                   g.select("#clip-" + id + " rect")
                       .attr("x", x(extent[0]))
@@ -513,7 +502,6 @@
 
     <div id="ajax_script"></div>
     <script>
-{#        d3.csv("{% static "pairs_100.csv" %}", d3_crossfilter);#}
         d3.csv("{% static "pairs_1.csv" %}", d3_crossfilter);
     </script>
 </body>
