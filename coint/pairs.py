@@ -23,6 +23,7 @@ class PairAnalysis(object):
     Z_SCORE_BUY = 1.5
     Z_SCORE_SELL = 0.5
     Z_SCORE_PANIC = 4
+    DECAY_HALFLIFE = 820800
 
     def __init__(self, c1, c2, lookback=1000):
         self.companies = []
@@ -50,19 +51,10 @@ class PairAnalysis(object):
             symbol=self.symbol,
         )
 
-        self.adf = []
-        self.ols = []
-        self.freq = []
+        self.analyses = []
 
         for d in date_span:
             self.analyze(d)
-
-        if self.pair.adf_stat < self.pair.adf_5pct:
-            coint_log_item = colored('Cointegrated', 'green', attrs=['bold'])
-        else:
-            coint_log_item = colored('Not Cointegrated', 'red', attrs=['bold'])
-
-        logger.info(self.symbol + '::' + coint_log_item + ': ' + str(self.pair.adf_stat))
 
     def get_company(self, co_arg):
         if isinstance(co_arg, str) or isinstance(co_arg, unicode):
@@ -74,7 +66,7 @@ class PairAnalysis(object):
         return company
 
     def analyze(self, date):
-        logger.info(self.symbol + '::Conducting analysis')
+        logger.debug(self.symbol + '::Conducting analysis')
 
         company_num = 1
         for c in self.companies:
@@ -97,9 +89,18 @@ class PairAnalysis(object):
             if abs(z_score) > self.Z_SCORE_PANIC and pos:
                 pos = 0
 
-        self.ols.append(ols_res)
-        self.adf.append(adf_res)
-        self.freq.append(successes)
+        self.analyses.append({
+            'ols': ols_res,
+            'adf': adf_res,
+            'freq': successes
+        })
+
+        if adf_res[0] < adf_res[4]['5%']:
+            coint_log_item = colored('Cointegrated', 'green', attrs=['bold'])
+        else:
+            coint_log_item = colored('Not Cointegrated', 'red', attrs=['bold'])
+
+        logger.info(self.symbol + '::' + coint_log_item + '::p-' + str(adf_res[1]) + '::f-' + str(successes))
 
         return None
 
@@ -112,6 +113,12 @@ class PairAnalysis(object):
         self.pair.adf_10pct = self.adf[4]['10%']
         self.pair.save()
         return None
+
+    def compute_ranking_statistic(self):
+        """
+        This is the magic
+        """
+
 
 
 def engle_granger_test(y, x):

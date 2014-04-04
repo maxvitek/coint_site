@@ -271,6 +271,8 @@
               function pairList(div) {
                 var pairsByP = nestByP.entries(adf_p.bottom(50));
 
+                Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': pairsByP[0].values[0].symbol});
+
                 div.each(function() {
                   var adf_p = d3.select(this).selectAll(".adf_p")
                       .data(pairsByP, function(d) { return d.key; });
@@ -310,7 +312,7 @@
                     x,
                     y = d3.scale.linear().range([100, 0]),
                     id = barChart.id++,
-                    axis = d3.svg.axis().orient("bottom"),
+                    axis = d3.svg.axis().orient("bottom").ticks(5),
                     brush = d3.svg.brush(),
                     brushDirty,
                     dimension,
@@ -492,12 +494,6 @@
                 return d3.rebind(chart, brush, "on");
               }
         }
-
-    </script>
-
-    <script>
-
-        Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': 'FDX-UPS'});
 
     </script>
 
