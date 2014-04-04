@@ -79,14 +79,14 @@ class PairAnalysis(object):
         res_std = np.std(ols_res.resid)
         pos = 0
         successes = 0
-        for r in ols_res.resid:
-            z_score = (r - res_mean) / res_std
-            if abs(z_score) > self.Z_SCORE_BUY and not pos:
+        ols_res.z_score = (ols_res.resid - res_mean) / res_std
+        for z in ols_res.z_score:
+            if abs(z) > self.Z_SCORE_BUY and not pos:
                 pos += 1
-            if abs(z_score) < self.Z_SCORE_SELL and pos:
+            if abs(z) < self.Z_SCORE_SELL and pos:
                 pos = 0
                 successes += 1
-            if abs(z_score) > self.Z_SCORE_PANIC and pos:
+            if abs(z) > self.Z_SCORE_PANIC and pos:
                 pos = 0
 
         self.analyses.append({

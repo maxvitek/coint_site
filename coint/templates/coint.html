@@ -63,10 +63,11 @@
 
     var series3 = [{% for i in pair_analysis.analyses.0.ols.resid.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
-    var series4 = [{% for i in pair_analysis.companies.0.log_prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+    var series4 = [{% for i in pair_analysis.analyses.0.ols.z_score.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
-    var series5 = [{% for i in pair_analysis.companies.1.log_prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+    var series5 = [{% for i in pair_analysis.companies.0.log_prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
+    var series6 = [{% for i in pair_analysis.companies.1.log_prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var min1 = Number.MAX_VALUE;
     var max1 = Number.MIN_VALUE;
@@ -103,11 +104,19 @@
       max5 = Math.max(max5, series5[i].y);
     }
 
+    var min6 = Number.MAX_VALUE;
+    var max6 = Number.MIN_VALUE;
+    for (i = 0; i < series6.length; i++) {
+      min6 = Math.min(min6, series6[i].y);
+      max6 = Math.max(max6, series6[i].y);
+    }
+
     var axis1 = d3.scale.linear().domain([min1, max1]);
     var axis2 = d3.scale.linear().domain([min2, max2]);
     var axis3 = d3.scale.linear().domain([min3, max3]);
     var axis4 = d3.scale.linear().domain([min4, max4]);
     var axis5 = d3.scale.linear().domain([min5, max5]);
+    var axis6 = d3.scale.linear().domain([min6, max6]);
 
     var stock_graph = new Rickshaw.Graph( {
         element: document.getElementById("stock_chart"),
@@ -137,14 +146,14 @@
         series: [
             {
                 color: "#7fcdbb",
-                data: series4,
+                data: series5,
                 name: "{{ pair_analysis.companies.0.symbol }}",
-                scale: axis4
+                scale: axis5
             }, {
                 color: "#2c7fb8",
-                data: series5,
+                data: series6,
                 name: "{{ pair_analysis.companies.1.symbol }}",
-                scale: axis5
+                scale: axis6
             }
         ]
     } );
@@ -160,6 +169,11 @@
                 data: series3,
                 name: "{{ pair_analysis.companies.0.symbol }}-{{ pair_analysis.companies.1.symbol }} Spread",
                 scale: axis3
+            }, {
+                color: "#addd8e",
+                data: series4,
+                name: "{{ pair_analysis.companies.0.symbol }}-{{ pair_analysis.companies.1.symbol }} Spread Z Score",
+                scale: axis4
             }
         ]
     } );
