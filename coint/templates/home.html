@@ -199,6 +199,8 @@
     <script>
 
         function d3_crossfilter(pairs) {
+
+            var first_load = true;
             
             var formatNumber = d3.format(",d");
             
@@ -271,7 +273,10 @@
               function pairList(div) {
                 var pairsByP = nestByP.entries(adf_p.bottom(50));
 
-                Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': pairsByP[0].values[0].symbol});
+                if (first_load==true) {
+                    first_load = false;
+                    Dajaxice.coint.ajax_coint(runAjaxJS, {'symbol': pairsByP[0].values[0].symbol});
+                }
 
                 div.each(function() {
                   var adf_p = d3.select(this).selectAll(".adf_p")
