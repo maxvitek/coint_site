@@ -24,3 +24,4 @@ netifaces==0.8
 port-for==0.3
 django-dajaxice==0.6
 django-tz-detect==0.2.2
+newrelic==2.18.1.15
