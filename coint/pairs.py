@@ -5,6 +5,7 @@ import statsmodels.tsa.stattools as ts
 import numpy as np
 import logging
 from coint_site.celery import app
+from celery.signals import task_prerun
 import itertools
 from tempodb import TempoDB
 from models import Company, Pair
@@ -12,10 +13,11 @@ from threadpool import ThreadPool
 import csv
 import os
 from termcolor import colored
-import urllib
 from util import clean_str
 
 logger = logging.getLogger(__name__)
+
+_companies = []
 
 
 class PairAnalysis(object):
@@ -176,7 +178,7 @@ def make_pair(ticker1, ticker2):
     return
 
 
-def make_all_pairs():
+def make_all_pairs(use_celery=False):
     """
     This will check all of the pairs
     """
@@ -189,16 +191,24 @@ def make_all_pairs():
         tpool.add_task(c.update_prices)
     tpool.wait_completion()
 
-    logger.info('Fetching full price histories')
-    for c in companies:
-        tpool.add_task(c.get_prices)
-    tpool.wait_completion()
+    if use_celery:
+        for c in itertools.combinations(_companies, 2):
+            c1 = c[0]
+            c2 = c[1]
+            make_pair.delay(c1, c2)
 
-    for c in itertools.combinations(companies, 2):
-        c1 = c[0]
-        c2 = c[1]
-        tpool.add_task(make_pair, c1, c2)
-    tpool.wait_completion()
+    else:
+
+        logger.info('Fetching full price histories')
+        for c in companies:
+            tpool.add_task(c.get_prices)
+        tpool.wait_completion()
+
+        for c in itertools.combinations(companies, 2):
+            c1 = c[0]
+            c2 = c[1]
+            tpool.add_task(make_pair, c1, c2)
+        tpool.wait_completion()
 
     return
 
@@ -230,3 +240,15 @@ def make_pairs_csv(pairs=None, threshold=100):
                                    sectors[row_data[1]], sectors[row_data[2]]])
 
     return None
+
+
+def _populate_companies():
+    logger.info('Fetching full price histories')
+    companies = Company.objects.all()
+    for c in companies:
+        c.get_prices()
+
+    return None
+
+task_prerun.connect(_populate_companies, sender=app.tasks[make_pair.name])
+
