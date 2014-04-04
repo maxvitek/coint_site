@@ -18,8 +18,12 @@ logger = logging.getLogger(__name__)
 
 class PairAnalysis(object):
     """
-
+    Abstraction of the pair analytics
     """
+    Z_SCORE_BUY = 1.5
+    Z_SCORE_SELL = 0.5
+    Z_SCORE_PANIC = 4
+
     def __init__(self, c1, c2, lookback=1000):
         self.companies = []
 
@@ -34,19 +38,24 @@ class PairAnalysis(object):
             self.df_dict['company_' + str(company_num)] = c.prices
             company_num += 1
 
+        date_span = set([d.date() for d in self.companies[0].prices.index])
+
         sym1, sym2 = sorted([c.symbol for c in self.companies])
         self.symbol = sym1 + '-' + sym2
 
         logger.info(self.symbol + '::Conducting pair analysis: ' + self.symbol)
 
-        self.adf = None
-        self.ols = None
         self.df = pd.DataFrame(self.df_dict)
         self.pair, self.created = Pair.objects.get_or_create(
             symbol=self.symbol,
         )
 
-        self.analyze()
+        self.adf = []
+        self.ols = []
+        self.freq = []
+
+        for d in date_span:
+            self.analyze(d)
 
         if self.pair.adf_stat < self.pair.adf_5pct:
             coint_log_item = colored('Cointegrated', 'green', attrs=['bold'])
@@ -64,16 +73,34 @@ class PairAnalysis(object):
             raise ValueError
         return company
 
-    def analyze(self):
+    def analyze(self, date):
         logger.info(self.symbol + '::Conducting analysis')
 
         company_num = 1
         for c in self.companies:
-            c.log_prices = np.log(c.prices)
+            c.log_prices = np.log(c.prices[str(date)])  # taking only this date
             self.df['log_company_' + str(company_num)] = c.log_prices
             company_num += 1
         self.df.dropna().interpolate()
-        self.ols, self.adf = engle_granger_test(y=self.df['log_company_1'], x=self.df['log_company_2'])
+        ols_res, adf_res = engle_granger_test(y=self.df['log_company_1'], x=self.df['log_company_2'])
+        res_mean = np.mean(ols_res.resid)
+        res_std = np.std(ols_res.resid)
+        pos = 0
+        successes = 0
+        for r in ols_res.resid:
+            z_score = (r - res_mean) / res_std
+            if abs(z_score) > self.Z_SCORE_BUY and not pos:
+                pos += 1
+            if abs(z_score) < self.Z_SCORE_SELL and pos:
+                pos = 0
+                successes += 1
+            if abs(z_score) > self.Z_SCORE_PANIC and pos:
+                pos = 0
+
+        self.ols.append(ols_res)
+        self.adf.append(adf_res)
+        self.freq.append(successes)
+
         return None
 
     def persist(self):

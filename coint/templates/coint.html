@@ -27,7 +27,7 @@
             .text("\\log{ P_t ^ { {{ pair_analysis.companies.0.symbol }} } } = \\log{ P_t ^ { {{ pair_analysis.companies.1.symbol }} } } * \\beta_{coint}");
     coint_div.append("script")
             .attr("type", "math/tex; mode=display")
-            .text("\\implies \\beta_{coint} = {{ pair_analysis.ols.beta.x|floatformat:"3" }}");
+            .text("\\implies \\beta_{coint} = {{ pair_analysis.ols.0.beta.x|floatformat:"3" }}");
     coint_div.append("p")
             .text("This gives us the spread:");
     coint_div.append("script")
@@ -44,15 +44,15 @@
             .text("Using these residuals, we test the null hypothesis the process has a unit root -- is not stationary -- using the Augmented-Dickey Fuller Test.  If {{ pair_analysis.companies.0.symbol }} and {{ pair_analysis.companies.1.symbol }} are cointegrated, the spread should be stationary.");
     coint_div.append("script")
             .attr("type", "math/tex; mode=display")
-            .text("ADF_{stat} = {{ pair_analysis.adf.0|floatformat:"3" }}");
+            .text("ADF_{stat} = {{ pair_analysis.adf.0.0|floatformat:"3" }}");
     coint_div.append("script")
             .attr("type", "math/tex; mode=display")
-            .text("p_{ADF} = {{ pair_analysis.adf.1|floatformat:"3" }}");
-    {% if pair_analysis.adf.1 < 0.05 %}
+            .text("p_{ADF} = {{ pair_analysis.adf.0.1|floatformat:"3" }}");
+    {% if pair_analysis.adf.0.1 < 0.05 %}
     coint_div.append("p")
             .html("{{ pair_analysis.companies.0.symbol }} and {{ pair_analysis.companies.1.symbol }} <b>are</b> cointegrated (with 95% confidence).");
     {% endif %}
-    {% if pair_analysis.adf.1 >= 0.05 %}
+    {% if pair_analysis.adf.0.1 >= 0.05 %}
     coint_div.append("p")
             .html("{{ pair_analysis.companies.0.symbol }} and {{ pair_analysis.companies.1.symbol }} <b>are not</b> cointegrated (with 95% confidence).");
     {% endif %}
@@ -61,7 +61,7 @@
 
     var series2 = [{% for i in pair_analysis.companies.1.prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
-    var series3 = [{% for i in pair_analysis.ols.resid.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+    var series3 = [{% for i in pair_analysis.ols.0.resid.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
     var series4 = [{% for i in pair_analysis.companies.0.log_prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
