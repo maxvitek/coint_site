@@ -26,5 +26,11 @@ def series2js(pd_series):
         })
 
 
+def clean_str(string):
+    clean_string = string.replace("&#39;", "'")
+    return clean_string
+
+
 class NotATimeSeries(Exception):
     pass
+

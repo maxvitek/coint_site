@@ -9,7 +9,7 @@
             .attr("id", "stock_chart");
     coint_div.append("p")
             .attr("style", "font-size: small; color: gray;")
-            .text("Latest stock performance of {{ pair_analysis.companies.0.name }} of {{ pair_analysis.companies.0.hq }} and {{ pair_analysis.companies.1.name }} of {{ pair_analysis.companies.1.hq }}.");
+            .text("Latest stock performance of {{ pair_analysis.companies.0.name | safe }} of {{ pair_analysis.companies.0.hq | safe }} and {{ pair_analysis.companies.1.name | safe }} of {{ pair_analysis.companies.1.hq | safe }}.");
     coint_div.append("br");
     coint_div.append("p")
             .text("We examine these for cointegration using the two step Engle-Granger test:");
@@ -20,7 +20,7 @@
             .attr("id", "log_price_chart");
     coint_div.append("p")
             .attr("style", "font-size: small; color: gray;")
-            .text("Log price processes for {{ pair_analysis.companies.0.name }} and {{ pair_analysis.companies.1.name }}.");
+            .text("Log price processes for {{ pair_analysis.companies.0.name | safe }} and {{ pair_analysis.companies.1.name | safe }}.");
     coint_div.append("br");
     coint_div.append("script")
             .attr("type", "math/tex; mode=display")
@@ -38,7 +38,7 @@
             .attr("id", "resid_chart");
     coint_div.append("p")
             .attr("style", "font-size: small; color: gray;")
-            .text("{{ pair_analysis.companies.0.symbol }}-{{ pair_analysis.companies.1.symbol }} spread, or residual of the Least Squares Linear Regression of the log price proccesses.");
+            .text("{{ pair_analysis.companies.0.symbol }}-{{ pair_analysis.companies.1.symbol }} spread z-score, or z-score of the residual of the Least Squares Linear Regression of the log price proccesses.");
     coint_div.append("br");
     coint_div.append("p")
             .text("Using these residuals, we test the null hypothesis the process has a unit root -- is not stationary -- using the Augmented-Dickey Fuller Test.  If {{ pair_analysis.companies.0.symbol }} and {{ pair_analysis.companies.1.symbol }} are cointegrated, the spread should be stationary.");
@@ -61,7 +61,7 @@
 
     var series2 = [{% for i in pair_analysis.companies.1.prices.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
-    var series3 = [{% for i in pair_analysis.analyses.0.ols.resid.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
+{#    var series3 = [{% for i in pair_analysis.analyses.0.ols.resid.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];#}
 
     var series4 = [{% for i in pair_analysis.analyses.0.ols.z_score.iteritems %}{ x: new Date("{{ i.0.isoformat }}").getTime() / 1000, y: {{ i.1 }} }{% if not forloop.last %},{% endif %}{% endfor %}];
 
@@ -83,12 +83,12 @@
       max2 = Math.max(max2, series2[i].y);
     }
 
-    var min3 = Number.MAX_VALUE;
-    var max3 = Number.MIN_VALUE;
-    for (i = 0; i < series3.length; i++) {
-      min3 = Math.min(min3, series3[i].y);
-      max3 = Math.max(max3, series3[i].y);
-    }
+{#    var min3 = Number.MAX_VALUE;#}
+{#    var max3 = Number.MIN_VALUE;#}
+{#    for (i = 0; i < series3.length; i++) {#}
+{#      min3 = Math.min(min3, series3[i].y);#}
+{#      max3 = Math.max(max3, series3[i].y);#}
+{#    }#}
 
     var min4 = Number.MAX_VALUE;
     var max4 = Number.MIN_VALUE;
@@ -113,7 +113,7 @@
 
     var axis1 = d3.scale.linear().domain([min1, max1]);
     var axis2 = d3.scale.linear().domain([min2, max2]);
-    var axis3 = d3.scale.linear().domain([min3, max3]);
+{#    var axis3 = d3.scale.linear().domain([min3, max3]);#}
     var axis4 = d3.scale.linear().domain([min4, max4]);
     var axis5 = d3.scale.linear().domain([min5, max5]);
     var axis6 = d3.scale.linear().domain([min6, max6]);
@@ -164,13 +164,14 @@
         height: 100,
         renderer: 'line',
         series: [
+{#            {#}
+{#                color: "#addd8e",#}
+{#                data: series3,#}
+{#                name: "{{ pair_analysis.companies.0.symbol }}-{{ pair_analysis.companies.1.symbol }} Spread",#}
+{#                scale: axis3#}
+{#            }, #}
             {
                 color: "#31a354",
-                data: series3,
-                name: "{{ pair_analysis.companies.0.symbol }}-{{ pair_analysis.companies.1.symbol }} Spread",
-                scale: axis3
-            }, {
-                color: "#addd8e",
                 data: series4,
                 name: "{{ pair_analysis.companies.0.symbol }}-{{ pair_analysis.companies.1.symbol }} Spread Z Score",
                 scale: axis4

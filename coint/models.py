@@ -5,6 +5,8 @@ from intradata import get_google_data
 from celery.contrib.methods import task_method
 from coint_site.celery import app
 import logging
+from djangotoolbox.fields import ListField
+import numpy as np
 
 logger = logging.getLogger(__name__)
 
@@ -51,17 +53,19 @@ class Company(models.Model):
 
 class Pair(models.Model):
     symbol = models.CharField(primary_key=True, max_length=40)
-    adf_stat = models.FloatField(null=True)
-    adf_p = models.FloatField(null=True)
-    adf_1pct = models.FloatField(null=True)
-    adf_5pct = models.FloatField(null=True)
-    adf_10pct = models.FloatField(null=True)
+    # adf_stat = models.FloatField(null=True)
+    # adf_p = models.FloatField(null=True)
+    # adf_1pct = models.FloatField(null=True)
+    # adf_5pct = models.FloatField(null=True)
+    # adf_10pct = models.FloatField(null=True)
+    adf = ListField()
+    ols = ListField()
+    freq = ListField()
+    ranking_statistic = models.FloatField(default=0)
 
     def component_tickers(self):
         return self.symbol.split('-')
 
     def csv_data(self):
-        return [self.symbol] + self.component_tickers() + [
-            self.adf_stat,
-            self.adf_p,
-        ]
+        avg_p_stat = np.mean([a[1] for a in self.adf])
+        return [self.symbol] + self.component_tickers() + [self.ranking_statistic, avg_p_stat, self.adf_p]
