@@ -58,8 +58,8 @@ class Pair(models.Model):
     # adf_1pct = models.FloatField(null=True)
     # adf_5pct = models.FloatField(null=True)
     # adf_10pct = models.FloatField(null=True)
-    adf = ListField()
-    ols = ListField()
+    adf_p = ListField()
+    ols_beta = ListField()
     freq = ListField()
     ranking_statistic = models.FloatField(default=0)
 
@@ -67,5 +67,6 @@ class Pair(models.Model):
         return self.symbol.split('-')
 
     def csv_data(self):
-        avg_p_stat = np.mean([a[1] for a in self.adf])
-        return [self.symbol] + self.component_tickers() + [self.ranking_statistic, avg_p_stat, self.adf_p]
+        avg_p_stat = np.mean([a for a in self.adf_p])
+        avg_freq = np.mean([f for f in self.freq])
+        return [self.symbol] + self.component_tickers() + [self.ranking_statistic, avg_p_stat, avg_freq]

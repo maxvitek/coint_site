@@ -133,7 +133,7 @@ class PairAnalysis(object):
         benchmark_time = self.companies[0].prices.index[-1].date()
         for a in self.analyses:
             t = (benchmark_time - a['date']).total_seconds()
-            stat = stat * (1 - a['adf'][1]) * a['freq'] * np.exp(-1 * decay_lambda * t)
+            stat += (1 - a['adf'][1]) * a['freq'] * np.exp(-1 * decay_lambda * t)
         self.ranking_statistic = stat
         return self.ranking_statistic
 
@@ -246,9 +246,9 @@ def make_pairs_csv(pairs=None, threshold=100):
     filepath = os.path.join(os.getcwd(), 'coint', 'static', 'pairs_' + str(threshold) + '.csv')
     with open(filepath, 'w') as f:
         c = csv.writer(f)
-        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'adf_stat', 'adf_p',
+        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'ranking_stat', 'avg_adf', 'avg_freq',
                     'industry_1', 'industry_2', 'sector_1', 'sector_2'])
-        sorted_pairs = sorted(pairs, key=lambda x: x.adf_p)
+	sorted_pairs = sorted(pairs, key=lambda x: x.ranking_statistic)
         short_pairs = sorted_pairs[:int(len(pairs) * threshold / 100) - 1]
         for p in short_pairs:
             row_data = p.csv_data()
