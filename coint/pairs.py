@@ -1,23 +1,26 @@
+import pickle
+import csv
+import os
+import itertools
+import logging
+import gzip
+import subprocess
+
 from finsymbols import get_sp500_symbols
 import pandas as pd
 from pandas.stats.api import ols
 import statsmodels.tsa.stattools as ts
 import numpy as np
-import logging
+from termcolor import colored
+
 from coint_site.celery import app
-from celery.signals import task_prerun
-import itertools
 from tempodb import TempoDB
 from models import Company, Pair
 from threadpool import ThreadPool
-import csv
-import os
-from termcolor import colored
 from util import clean_str
 
-logger = logging.getLogger(__name__)
 
-_companies = {}
+logger = logging.getLogger(__name__)
 
 
 class PairAnalysis(object):
@@ -173,12 +176,16 @@ def make_pair(ticker1, ticker2):
     A function which makes a PairAnalysis object
     used farm off the task to a celery worker
     """
-    if _companies:
-        c1 = _companies[ticker1]
-        c2 = _companies[ticker2]
-    else:
+    try:
+        c1 = unpickle_company(ticker1)
+    except IOError:
         c1 = ticker1
+
+    try:
+        c2 = unpickle_company(ticker2)
+    except IOError:
         c2 = ticker2
+
     pa = PairAnalysis(c1, c2)
     pa.persist()
     return
@@ -199,23 +206,22 @@ def make_all_pairs(use_celery=False):
     tpool.wait_completion()
     logger.info('Prices updated')
 
+    symbols = [c.symbol for c in companies]
+
+    logger.info('Pickling companies')
+    pickle_all_companies()
+
+    logger.info('Updating workers')
+    update_workers()
+
     if use_celery:
-        for c in itertools.combinations(companies, 2):
-            c1 = c[0]
-            c2 = c[1]
-            make_pair.delay(c1, c2)
+        for s1, s2 in itertools.combinations(symbols, 2):
+            make_pair.delay(s1, s2)
 
     else:
 
-        logger.info('Fetching full price histories')
-        for c in companies:
-            tpool.add_task(c.get_prices)
-        tpool.wait_completion()
-
-        for c in itertools.combinations(companies, 2):
-            c1 = c[0]
-            c2 = c[1]
-            tpool.add_task(make_pair, c1, c2)
+        for s1, s2 in itertools.combinations(symbols, 2):
+            tpool.add_task(make_pair, s1, s2)
         tpool.wait_completion()
 
     return
@@ -250,14 +256,35 @@ def make_pairs_csv(pairs=None, threshold=100):
     return None
 
 
-def _populate_companies(**kwargs):
-    logger.info('Fetching full price histories')
-    companies = Company.objects.all()
-    for c in companies:
-        c.get_prices()
-        _companies[c.symbol] = c
+def pickle_company(symbol):
+    filename = os.path.join(os.getcwd(), 'coint', 'data', symbol)
+    file = gzip.open(filename, 'wb')
+    company = Company.objects.get(symbol=symbol)
+    company.get_prices()
+    pickle.dump(company, file)
 
     return None
 
-task_prerun.connect(_populate_companies, sender=app.tasks[make_pair.name])
 
+def unpickle_company(symbol):
+    filename = os.path.join(os.getcwd(), 'coint', 'data', symbol)
+    file = gzip.open(filename, 'rb')
+    company = pickle.load(file)
+
+    return company
+
+
+def pickle_all_companies():
+    tpool = ThreadPool(75)
+    companies = Company.objects.all()
+    for c in companies:
+        tpool.add_task(pickle_company, c.symbol)
+    tpool.wait_completion()
+
+    return None
+
+
+def update_workers():
+    subprocess.call(['drone', '--ps:update'])
+
+    return None
