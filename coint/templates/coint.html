@@ -32,7 +32,7 @@
             .text("This gives us the spread:");
     coint_div.append("script")
             .attr("type", "math/tex; mode=display")
-            .text("S_t = log{ P_t ^ { {{ pair_analysis.companies.0.symbol }} } } - \\log{ P_t ^ { {{ pair_analysis.companies.1.symbol }} } } * \\beta_{coint} = log{ P_t ^ { {{ pair_analysis.companies.0.symbol }} } } - \\log{ P_t ^ { {{ pair_analysis.companies.1.symbol }} } } * {{ pair_analysis.ols.beta.x|floatformat:"3" }}");
+            .text("S_t = log{ P_t ^ { {{ pair_analysis.companies.0.symbol }} } } - \\log{ P_t ^ { {{ pair_analysis.companies.1.symbol }} } } * \\beta_{coint} = log{ P_t ^ { {{ pair_analysis.companies.0.symbol }} } } - \\log{ P_t ^ { {{ pair_analysis.companies.1.symbol }} } } * {{ pair_analysis.analyses.0.ols.beta.x|floatformat:"3" }}");
     coint_div.append("br");
     coint_div.append("div")
             .attr("id", "resid_chart");

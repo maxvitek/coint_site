@@ -17,7 +17,7 @@ from util import clean_str
 
 logger = logging.getLogger(__name__)
 
-_companies = []
+_companies = {}
 
 
 class PairAnalysis(object):
@@ -173,14 +173,21 @@ def make_pair(ticker1, ticker2):
     A function which makes a PairAnalysis object
     used farm off the task to a celery worker
     """
-    pa = PairAnalysis(ticker1, ticker2)
+    if _companies:
+        c1 = _companies[ticker1]
+        c2 = _companies[ticker2]
+    else:
+        c1 = ticker1
+        c2 = ticker2
+    pa = PairAnalysis(c1, c2)
     pa.persist()
     return
 
 
 def make_all_pairs(use_celery=False):
     """
-    This will check all of the pairs
+    This will check all of the pairs, either threaded
+    or via celery (i.e. local v cloud)
     """
     logger.info('Collecting companies')
     companies = Company.objects.all()
@@ -190,9 +197,10 @@ def make_all_pairs(use_celery=False):
     for c in companies:
         tpool.add_task(c.update_prices)
     tpool.wait_completion()
+    logger.info('Prices updated')
 
     if use_celery:
-        for c in itertools.combinations(_companies, 2):
+        for c in itertools.combinations(companies, 2):
             c1 = c[0]
             c2 = c[1]
             make_pair.delay(c1, c2)
@@ -242,11 +250,12 @@ def make_pairs_csv(pairs=None, threshold=100):
     return None
 
 
-def _populate_companies():
+def _populate_companies(**kwargs):
     logger.info('Fetching full price histories')
     companies = Company.objects.all()
     for c in companies:
         c.get_prices()
+        _companies[c.symbol] = c
 
     return None
 
