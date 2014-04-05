@@ -117,8 +117,8 @@ class PairAnalysis(object):
 
     def persist(self):
         logger.info(self.symbol + '::Persisting analysis')
-        self.pair.adf = [a['adf'] for a in self.analyses]
-        self.pair.ols = [a['ols'] for a in self.analyses]
+        self.pair.adf_p = [a['adf'][1] for a in self.analyses]
+        self.pair.ols_beta = [a['ols'].beta.x for a in self.analyses]
         self.pair.freq = [a['freq'] for a in self.analyses]
         self.pair.ranking_statistic = self.ranking_statistic
         self.pair.save()
@@ -191,27 +191,29 @@ def make_pair(ticker1, ticker2):
     return
 
 
-def make_all_pairs(use_celery=False):
+def make_all_pairs(use_celery=False, skip_update=False, skip_pickle=False):
     """
     This will check all of the pairs, either threaded
     or via celery (i.e. local v cloud)
     """
-    logger.info('Collecting companies')
+    logger.info(colored('Collecting companies', 'white', attrs=['bold']))
     companies = Company.objects.all()
-    tpool = ThreadPool(75)
+    tpool = ThreadPool(50)
 
-    logger.info('Updating prices')
-    for c in companies:
-        tpool.add_task(c.update_prices)
-    tpool.wait_completion()
-    logger.info('Prices updated')
+    if not skip_update:
+        logger.info(colored('Updating prices', 'white', attrs=['bold']))
+        for c in companies:
+            tpool.add_task(c.update_prices)
+        tpool.wait_completion()
+        logger.info(colored('Prices updated', 'white', attrs=['bold']))
 
     symbols = [c.symbol for c in companies]
 
-    logger.info('Pickling companies')
-    pickle_all_companies()
+    if not skip_pickle:
+        logger.info(colored('Pickling companies', 'white', attrs=['bold']))
+        pickle_all_companies()
 
-    logger.info('Updating workers')
+    logger.info(colored('Updating workers', 'white', attrs=['bold']))
     update_workers()
 
     if use_celery:
@@ -258,24 +260,24 @@ def make_pairs_csv(pairs=None, threshold=100):
 
 def pickle_company(symbol):
     filename = os.path.join(os.getcwd(), 'coint', 'data', symbol)
-    file = gzip.open(filename, 'wb')
-    company = Company.objects.get(symbol=symbol)
-    company.get_prices()
-    pickle.dump(company, file)
+    with gzip.open(filename, 'wb') as f:
+        company = Company.objects.get(symbol=symbol)
+        company.get_prices()
+        pickle.dump(company, f)
 
     return None
 
 
 def unpickle_company(symbol):
     filename = os.path.join(os.getcwd(), 'coint', 'data', symbol)
-    file = gzip.open(filename, 'rb')
-    company = pickle.load(file)
+    with gzip.open(filename, 'rb') as f:
+        company = pickle.load(f)
 
     return company
 
 
 def pickle_all_companies():
-    tpool = ThreadPool(75)
+    tpool = ThreadPool(50)
     companies = Company.objects.all()
     for c in companies:
         tpool.add_task(pickle_company, c.symbol)
@@ -285,6 +287,7 @@ def pickle_all_companies():
 
 
 def update_workers():
+    subprocess.call(['git', 'commit', '-m', 'automated data update commit'])
     subprocess.call(['drone', '--ps:update'])
 
     return None
