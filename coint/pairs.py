@@ -295,7 +295,8 @@ def update_workers():
 
 @app.task
 def update_pair(pair):
-    for c in pair.component_tickers:
+    companies = []
+    for c in pair.component_tickers():
         companies.append(Company.objects.filter(symbol=c).get())
     for c in companies:
         c.get_volumes()
@@ -304,7 +305,7 @@ def update_pair(pair):
     for d in date_span:
         vols = []
         for c in companies:
-            vols.append(c.volumes[d].cumsum())
+            vols.append(c.volumes[str(d)].sum())
         if not pair_vol:
             pair_vol = min(vols)
         else:
@@ -316,7 +317,6 @@ def update_pair(pair):
 
 
 def update_pairs():
-    companies = []
     pairs = Pair.objects.all()
     for p in pairs:
         update_pair.delay(p)
