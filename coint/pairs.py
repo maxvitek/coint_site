@@ -294,8 +294,8 @@ def update_workers():
 
 
 @app.task
-def update_pair():
-    for c in p.component_tickers:
+def update_pair(pair):
+    for c in pair.component_tickers:
         companies.append(Company.objects.filter(symbol=c).get())
     for c in companies:
         c.get_volumes()
@@ -309,8 +309,8 @@ def update_pair():
             pair_vol = min(vols)
         else:
             pair_vol = min(pair_vol, min(vols))
-    p.volume = pair_vol
-    p.save()
+    pair.volume = pair_vol
+    pair.save()
 
     return None
 
@@ -319,5 +319,5 @@ def update_pairs():
     companies = []
     pairs = Pair.objects.all()
     for p in pairs:
-        update_pair.delay()
+        update_pair.delay(p)
     return None
