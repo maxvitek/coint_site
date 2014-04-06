@@ -248,7 +248,7 @@ def make_pairs_csv(pairs=None, threshold=100):
         c = csv.writer(f)
         c.writerow(['symbol', 'symbol_1', 'symbol_2', 'ranking_stat', 'avg_adf', 'avg_freq',
                     'industry_1', 'industry_2', 'sector_1', 'sector_2'])
-	sorted_pairs = sorted(pairs, key=lambda x: x.ranking_statistic)
+	sorted_pairs = sorted(pairs, key=lambda x: x.ranking_statistic, reverse=True)
         short_pairs = sorted_pairs[:int(len(pairs) * threshold / 100) - 1]
         for p in short_pairs:
             row_data = p.csv_data()
