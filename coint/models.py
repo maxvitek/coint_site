@@ -18,6 +18,7 @@ class Company(models.Model):
     industry = models.CharField(max_length=150)
     sector = models.CharField(max_length=150)
     tempodb = models.IntegerField()
+    min_daily_vol = models.FloatField(null=True)
 
     def get_prices(self, lookback=1000):
         tdb = TempoDB()
@@ -50,11 +51,13 @@ class Company(models.Model):
         self.prices = series
         return self.prices
 
-    def get_volumes(self, lookback=15):
+    def update_volume(self, lookback=15):
 	df = get_google_data(self.symbol, lookback=lookback)
 	series = df['volume']
-	self.volumes = series
-	return self.volumes
+        date_span = set([d.date() for d in series.index])
+        self.min_daily_vol = min([series[str(d)].sum() for d in date_span])
+
+        return None
 
 
 class Pair(models.Model):

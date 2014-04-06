@@ -294,6 +294,21 @@ def update_workers():
 
 
 @app.task
+def update_company(company):
+	company.update_volume()
+	company.save()
+	return None
+
+
+def update_companies():
+    companies = Company.objects.all()
+    for c in companies:
+	update_company.delay(c)
+
+    return None
+
+
+@app.task
 def update_pair(pair):
     companies = []
     for c in pair.component_tickers():
