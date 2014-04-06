@@ -310,22 +310,8 @@ def update_companies():
 
 @app.task
 def update_pair(pair):
-    companies = []
-    for c in pair.component_tickers():
-        companies.append(Company.objects.filter(symbol=c).get())
-    for c in companies:
-        c.get_volumes()
-    date_span = set([d.date() for d in companies[0].volumes.index])
-    pair_vol = None
-    for d in date_span:
-        vols = []
-        for c in companies:
-            vols.append(c.volumes[str(d)].sum())
-        if not pair_vol:
-            pair_vol = min(vols)
-        else:
-            pair_vol = min(pair_vol, min(vols))
-    pair.volume = pair_vol
+    companies = [Company.objects.filter(symbol=c).get() for c in pair.component_tickers()]
+    pair.volume = min([c.min_daily_vol for c in companies if c.min_daily_vol])
     pair.save()
 
     return None
