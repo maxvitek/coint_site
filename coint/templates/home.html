@@ -231,7 +231,7 @@
 		d.volume = +d.volume;
               });
 
-            var coarseness = 1000 ;
+            var coarseness = 10000 ;
                 pair = crossfilter(pairs),
                 all = pair.groupAll(),
                 ranking_stat = pair.dimension(function(d) { return d.ranking_stat; }),
@@ -550,6 +550,6 @@
 
     <div id="ajax_script"></div>
     <script>
-        d3.csv("{% static "pairs_10.csv" %}", d3_crossfilter);
+        d3.csv("{% static "pairs_5.csv" %}", d3_crossfilter);
     </script>
 </body>
