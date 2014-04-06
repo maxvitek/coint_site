@@ -291,3 +291,33 @@ def update_workers():
     subprocess.call(['drone', '--ps:update'])
 
     return None
+
+
+@app.task
+def update_pair():
+    for c in p.component_tickers:
+        companies.append(Company.objects.filter(symbol=c).get())
+    for c in companies:
+        c.get_volumes()
+    date_span = set([d.date() for d in companies[0].volumes.index])
+    pair_vol = None
+    for d in date_span:
+        vols = []
+        for c in companies:
+            vols.append(c.volumes[d].cumsum())
+        if not pair_vol:
+            pair_vol = min(vols)
+        else:
+            pair_vol = min(pair_vol, min(vols))
+    p.volume = pair_vol
+    p.save()
+
+    return None
+
+
+def update_pairs():
+    companies = []
+    pairs = Pair.objects.all()
+    for p in pairs:
+        update_pair.delay()
+    return None

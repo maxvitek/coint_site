@@ -50,18 +50,21 @@ class Company(models.Model):
         self.prices = series
         return self.prices
 
+    def get_volumes(self, lookback=15):
+	df = get_google_data(self.symbol, lookback=lookback)
+	series = df['volume']
+	self.volumes = series
+	return self.volumes
+
 
 class Pair(models.Model):
     symbol = models.CharField(primary_key=True, max_length=40)
-    # adf_stat = models.FloatField(null=True)
-    # adf_p = models.FloatField(null=True)
-    # adf_1pct = models.FloatField(null=True)
-    # adf_5pct = models.FloatField(null=True)
-    # adf_10pct = models.FloatField(null=True)
     adf_p = ListField()
     ols_beta = ListField()
     freq = ListField()
     ranking_statistic = models.FloatField(default=0)
+    volume = models.FloatField(default=0, null=True)
+    updated = models.DateTimeField(auto_now=True, null=True)
 
     def component_tickers(self):
         return self.symbol.split('-')
