@@ -188,6 +188,9 @@
 	  <div id="freq-chart" class="chart">
 	    	  <div class="title">Spread Frequency</div>
 	  </div>
+	  <div id="volume-chart" class="chart">
+		  <div class="title">Minimum Daily Volume</div>
+	  </div>
         </div>
 
         <p id="totals"><span id="active">-</span> of <span id="total">-</span> pairs selected.</p>
@@ -207,7 +210,8 @@
 
             var first_load = true;
             
-            var formatNumber = d3.format(",d");
+            var formatNumber = d3.format(",d"),
+		formatFloat = d3.format(".2r");
             
             var nestByP = d3.nest()
                 .key(function(d) { return d.ranking_stat; });
@@ -224,6 +228,7 @@
                 d.avg_adf = +d.avg_adf;
 		d.avg_freq = +d.avg_freq;
                 d.ranking_stat = +d.ranking_stat;
+		d.volume = +d.volume;
               });
 
             var coarseness = 1000 ;
@@ -237,7 +242,10 @@
 		avg_adf_extent = d3.extent(pairs, function(d) { return d.avg_adf; }),
 		avg_freq = pair.dimension(function(d) { return d.avg_freq; }),
 		avg_freqs = avg_freq.group(function(d) { return Math.floor(d * coarseness) / coarseness; }),
-		avg_freq_extent = d3.extent(pairs, function(d) { return d.avg_freq; });
+		avg_freq_extent = d3.extent(pairs, function(d) { return d.avg_freq; }),
+		volume = pair.dimension(function(d) { return d.volume }),
+		volumes = volume.group(function(d) { return Math.floor( d * coarseness) / coarseness; }),
+		volume_extent = d3.extent(pairs, function(d) { return d.volume; });
 
             var charts = [
 
@@ -258,7 +266,14 @@
                     .group(avg_adfs)
                     .x(d3.scale.linear()
                     .domain([Math.floor(avg_adf_extent[0]), Math.ceil(avg_adf_extent[1] * coarseness) / coarseness])
+                    .rangeRound([0, 10 * 24])),
+		barChart()
+                    .dimension(volume)
+                    .group(volumes)
+                    .x(d3.scale.linear()
+                    .domain([Math.floor(volume_extent[0]), Math.ceil(volume_extent[1] * coarseness) / coarseness])
                     .rangeRound([0, 10 * 24]))
+            
             ];
 
             var chart = d3.selectAll(".chart")
@@ -325,7 +340,15 @@
 
                   pairEnter.append("div")
                       .attr("class", "ranking_stat")
-                      .text(function(d) { return d.ranking_stat; });
+                      .text(function(d) { return formatFloat(d.ranking_stat); });
+
+		  pairEnter.append("div")
+		      .attr("class", "freq")
+		      .text(function(d) { return d.avg_freq; });
+
+		  pairEnter.append("div")
+		      .attr("class", "avg_p")
+		      .text(function(d) { return formatFloat(d.avg_adf); });
 
                   pair.exit().remove();
 

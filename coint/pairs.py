@@ -191,7 +191,7 @@ def make_pair(ticker1, ticker2):
     return
 
 
-def make_all_pairs(use_celery=False, skip_update=False, skip_pickle=False):
+def make_all_pairs(use_celery=False, skip_update=False, skip_pickle=False, skip_worker_update=False):
     """
     This will check all of the pairs, either threaded
     or via celery (i.e. local v cloud)
@@ -213,8 +213,9 @@ def make_all_pairs(use_celery=False, skip_update=False, skip_pickle=False):
         logger.info(colored('Pickling companies', 'white', attrs=['bold']))
         pickle_all_companies()
 
-    logger.info(colored('Updating workers', 'white', attrs=['bold']))
-    update_workers()
+    if not skip_worker_update:
+        logger.info(colored('Updating workers', 'white', attrs=['bold']))
+        update_workers()
 
     if use_celery:
         for s1, s2 in itertools.combinations(symbols, 2):
@@ -246,7 +247,7 @@ def make_pairs_csv(pairs=None, threshold=100):
     filepath = os.path.join(os.getcwd(), 'coint', 'static', 'pairs_' + str(threshold) + '.csv')
     with open(filepath, 'w') as f:
         c = csv.writer(f)
-        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'ranking_stat', 'avg_adf', 'avg_freq',
+        c.writerow(['symbol', 'symbol_1', 'symbol_2', 'ranking_stat', 'avg_adf', 'avg_freq', 'volume',
                     'industry_1', 'industry_2', 'sector_1', 'sector_2'])
 	sorted_pairs = sorted(pairs, key=lambda x: x.ranking_statistic, reverse=True)
         short_pairs = sorted_pairs[:int(len(pairs) * threshold / 100) - 1]
@@ -287,7 +288,7 @@ def pickle_all_companies():
 
 
 def update_workers():
-    subprocess.call(['git', 'commit', '-m', 'automated data update commit'])
+    subprocess.call(['git', 'commit', '-am', "'automated data update commit'"])
     subprocess.call(['drone', '--ps:update'])
 
     return None

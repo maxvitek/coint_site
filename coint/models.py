@@ -75,4 +75,4 @@ class Pair(models.Model):
     def csv_data(self):
         avg_p_stat = np.mean([a for a in self.adf_p])
         avg_freq = np.mean([f for f in self.freq])
-        return [self.symbol] + self.component_tickers() + [self.ranking_statistic, avg_p_stat, avg_freq]
+        return [self.symbol] + self.component_tickers() + [self.ranking_statistic, avg_p_stat, avg_freq, self.volume]
